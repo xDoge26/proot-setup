@@ -19,3 +19,7 @@ Target : /mnt
 
 # Tiger VNC
 sudo apt install tigervnc*
+
+# Gallium Hud
+GALLIUM_HUD=help glxgears
+GALLIUM_HUD=simple,fps glxgears
