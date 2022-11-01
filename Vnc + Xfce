@@ -1,3 +1,4 @@
+# Install tigervnc ,xfce4
 sudo apt install tigervnc*
 sudo apt install xfce4*
 
@@ -9,13 +10,16 @@ vncserver -kill :1
 
 # Xstartup 
 nano ~/.vnc/xstartup
-
  #!/bin/sh
  unset SESSION_MANAGER
  unset DBUS_SESSION_BUS_ADDRESS
  dbus-launch xfce4-session
 
 chmod +x ~/.vnc/xstartup
+
+# Auto start vncserver
+nano .bashrc
+vncserver :1
 
 # Auto Kill vncserver
 nano .bash_logout
