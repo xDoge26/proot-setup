@@ -18,6 +18,7 @@ nano /etc/apt/sources.list
 apt install sudo
 adduser android
 nano /etc/sudoers
+android ALL=(ALL:ALL) ALL
 
 # Auto login to android user
 proot-distro login debian --user android --shared-tmp
