@@ -1,0 +1,21 @@
+# Linux Deploy settings
+Debian Arm64 Stable
+
+# Installation type
+Directory
+
+# Installation Path
+/data/Chroot
+
+# User Name
+root
+
+# User Password
+123456
+
+# Mount
+Source : /mnt/runtime/default/emulated/0
+Target : /mnt
+
+# Tiger VNC
+sudo apt install tigervnc*
