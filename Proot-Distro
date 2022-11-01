@@ -1,11 +1,18 @@
 # Update Termux pkg
 apt update && apt upgrade
+termux-setup-storage
+
+# Install Proot distro
+pkg install proot-distro
+proot-distro install debian
+proot-distro login debian
 
 # Auto login to proot
 nano ~/.bashrc
-proot-distro login ubuntu 
+proot-distro login debian
 
 # Edit /etc/apt/sources.list
+nano /etc/apt/sources.list
 
 # Add user
 apt install sudo
@@ -13,4 +20,5 @@ adduser android
 nano /etc/sudoer
 
 # Auto login to android user
-proot-distro login ubuntu --user android --shared-tmp
+proot-distro login debian --user android --shared-tmp
+
