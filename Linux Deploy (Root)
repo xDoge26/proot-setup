@@ -30,3 +30,6 @@ bionic -> focal
 
 edit /data/user/0/ru.meefik.linuxdeploy/files/include/bootstrap/debian/debootstrap/scripts/
 rename bionic to focal
+
+# Text viewer
+sudo apt install mousepad
