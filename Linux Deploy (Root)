@@ -28,4 +28,5 @@ GALLIUM_HUD=simple,fps glxgears
 edit /data/data/ru.meefik.linuxdeploy/files/config/linux.conf
 bionic -> focal
 
-edit /data/user/0/ru.meefik.linuxdeploy/files/include/bootstrap/debian/debootstrap/scripts/focal
+edit /data/user/0/ru.meefik.linuxdeploy/files/include/bootstrap/debian/debootstrap/scripts/
+rename bionic to focal
