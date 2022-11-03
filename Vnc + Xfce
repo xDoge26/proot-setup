@@ -12,6 +12,10 @@ vncserver -kill :1
 # Display
 export DISPLAY=":1"
 
+#Vnc config
+nano ~/.vnc/vnc.conf
+$geometry = "960x540"
+
 # Xstartup 
 nano ~/.vnc/xstartup
  #!/bin/sh
