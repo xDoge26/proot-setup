@@ -9,6 +9,9 @@ vncserver :1
 # Stop Vnc server
 vncserver -kill :1
 
+# Display
+export DISPLAY=":1"
+
 # Xstartup 
 nano ~/.vnc/xstartup
  #!/bin/sh
