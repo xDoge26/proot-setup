@@ -23,3 +23,7 @@ sudo apt install tigervnc*
 # Gallium Hud
 GALLIUM_HUD=help glxgears
 GALLIUM_HUD=simple,fps glxgears
+
+# Ubuntu 20.04 LTS
+edit /data/data/ru.meefik.linuxdeploy/files/config/linux.conf
+bionic -> focal
