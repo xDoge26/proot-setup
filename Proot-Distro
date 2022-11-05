@@ -4,12 +4,12 @@ termux-setup-storage
 
 # Install Proot distro
 pkg install proot-distro
-proot-distro install debian
-proot-distro login debian
+proot-distro install ubuntu
+proot-distro login ubuntu
 
 # Auto login to proot
 nano ~/.bashrc
-proot-distro login debian
+proot-distro login ubuntu --shared-tmp
 
 # Update distro
 apt update && apt upgrade -y
@@ -33,4 +33,4 @@ nano /etc/sudoers
 android ALL=(ALL:ALL) ALL
 
 # Auto login to android user
-proot-distro login debian --user android --shared-tmp
+proot-distro login ubuntu --user android --shared-tmp
