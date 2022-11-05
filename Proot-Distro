@@ -17,6 +17,9 @@ apt update && apt upgrade -y
 # Edit /etc/apt/sources.list
 nano /etc/apt/sources.list
 
+# Fix Fex-emu
+sudo apt install software-properties-common
+
 # Sound
 
 - In Termux
