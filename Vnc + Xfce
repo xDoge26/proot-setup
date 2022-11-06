@@ -1,5 +1,5 @@
 # Install tigervnc ,xfce4
-sudo apt install tigervnc-standalone-server
+sudo apt install tigervnc-standalone-server tigervnc-xorg-extension
 sudo apt install xfce4
 sudo apt install dbus dbus-x11
 
