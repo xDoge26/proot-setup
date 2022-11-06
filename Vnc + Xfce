@@ -18,11 +18,6 @@ $geometry = "960x540"
 
 # Xstartup 
 nano ~/.vnc/xstartup
- #!/bin/sh
- unset SESSION_MANAGER
- unset DBUS_SESSION_BUS_ADDRESS
- dbus-launch xfce4-session
-
 chmod +x ~/.vnc/xstartup
 
 # Auto start vncserver
