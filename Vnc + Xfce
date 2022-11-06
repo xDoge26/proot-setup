@@ -10,7 +10,7 @@ vncserver :1
 vncserver -kill :1
 
 # Display
-export DISPLAY=":1"
+export DISPLAY=:1
 
 #Vnc config
 nano ~/.vnc/vnc.conf
