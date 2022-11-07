@@ -52,12 +52,12 @@ cd
 rm -rf box64
 
 # Download Wine 7.0
-
 mkdir wine
 
 cd wine
 
 wget https://www.playonlinux.com/wine/binaries/phoenicis/upstream-linux-x86/PlayOnLinux-wine-7.0-upstream-linux-x86.tar.gz
+wget https://www.playonlinux.com/wine/binaries/phoenicis/upstream-linux-x86/PlayOnLinux-wine-7.0-rc5-upstream-linux-x86.tar.gz
 
 tar -xvf *.tar.gz
 
