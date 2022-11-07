@@ -1,0 +1,32 @@
+local branch="devel" #example: devel, staging, or stable (wine-staging 4.5+ requires libfaudio0:i386)
+	local version="7.1" #example: "7.1"
+	local id="debian" #example: debian, ubuntu
+	local dist="bullseye" #example (for debian): bullseye, buster, jessie, wheezy, ${VERSION_CODENAME}, etc 
+	local tag="-1" #example: -1 (some wine .deb files have -1 tag on the end and some don't)
+
+# Clean up any old wine instances
+	wineserver -k # stop any old wine installations from running
+	rm -rf ~/.cache/wine # remove any old wine-mono/wine-gecko install files
+	rm -rf ~/.local/share/applications/wine # remove any old program shortcuts
+# Wine download links from WineHQ: https://dl.winehq.org/wine-builds/
+	LNKA="https://dl.winehq.org/wine-builds/${id}/dists/${dist}/main/binary-amd64/" #amd64-wine links
+	DEB_A1="wine-${branch}-amd64_${version}~${dist}${tag}_amd64.deb" #wine64 main bin
+	DEB_A2="wine-${branch}_${version}~${dist}${tag}_amd64.deb" #wine64 support files (required for wine64 / can work alongside wine_i386 main bin)
+	
+	LNKB="https://dl.winehq.org/wine-builds/${id}/dists/${dist}/main/binary-i386/" #i386-wine links
+	DEB_B1="wine-${branch}-i386_${version}~${dist}${tag}_i386.deb" #wine_i386 main bin
+	DEB_B2="wine-${branch}_${version}~${dist}${tag}_i386.deb" #wine_i386 support files (required for wine_i386 if no wine64 / CONFLICTS WITH wine64 support files)
+	
+# Install amd64-wine (64-bit) alongside i386-wine (32-bit)
+	echo -e "Downloading wine . . ."
+	wget -q ${LNKA}${DEB_A1} 
+	wget -q ${LNKA}${DEB_A2} 
+	wget -q ${LNKB}${DEB_B1} 
+	echo -e "Extracting wine . . ."
+	dpkg-deb -x ${DEB_A1} wine-installer
+	dpkg-deb -x ${DEB_A2} wine-installer
+	dpkg-deb -x ${DEB_B1} wine-installer
+	
+# Stuff
+dpkg-deb -x *.deb ~/Download
+mv ~/Download/opt/wine* ~/wine
