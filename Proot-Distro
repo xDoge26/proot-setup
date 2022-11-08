@@ -33,7 +33,7 @@ pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymou
 - In proot
 export PULSE_SERVER=127.0.0.1
 
-# Add user
+# Add user (Optional)
 apt install sudo
 adduser android
 nano /etc/sudoers
