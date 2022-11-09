@@ -1,0 +1,13 @@
+# https://dl.winehq.org/wine-builds/ubuntu/dists/
+# Make sure wine .deb files in ~/Downloads
+
+# 32 Bit 
+wine-stable-i386_7.0.0.0~focal-1_i386.deb
+wine-stable_7.0.0.0~focal-1_i386.deb
+
+# 64 Bit
+wine-stable-amd64_7.0.0.0~focal-1_amd64.deb
+wine-stable_7.0.0.0~focal-1_amd64.deb
+
+dpkg-deb -x *.deb ~/Downloads
+mv ~/Downloads/opt/wine* ~/wine
