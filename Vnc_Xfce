@@ -1,0 +1,37 @@
+# Update Termux pkg
+apt update && apt upgrade -y
+termux-setup-storage
+
+# Install Proot distro
+pkg install proot-distro
+pkg install pulseaudio
+proot-distro install ubuntu
+proot-distro login ubuntu
+
+# Auto login to proot distro
+nano ~/.bashrc
+proot-distro login ubuntu --shared-tmp
+
+# Update proot distro
+apt update && apt upgrade -y
+
+# Edit /etc/apt/sources.list
+nano /etc/apt/sources.list
+
+# Sound
+
+- In Termux 
+pulseaudio --start --exit-idle-time=-1
+pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
+
+- In proot
+export PULSE_SERVER=127.0.0.1
+
+# Add user (Optional)
+apt install sudo
+adduser android
+nano /etc/sudoers
+android ALL=(ALL:ALL) ALL
+
+# Auto login to android user 
+proot-distro login ubuntu --user android --shared-tmp
