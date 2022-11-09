@@ -11,3 +11,7 @@ wine-stable_7.0.0.0~focal-1_amd64.deb
 
 dpkg-deb -x *.deb ~/Downloads
 mv ~/Downloads/opt/wine* ~/wine
+
+# PC only
+export PATH=~/wine/bin/
+export LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:~/wine/lib/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu/:$PATH
