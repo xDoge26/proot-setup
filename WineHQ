@@ -68,8 +68,14 @@ mv ~/Download/opt/wine* ~/wine
 		
 # Install symlinks
 	sudo ln -s ~/wine/bin/wine /usr/local/bin/wine
+	
 	sudo ln -s ~/wine/bin/wine64 /usr/local/bin/wine64
+	
 	sudo ln -s ~/wine/bin/wineboot /usr/local/bin/wineboot
+	
 	sudo ln -s ~/wine/bin/winecfg /usr/local/bin/winecfg
+	
 	sudo ln -s ~/wine/bin/wineserver /usr/local/bin/wineserver
+	
 	sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64 /usr/local/bin/wineboot /usr/local/bin/winecfg /usr/local/bin/wineserver
+
