@@ -80,11 +80,11 @@ cd
 
 export BOX86_PATH=~/wine/bin/
 
-export BOX86_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu:/lib/arm-linux-gnueabihf:/lib/aarch64-linux-gnu/
+export BOX86_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
 
 export BOX64_PATH=~/wine64/bin/
 
-export BOX64_LD_LIBRARY_PATH=~/wine64/lib/wine/i386-unix/:~/wine64/lib/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu:/lib/arm-linux-gnueabihf:/lib/aarch64-linux-gnu/
+export BOX64_LD_LIBRARY_PATH=~/wine64/lib/wine/i386-unix/:~/wine64/lib/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
 
 # If i want to execute 32-bit Box86 + Wine, the complete instructions are as follows:
 
