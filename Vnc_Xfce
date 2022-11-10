@@ -1,1 +1,29 @@
+# Install tigervnc ,xfce4
+sudo apt install tigervnc-standalone-server tigervnc-common tigervnc-xorg-extension
+sudo apt install xfce4
+sudo apt install dbus dbus-x11
 
+# Start Vnc server
+vncserver :1
+
+# Stop Vnc server
+vncserver -kill :1
+
+# Display
+export DISPLAY=:1
+
+# Vnc config
+nano ~/.vnc/vnc.conf
+$geometry = "960x540"
+
+# Xstartup 
+nano ~/.vnc/xstartup
+chmod +x ~/.vnc/xstartup
+
+# Auto start vncserver
+nano .bashrc
+vncserver :1
+
+# Auto Kill vncserver
+nano .bash_logout
+vncserver -kill :1
