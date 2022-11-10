@@ -92,7 +92,7 @@ box86 wine *.exe
 
 # In case of 64-bit Box64 + Wine64:
 
-export WINEPREFIX=/home/android/.wine64
+export WINEPREFIX=~/.wine64
 
 export WINEARCH=win64
 
