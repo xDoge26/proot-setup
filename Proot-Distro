@@ -4,6 +4,7 @@ termux-setup-storage
 
 # Install Proot distro
 pkg install proot-distro
+pkg install pulseaudio
 proot-distro install ubuntu
 proot-distro login ubuntu
 
