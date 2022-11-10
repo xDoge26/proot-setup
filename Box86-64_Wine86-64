@@ -99,3 +99,9 @@ export WINEPREFIX=~/.wine64
 export WINEARCH=win64
 
 box64 wine64 *.exe
+
+# To run wine64 without always deleting the prefix, put these in your .bashrc
+
+export PATH=~/wine/bin:~/wine64/bin:$PATH
+alias win64='WINEPREFIX=~/.wine64 WINEARCH=win64'
+
