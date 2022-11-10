@@ -37,6 +37,8 @@ rm -rf box86
 
 # Compile Box64
 
+cd
+
 git clone https://github.com/ptitSeb/box64
 
 cd box64
