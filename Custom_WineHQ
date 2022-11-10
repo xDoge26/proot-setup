@@ -23,3 +23,5 @@ export BOX86_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:/li
 
 export BOX64_PATH=~/wine64/bin/
 export BOX64_LD_LIBRARY_PATH=~/wine64/lib64/wine/x86_64-unix/:/lib/x86_64-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
+
+
