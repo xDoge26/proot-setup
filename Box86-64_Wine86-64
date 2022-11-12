@@ -54,6 +54,9 @@ cd
 rm -rf box64
 
 # Download Wine 7.0
+
+cd
+
 mkdir wine
 
 cd wine
