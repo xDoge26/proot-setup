@@ -9,6 +9,11 @@ sudo apt install tango-icon-theme
 
 sudo update-icon-caches /usr/share/icons/*
 
+# tweak tool to select theme
+sudo apt-get install gnome-tweak
+# add adwaita-dark theme variant
+sudo apt-get install gnome-themes-extra
+
 # Vnc
 nano /usr/local/bin/vncserver-start
 
