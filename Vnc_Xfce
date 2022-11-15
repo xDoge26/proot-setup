@@ -7,6 +7,11 @@ nano /usr/local/bin/vncserver-start
 
 vncserver -name remote-desktop -geometry 960x540 :1
 
+nano /usr/local/bin/vncserver-stop
+
+vncserver -kill :1
+rm -rf /tmp/.X1-lock
+rm -rf /tmp/.X11-unix/X1
 
 # Start Vnc server
 vncserver :1
