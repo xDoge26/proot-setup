@@ -3,6 +3,11 @@ sudo apt install tigervnc-standalone-server tigervnc-common tigervnc-xorg-extens
 sudo apt install xfce4
 sudo apt install dbus dbus-x11
 
+nano /usr/local/bin/vncserver-start
+
+vncserver -name remote-desktop -geometry 960x540 :1
+
+
 # Start Vnc server
 vncserver :1
 
