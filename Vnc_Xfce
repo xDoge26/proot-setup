@@ -30,6 +30,16 @@ $geometry = "960x540"
 nano ~/.vnc/xstartup
 chmod +x ~/.vnc/xstartup
 
+#!/bin/bash
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+export PULSE_SERVER=127.0.0.1
+XAUTHORITY=$HOME/.Xauthority
+export XAUTHORITY                                      >
+LANG=en_US.UTF-8
+export LANG
+echo $$ > /tmp/xsession.pid
+dbus-launch --exit-with-session startxfce4 &
+
 # Auto start vncserver
 nano .bashrc
 vncserver :1
