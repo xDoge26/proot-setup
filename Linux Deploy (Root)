@@ -1,3 +1,5 @@
+# This is MUST to fix broken terminal
+
 # Linux Deploy settings
 Debian Arm64 Stable
 
@@ -5,7 +7,7 @@ Debian Arm64 Stable
 Directory
 
 # Installation Path
-/data/Chroot
+/data/Debian
 
 # User Name
 root
@@ -21,21 +23,23 @@ Source :
 
 Target : 
 
-/mnt
+/sdcard
 
 # Tiger VNC
 sudo apt install tigervnc*
+
+# Text viewer
+sudo apt install mousepad
 
 # Gallium Hud
 GALLIUM_HUD=help glxgears
 GALLIUM_HUD=simple,fps glxgears
 
 # Ubuntu 20.04 LTS
+
 edit /data/data/ru.meefik.linuxdeploy/files/config/linux.conf
 bionic -> focal
 
 edit /data/user/0/ru.meefik.linuxdeploy/files/include/bootstrap/debian/debootstrap/scripts/
 rename bionic to focal
 
-# Text viewer
-sudo apt install mousepad
