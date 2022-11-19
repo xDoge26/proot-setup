@@ -93,6 +93,8 @@ cd
 
 # Add these lines to your /etc/profile:
 
+nano /etc/profile
+
 export BOX86_PATH=~/wine/bin/
 
 export BOX86_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
