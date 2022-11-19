@@ -1,0 +1,16 @@
+# Wine-i386
+
+cd 
+
+mkdir wine
+
+cd wine 
+
+wget https://github.com/Kron4ek/Wine-Builds/releases/download/7.0/wine-7.0-x86.tar.xz
+
+tar -xvf *.tar.xz
+
+mv ~/wine/wine-7.0-x86/* ~/wine
+
+rm -r wine-7.0-x86 
+
