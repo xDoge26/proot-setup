@@ -14,8 +14,14 @@ root
 123456
 
 # Mount
-Source : /mnt/runtime/default/emulated/0
-Target : /mnt
+
+Source : 
+
+/mnt/runtime/default/emulated/0
+
+Target : 
+
+/mnt
 
 # Tiger VNC
 sudo apt install tigervnc*
