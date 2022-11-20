@@ -10,11 +10,12 @@ wine-stable_7.0.0.0~focal-1_i386.deb
 wine-stable-amd64_7.0.0.0~focal-1_amd64.deb
 wine-stable_7.0.0.0~focal-1_amd64.deb
 
-
 # Extract wine
 dpkg-deb -x *.deb .
 mv ~/wine/opt/wine* ~/wine      #32bit wine
 mv ~/wine64/opt/wine* ~/wine64  #64bit wine
+
+rm -r wine* usr/ otp/
 
 # PC only
 export PATH=~/wine/bin/:$PATH
@@ -26,6 +27,6 @@ export BOX86_PATH=~/wine/bin/
 export BOX86_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
 
 export BOX64_PATH=~/wine64/bin/
-export BOX64_LD_LIBRARY_PATH=~/wine64/lib64/wine/x86_64-unix/:/lib/x86_64-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
+export BOX64_LD_LIBRARY_PATH=~/wine64/lib/wine/i386-unix/:~/wine64/lib64/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
 
 
