@@ -10,7 +10,7 @@ wget https://github.com/Kron4ek/Wine-Builds/releases/download/7.0/wine-7.0-x86.t
 
 tar -xvf *.tar.xz
 
-mv ~/wine/wine-7.0-x86/* ~/wine
+mv ~/wine/wine*/* ~/wine
 
 rm -r wine*
 
@@ -28,7 +28,7 @@ wget https://github.com/Kron4ek/Wine-Builds/releases/download/7.0/wine-7.0-amd64
 
 tar -xvf *.tar.xz
 
-mv ~/wine64/wine-7.0-amd64/* ~/wine64
+mv ~/wine64/wine*/* ~/wine64
 
 rm -r wine*
 
