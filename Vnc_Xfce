@@ -37,6 +37,7 @@ export DISPLAY=:1
 # Vnc config
 nano ~/.vnc/vnc.conf
 $geometry = "960x540"
+$localhost = "yes"
 
 # Xstartup 
 nano ~/.vnc/xstartup
