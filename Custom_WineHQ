@@ -10,9 +10,11 @@ wine-stable_7.0.0.0~focal-1_i386.deb
 wine-stable-amd64_7.0.0.0~focal-1_amd64.deb
 wine-stable_7.0.0.0~focal-1_amd64.deb
 
-dpkg-deb -x *.deb ~/Downloads
-mv ~/Downloads/opt/wine* ~/wine    #32bit wine
-mv ~/Downloads/opt/wine* ~/wine64  #64bit wine
+
+# Extract wine
+dpkg-deb -x *.deb .
+mv ~/wine/opt/wine* ~/wine      #32bit wine
+mv ~/wine64/opt/wine* ~/wine64  #64bit wine
 
 # PC only
 export PATH=~/wine/bin/:$PATH
