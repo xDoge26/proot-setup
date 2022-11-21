@@ -63,31 +63,39 @@ cd
 
 rm -rf box64
 
-# Download Wine 7.0
+# Wine-i386
 
-cd
+cd 
 
 mkdir wine
 
-cd wine
+cd wine 
 
-wget https://www.playonlinux.com/wine/binaries/phoenicis/upstream-linux-x86/PlayOnLinux-wine-7.0-upstream-linux-x86.tar.gz
+wget https://github.com/Kron4ek/Wine-Builds/releases/download/7.0/wine-7.0-x86.tar.xz
 
-tar -xvf *.tar.gz
+tar -xvf *.tar.xz
+
+mv ~/wine/wine*/* ~/wine
+
+rm -r wine*
 
 cd
 
-# Download Wine64 6.17
+# Wine-amd64
 
-cd
+cd 
 
 mkdir wine64
 
 cd wine64
 
-wget https://www.playonlinux.com/wine/binaries/phoenicis/upstream-linux-amd64/PlayOnLinux-wine-6.17-upstream-linux-amd64.tar.gz
+wget https://github.com/Kron4ek/Wine-Builds/releases/download/7.0/wine-7.0-amd64.tar.xz
 
-tar -xvf *.tar.gz
+tar -xvf *.tar.xz
+
+mv ~/wine64/wine*/* ~/wine64
+
+rm -r wine*
 
 cd
 
