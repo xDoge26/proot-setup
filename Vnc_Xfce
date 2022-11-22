@@ -31,6 +31,7 @@ chmod +x /usr/local/bin/vncserver-start
 nano /usr/local/bin/vncserver-stop
 
 vncserver -kill :1
+rm -rf /root/.vnc/localhost:1.pid
 rm -rf /tmp/.X1-lock
 rm -rf /tmp/.X11-unix/X1
 
