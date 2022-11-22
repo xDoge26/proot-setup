@@ -1,7 +1,6 @@
 # Install tigervnc ,xfce4
-sudo apt install tigervnc-standalone-server tigervnc-common tigervnc-xorg-extension
+sudo apt install tigervnc-standalone-server
 sudo apt install xfce4
-sudo apt install dbus dbus-x11
 
 # Theme
 
@@ -10,22 +9,30 @@ sudo apt install tango-icon-theme
 sudo update-icon-caches /usr/share/icons/*
 
 # tweak tool to select theme
+
 sudo apt-get install gnome-tweak
+
 # add adwaita-dark theme variant
+
 sudo apt-get install gnome-themes-extra
 
 # Vnc
+
 nano /usr/local/bin/vncserver-start
 
 vncserver -name remote-desktop -geometry 960x540 :1
 
 vncserver -name remote-desktop -geometry 960x540 -localhost no :1
 
+chmod +x /usr/local/bin/vncserver-start
+
 nano /usr/local/bin/vncserver-stop
 
 vncserver -kill :1
 rm -rf /tmp/.X1-lock
 rm -rf /tmp/.X11-unix/X1
+
+chmod +x /usr/local/bin/vncserver-stop
 
 # Start Vnc server
 vncserver :1
@@ -43,7 +50,6 @@ $localhost = "yes"
 
 # Xstartup 
 nano ~/.vnc/xstartup
-chmod +x ~/.vnc/xstartup
 
 #!/bin/bash
 [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
@@ -54,6 +60,8 @@ LANG=en_US.UTF-8
 export LANG
 echo $$ > /tmp/xsession.pid
 dbus-launch --exit-with-session startxfce4 &
+
+chmod +x ~/.vnc/xstartup
 
 # Auto start vncserver
 nano .bashrc
