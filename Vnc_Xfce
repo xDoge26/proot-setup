@@ -1,7 +1,11 @@
 # Install tigervnc ,xfce4
+
 sudo apt install tigervnc-standalone-server
-sudo apt install xfce4
+
+sudo apt install dbus dbus-x11
+
 sudo apt-get install sudo wget nano inetutils-tools dialog
+
 sudo apt-get install xfce4 xfce4-goodies xfce4-terminal exo-utils --no-install-recommends
 
 # Theme
@@ -37,14 +41,13 @@ rm -rf /tmp/.X11-unix/X1
 
 chmod +x /usr/local/bin/vncserver-stop
 
-# Start Vnc server
-vncserver :1
-
-# Stop Vnc server
-vncserver -kill :1
-
 # Display
+
 export DISPLAY=:1
+
+echo "export DISPLAY=":1"" >> /etc/profile
+
+source /etc/profile
 
 # Vnc config
 nano ~/.vnc/vnc.conf
@@ -69,6 +72,12 @@ xrdb $HOME/.Xresources
 startxfce4
 
 chmod +x ~/.vnc/xstartup
+
+# Start Vnc server
+vncserver :1
+
+# Stop Vnc server
+vncserver -kill :1
 
 # Auto start vncserver
 nano .bashrc
