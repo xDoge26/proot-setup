@@ -6,11 +6,27 @@ cat $PREFIX/etc/apt/sources.list &&
 
 pkg update -y && pkg install wget curl proot tar -y && 
 
+echo "./start-ubuntu20.sh" >> ~/.bashrc
+
 wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu20/ubuntu20-xfce.sh -O ubuntu20-xfce.sh && 
 
 chmod +x ubuntu20-xfce.sh && 
 
-bash ubuntu20-xfce.sh
+bash ubuntu20-xfce.sh &&
+
+echo "vncserver-start" >> ~/.bashrc &&
+
+echo "vncserver -name remote-desktop -geometry 960x540 :1" > /usr/local/bin/vncserver-start &&
+
+echo -e "vncserver -kill :1\nrm -rf /root/.vnc/localhost:1.pid\nrm -rf /tmp/.X1-lock\nrm -rf /tmp/.X11-unix/X1" > ~/.bash_logout &&
+
+cd &&
+
+wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh &&
+
+chmod +x Box86-64_Wine86-64.sh &&
+
+./Box86-64_Wine86-64.sh
 
 # Debian
 
