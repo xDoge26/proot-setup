@@ -25,3 +25,8 @@ wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Install
 chmod +x debian-xfce.sh && 
 
 bash debian-xfce.sh
+
+# Install
+
+echo "./start-ubuntu20.sh" >> ~/.bashrc
+
