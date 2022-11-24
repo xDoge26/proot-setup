@@ -36,4 +36,12 @@ echo "vncserver -name remote-desktop -geometry 960x540 :1" > /usr/local/bin/vncs
 
 echo -e "vncserver -kill :1\nrm -rf /root/.vnc/localhost:1.pid\nrm -rf /tmp/.X1-lock\nrm -rf /tmp/.X11-unix/X1" > ~/.bash_logout
 
+# Box86-64
+cd
+
+wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh
+
+chmod +x Box86-64_Wine86-64.sh
+
+./Box86-64_Wine86-64.sh
 
