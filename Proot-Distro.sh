@@ -11,7 +11,7 @@ apt-get install xfce4 xfce4-goodies xfce4-terminal exo-utils tigervnc-standalone
 apt install tango-icon-theme
 update-icon-caches /usr/share/icons/*
 
-apt clean && apt auto remove
+apt clean && apt autoremove
 
 mkdir -p ~/.vnc
 wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/xstartup -P ~/.vnc/
