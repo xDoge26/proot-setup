@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Setup Box86-64_Wine86-64
 
 sudo dpkg --add-architecture armhf
