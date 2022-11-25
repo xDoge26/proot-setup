@@ -19,7 +19,7 @@ apt update && apt upgrade -y
 nano /etc/apt/sources.list
 
 # Fix Fex-emu
-sudo apt install sudo curl software-properties-common
+sudo apt install curl software-properties-common
 
 # Sound
 
