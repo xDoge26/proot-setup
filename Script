@@ -17,11 +17,14 @@ chmod +x debian-xfce.sh &&
 bash debian-xfce.sh
 
 # Install
+pkg update && pkg update -y && termux-setup-storage && pkg install proot-distro && proot-distro install ubuntu
 
 echo "allow-external-apps = true" >> ~/.termux/termux.properties
 echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 
 echo "./start-ubuntu20.sh" >> ~/.bashrc
+
+echo "proot-distro login ubuntu" >> ~/.bashrc
 
 echo "vncserver-start" >> ~/.bashrc 
 
