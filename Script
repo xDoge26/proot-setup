@@ -10,7 +10,7 @@ chmod +x ubuntu20-xfce.sh && bash ubuntu20-xfce.sh && cd &&
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh && 
 chmod +x Box86-64_Wine86-64.sh && ./Box86-64_Wine86-64.sh
 
-# Install
+# Install proot-distro
 
 echo "allow-external-apps = true" >> ~/.termux/termux.properties
 echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
@@ -18,8 +18,8 @@ echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 pkg update && pkg upgrade -y && 
 termux-setup-storage && 
 pkg install proot-distro pulseaudio && 
-echo "debian or ubuntu ?"
-read distro
+echo "debian or ubuntu ?" &&
+read distro &&
 proot-distro install $distro &&
 echo "proot-distro login $distro" >> ~/.bashrc &&
 proot-distro login $distro
@@ -31,6 +31,8 @@ chmod +x Proot-Distro.sh &&
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh && 
 chmod +x Box86-64_Wine86-64.sh && 
 ./Box86-64_Wine86-64.sh
+
+# Stuff 
 
 echo "./start-ubuntu20.sh" >> ~/.bashrc
 
