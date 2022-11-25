@@ -12,7 +12,7 @@ termux-setup-storage &&
 pkg install proot-distro pulseaudio && 
 proot-distro install ubuntu &&
 echo "proot-distro login ubuntu" >> ~/.bashrc &&
-proot-distro login ubuntu &&
+proot-distro login ubuntu 
 
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh && 
 chmod +x Box86-64_Wine86-64.sh && 
