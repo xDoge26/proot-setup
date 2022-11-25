@@ -6,7 +6,7 @@ apt update && apt upgrade -y
 
 apt-get install sudo wget nano inetutils-tools dialog -y
 
-apt-get install xfce4 xfce4-goodies xfce4-terminal exo-utils tigervnc-standalone-server tigervnc-common dbus-x11 --no-install-recommends -y
+apt-get install xfce4 xfce4-goodies xfce4-terminal exo-utils tigervnc-standalone-server tigervnc-common tigervnc-tools dbus-x11 --no-install-recommends -y
 
 apt install tango-icon-theme
 update-icon-caches /usr/share/icons/*
