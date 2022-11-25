@@ -2,20 +2,6 @@
 
 echo "deb https://termux.mentality.rip/termux-main stable main" > $PREFIX/etc/apt/sources.list && cat $PREFIX/etc/apt/sources.list && pkg update -y && pkg install wget curl proot tar pulseaudio -y && echo -e "pulseaudio --start --exit-idle-time=-1\npacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" >> ~/.bashrc && echo "./start-ubuntu20.sh" >> ~/.bashrc && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Ubuntu20/ubuntu20-xfce.sh -O ubuntu20-xfce.sh && chmod +x ubuntu20-xfce.sh && bash ubuntu20-xfce.sh && cd && wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh && chmod +x Box86-64_Wine86-64.sh && ./Box86-64_Wine86-64.sh
 
-# Debian
-
-echo "deb https://termux.mentality.rip/termux-main stable main" > $PREFIX/etc/apt/sources.list && 
-
-cat $PREFIX/etc/apt/sources.list && 
-
-pkg update -y && pkg install wget curl proot tar -y && 
-
-wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Debian/debian-xfce.sh -O debian-xfce.sh && 
-
-chmod +x debian-xfce.sh && 
-
-bash debian-xfce.sh
-
 # Install
 pkg update && pkg update -y && termux-setup-storage && pkg install proot-distro && proot-distro install ubuntu
 
