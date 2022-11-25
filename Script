@@ -18,15 +18,19 @@ echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 pkg update && pkg upgrade -y && 
 termux-setup-storage && 
 pkg install proot-distro pulseaudio && 
-proot-distro install ubuntu &&
-echo "proot-distro login ubuntu" >> ~/.bashrc &&
-proot-distro login ubuntu 
+echo "debian or ubuntu ?"
+read distro
+proot-distro install $distro &&
+echo "proot-distro login $distro" >> ~/.bashrc &&
+proot-distro login $distro
+
+wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Proot-Distro.sh &&
+chmod +x Proot-Distro.sh &&
+./Proot-Distro.sh
 
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh && 
 chmod +x Box86-64_Wine86-64.sh && 
 ./Box86-64_Wine86-64.sh
-
-
 
 echo "./start-ubuntu20.sh" >> ~/.bashrc
 
