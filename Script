@@ -18,8 +18,7 @@ echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 pkg update && pkg upgrade -y && 
 termux-setup-storage && 
 pkg install proot-distro pulseaudio && 
-echo "debian or ubuntu ?" &&
-read distro &&
+read -p "debian or ubuntu ?" distro &&
 proot-distro install $distro &&
 echo "proot-distro login $distro" >> ~/.bashrc &&
 proot-distro login $distro
