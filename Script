@@ -18,6 +18,9 @@ bash debian-xfce.sh
 
 # Install
 
+echo "allow-external-apps = true" >> ~/.termux/termux.properties
+echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
+
 echo "./start-ubuntu20.sh" >> ~/.bashrc
 
 echo "vncserver-start" >> ~/.bashrc 
