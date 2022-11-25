@@ -28,7 +28,7 @@ sudo apt-get install libasound2:arm64 libc6:arm64 libglib2.0-0:arm64 libgphoto2-
 
 # Clean
 
-sudo apt clean && sudo apt autoremove
+sudo apt clean && sudo apt autoremove -y
 
 # Install Box86
 
