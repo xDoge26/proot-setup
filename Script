@@ -21,6 +21,8 @@ pkg install proot-distro pulseaudio &&
 read -p "debian or ubuntu ?" distro &&
 proot-distro install $distro &&
 echo "proot-distro login $distro" >> ~/.bashrc &&
+cd /data/data/com.termux/files/usr/var/lib/proot-distro/dlcache &&
+rm * &&
 proot-distro login $distro
 
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Proot-Distro.sh &&
