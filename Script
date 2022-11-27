@@ -9,7 +9,7 @@ termux-setup-storage &&
 pkg install proot-distro pulseaudio && 
 proot-distro install ubuntu &&
 echo "pulseaudio --start --exit-idle-time=-1
-pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" >> ~/.bashrc
+pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" >> ~/.bashrc &&
 echo "proot-distro login ubuntu --shared-tmp" >> ~/.bashrc &&
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/dlcache &&
 rm * &&
