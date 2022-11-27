@@ -4,9 +4,9 @@ sudo apt install tigervnc-standalone-server
 
 sudo apt install dbus dbus-x11
 
-sudo apt-get install sudo wget nano inetutils-tools dialog
+sudo apt-get install sudo nano wget curl 
 
-sudo apt-get install xfce4 xfce4-goodies xfce4-terminal exo-utils --no-install-recommends
+sudo apt-get install xfce4 xfce4-terminal --no-install-recommends
 
 # Theme
 
