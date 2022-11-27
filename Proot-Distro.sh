@@ -4,16 +4,16 @@ dpkg --add-architecture armhf
 
 apt update && apt upgrade -y
 
-apt-get install sudo wget nano inetutils-tools dialog -y
+apt-get install sudo wget nano inetutils-tools dialog exo-utils tigervnc-standalone-server dbus-x11 -y
 
-apt-get install xfce4 xfce4-goodies xfce4-terminal exo-utils tigervnc-standalone-server tigervnc-common tigervnc-tools dbus-x11 --no-install-recommends -y
+apt-get install xfce4 xfce4-terminal --no-install-recommends -y
 
 apt install tango-icon-theme
 update-icon-caches /usr/share/icons/*
 
 apt clean && apt autoremove -y
 
-mkdir -p ~/.vnc
+mkdir ~/.vnc
 wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/xstartup -P ~/.vnc/
 wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-start -P /usr/local/bin/
 wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-stop -P /usr/local/bin/
