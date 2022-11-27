@@ -5,7 +5,7 @@ dpkg --add-architecture armhf
 apt update && apt upgrade -y
 
 apt-get install sudo wget nano tigervnc-standalone-server dbus-x11 -y
-inetutils-tools exo-utils
+
 apt-get install xfce4 xfce4-terminal --no-install-recommends -y
 
 apt install tango-icon-theme
