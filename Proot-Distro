@@ -21,6 +21,9 @@ nano /etc/apt/sources.list
 # Fix Fex-emu
 sudo apt install curl software-properties-common
 
+# Font
+mkdir ~/.fonts # then copy paste font you want
+
 # Sound
 
 - In Termux
