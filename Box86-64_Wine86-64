@@ -58,37 +58,19 @@ cd
 
 rm -rf box64
 
-# Wine-i386
+# Wine-amd64
 
 cd 
 
 mkdir wine
 
-cd wine 
-
-wget https://github.com/Kron4ek/Wine-Builds/releases/download/7.21/wine-7.21-x86.tar.xz
-
-tar -xvf *.tar.xz
-
-mv ~/wine/wine*/* ~/wine
-
-rm -r wine*
-
-cd
-
-# Wine-amd64
-
-cd 
-
-mkdir wine64
-
-cd wine64
+cd wine
 
 wget https://github.com/Kron4ek/Wine-Builds/releases/download/7.21/wine-7.21-amd64.tar.xz
 
 tar -xvf *.tar.xz
 
-mv ~/wine64/wine*/* ~/wine64
+mv ~/wine/wine*/* ~/wine
 
 rm -r wine*
 
@@ -104,7 +86,11 @@ export BOX86_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:/li
 
 export BOX64_PATH=~/wine64/bin/
 
-export BOX64_LD_LIBRARY_PATH=~/wine64/lib/wine/i386-unix/:~/wine64/lib/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
+export BOX64_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:~/wine/lib/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
+
+
+
+# Outdated 
 
 # If i want to execute 32-bit Box86 + Wine, the complete instructions are as follows:
 
