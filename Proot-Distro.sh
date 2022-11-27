@@ -4,7 +4,7 @@ dpkg --add-architecture armhf
 
 apt update && apt upgrade -y
 
-apt-get install sudo wget nano inetutils-tools dialog exo-utils tigervnc-standalone-server dbus-x11 -y
+apt-get install sudo wget nano inetutils-tools exo-utils tigervnc-standalone-server dbus-x11 -y
 
 apt-get install xfce4 xfce4-terminal --no-install-recommends -y
 
