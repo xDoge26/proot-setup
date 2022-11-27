@@ -8,10 +8,10 @@ pkg update && pkg upgrade -y &&
 termux-setup-storage && 
 pkg install proot-distro pulseaudio && 
 proot-distro install ubuntu &&
-echo "proot-distro login ubuntu" >> ~/.bashrc &&
+echo "proot-distro login ubuntu --shared-tmp" >> ~/.bashrc &&
 cd /data/data/com.termux/files/usr/var/lib/proot-distro/dlcache &&
 rm * &&
-proot-distro login ubuntu
+proot-distro login ubuntu --shared-tmp
 
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Proot-Distro.sh &&
 chmod +x Proot-Distro.sh &&
