@@ -22,6 +22,8 @@ chmod +x /usr/local/bin/vncserver-stop
 chmod +x ~/.vnc/xstartup
 
 echo "export DISPLAY=":1"" >> /etc/profile
+echo "export PULSE_SERVER=127.0.0.1" >> /etc/profile
+
 source /etc/profile
 
 echo "vncserver -name remote-desktop -geometry 960x540 :1" > /usr/local/bin/vncserver-start
