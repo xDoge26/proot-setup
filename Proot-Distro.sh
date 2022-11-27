@@ -4,7 +4,7 @@ dpkg --add-architecture armhf
 
 apt update && apt upgrade -y
 
-apt-get install sudo wget nano xfe tigervnc-standalone-server -y
+apt-get install sudo wget xfe dbus-x11 tigervnc-standalone-server -y
 
 apt-get install xfce4 xfce4-terminal --no-install-recommends -y
 
