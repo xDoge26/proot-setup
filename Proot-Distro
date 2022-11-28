@@ -38,3 +38,18 @@ android ALL=(ALL:ALL) ALL
 
 # Auto login to android user
 proot-distro login ubuntu --user android --shared-tmp
+
+# Gstreamer
+sudo apt install gstreamer1.0-libav:armhf
+sudo apt install gstreamer1.0-plugins-bad:armhf
+sudo apt install gstreamer1.0-plugins-base:armhf
+sudo apt install gstreamer1.0-plugins-good:armhf
+sudo apt install gstreamer1.0-plugins-ugly:armhf
+
+sudo apt install gstreamer1.0-libav
+sudo apt install gstreamer1.0-plugins-bad
+sudo apt install gstreamer1.0-plugins-base
+sudo apt install gstreamer1.0-plugins-good
+sudo apt install gstreamer1.0-plugins-ugly
+
+
