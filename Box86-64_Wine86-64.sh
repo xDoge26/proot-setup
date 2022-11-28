@@ -12,7 +12,7 @@ sudo apt install gpg -y
 
 # OpenGL
 
-sudo apt install libgl1:armhf libgl1
+sudo apt install libgl1:armhf libgl1 -y
 
 # sudo apt install build-essential git make cmake wget gcc-arm-linux-gnueabihf libc6:armhf 
 
