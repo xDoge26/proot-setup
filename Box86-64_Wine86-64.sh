@@ -59,7 +59,7 @@ mkdir wine
 
 cd wine
 
-wget https://github.com/Kron4ek/Wine-Builds/releases/download/7.21/wine-7.21-amd64.tar.xz
+wget https://github.com/Kron4ek/Wine-Builds/releases/download/7.22/wine-7.22-amd64.tar.xz
 
 tar -xvf *.tar.xz
 
