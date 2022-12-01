@@ -27,7 +27,8 @@ echo "export PULSE_SERVER=127.0.0.1" >> /etc/profile
 
 source /etc/profile
 
-echo "vncserver -name remote-desktop -geometry 960x540 :1" > /usr/local/bin/vncserver-start
+# echo "vncserver -name remote-desktop -geometry 960x540 :1" > /usr/local/bin/vncserver-start
+echo "vncserver -name remote-desktop -geometry 960x540 -localhost no :1" > /usr/local/bin/vncserver-start
 
 echo -e "vncserver -kill :1\nrm -rf /root/.vnc/localhost:1.pid\nrm -rf /tmp/.X1-lock\nrm -rf /tmp/.X11-unix/X1" > ~/.bash_logout
 
