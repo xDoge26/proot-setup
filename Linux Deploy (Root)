@@ -33,6 +33,9 @@ deb-src http://deb.debian.org/debian/ unstable main contrib non-free
 # Tiger VNC
 sudo apt install tigervnc*
 
+# xz utils
+apt install xz-utils
+
 # Text viewer
 sudo apt install mousepad
 
@@ -40,11 +43,4 @@ sudo apt install mousepad
 GALLIUM_HUD=help glxgears
 GALLIUM_HUD=simple,fps glxgears
 
-# Ubuntu 20.04 LTS
-
-edit /data/data/ru.meefik.linuxdeploy/files/config/linux.conf
-bionic -> focal
-
-edit /data/user/0/ru.meefik.linuxdeploy/files/include/bootstrap/debian/debootstrap/scripts/
-rename bionic to focal
 
