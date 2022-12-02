@@ -3,6 +3,9 @@
 # Linux Deploy settings
 Debian Arm64 Stable
 
+# Source
+http://deb.debian.org/debian/
+
 # Installation type
 Directory
 
