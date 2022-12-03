@@ -35,7 +35,6 @@ umount ./chroot/dev
 umount ./chroot/sys
 umount ./chroot/proc
 umount ./chroot/sdcard
-umount ./chroot/sdcard
 
 chmod +x start.sh
 
