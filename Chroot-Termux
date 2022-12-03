@@ -6,7 +6,10 @@ cd chroot
 
 sudo wget https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-arm64.tar.gz
 
-sudo tar xvpf ubuntu-base-22.04-base-arm64.tar.gz 
+sudo tar xvpf ubuntu-base-22.04-base-arm64.tar.gz --numeric-owner
+
+mkdir sdcard
+
 
 sudo mkdir sdcard
 
