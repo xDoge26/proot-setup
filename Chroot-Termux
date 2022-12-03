@@ -8,7 +8,7 @@ wget https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-2
 
 sudo tar xvpf ubuntu-base-22.04-base-arm64.tar.gz 
 
-mkdir sdcard
+sudo mkdir sdcard
 
 #!/data/data/com.termux/files/usr/bin/sh
 
