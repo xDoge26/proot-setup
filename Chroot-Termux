@@ -1,10 +1,12 @@
 pkg update
 pkg install tsu pulseaudio
 
+mkdir chroot
+cd chroot
+
 wget https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-arm64.tar.gz
 
-
-tar xvpf ubuntu-base-22.04-base-arm64.tar.gz --numeric-owner
+sudo tar xvpf ubuntu-base-22.04-base-arm64.tar.gz 
 
 mkdir sdcard
 
@@ -17,6 +19,7 @@ mount --bind /dev ./chroot/dev
 mount --bind /sys ./chroot/sys
 mount --bind /proc ./chroot/proc
 mount --bind /dev/pts ./chroot/dev/pts
+mount --bind /sdcard ./chroot/sdcard
 
 # disable termux-exec
 unset LD_PRELOAD
@@ -27,40 +30,12 @@ export TMPDIR=/tmp
 
 chroot ./chroot /bin/su - root
 
-
-
-busybox mount --bind /dev /data/local/tmp/chrootubuntu/dev
-
-busybox mount --bind /sys /data/local/tmp/chrootubuntu/sys
-
-busybox mount --bind /proc /data/local/tmp/chrootubuntu/proc
-
-busybox mount -t devpts devpts /data/local/tmp/chrootubuntu/dev/pts
-
-
-
-# 將手機內部儲存空間掛載到chroot的/sdcard目錄
-
-busybox mount --bind /sdcard /data/local/tmp/chrootubuntu/sdcard
-
-
-
-# 進入chroot
-
-busybox chroot /data/local/tmp/chrootubuntu /bin/su - root
-
-
-# 退出chroot後自動取消掛載
-
-busybox umount /data/local/tmp/chrootubuntu/dev/pts
-
-busybox umount /data/local/tmp/chrootubuntu/dev
-
-busybox umount /data/local/tmp/chrootubuntu/proc
-
-busybox umount /data/local/tmp/chrootubuntu/sys
-
-busybox umount /data/local/tmp/chrootubuntu/sdcard
+umount ./chroot/dev/pts
+umount ./chroot/dev
+umount ./chroot/sys
+umount ./chroot/proc
+umount ./chroot/sdcard
+umount ./chroot/sdcard
 
 chmod +x start.sh
 
