@@ -1,0 +1,62 @@
+pkg update
+pkg install tsu pulseaudio
+
+wget https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-arm64.tar.gz
+
+
+tar xvpf ubuntu-base-22.04-base-arm64.tar.gz --numeric-owner
+
+mkdir sdcard
+
+busybox mount --bind /dev /data/local/tmp/chrootubuntu/dev
+
+busybox mount --bind /sys /data/local/tmp/chrootubuntu/sys
+
+busybox mount --bind /proc /data/local/tmp/chrootubuntu/proc
+
+busybox mount -t devpts devpts /data/local/tmp/chrootubuntu/dev/pts
+
+
+
+# 將手機內部儲存空間掛載到chroot的/sdcard目錄
+
+busybox mount --bind /sdcard /data/local/tmp/chrootubuntu/sdcard
+
+
+
+# 進入chroot
+
+busybox chroot /data/local/tmp/chrootubuntu /bin/su - root
+
+
+# 退出chroot後自動取消掛載
+
+busybox umount /data/local/tmp/chrootubuntu/dev/pts
+
+busybox umount /data/local/tmp/chrootubuntu/dev
+
+busybox umount /data/local/tmp/chrootubuntu/proc
+
+busybox umount /data/local/tmp/chrootubuntu/sys
+
+busybox umount /data/local/tmp/chrootubuntu/sdcard
+
+chmod +x start.sh
+
+# 使用Google的DNS
+
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+
+echo "127.0.0.1 localhost" > /etc/hosts
+
+# Fix 
+
+groupadd -g 3003 aid_inet
+
+groupadd -g 3004 aid_net_raw
+
+groupadd -g 1003 aid_graphics
+
+usermod -g 3003 -G 3003,3004 -a _apt
+
+usermod -G 3003 -a root
