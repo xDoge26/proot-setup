@@ -10,6 +10,8 @@ sudo tar xvpf ubuntu-base-22.04-base-arm64.tar.gz
 
 sudo mkdir sdcard
 
+# start.sh
+
 #!/data/data/com.termux/files/usr/bin/sh
 
 # fix /data mount options
@@ -30,13 +32,17 @@ export TMPDIR=/tmp
 
 chroot ./chroot /bin/su - root
 
+# stop.sh
+
+#!/data/data/com.termux/files/usr/bin/sh
+
 umount ./chroot/dev/pts
 umount ./chroot/dev
 umount ./chroot/sys
 umount ./chroot/proc
 umount ./chroot/sdcard
 
-chmod +x start.sh
+chmod +x *.sh
 
 # 使用Google的DNS
 
