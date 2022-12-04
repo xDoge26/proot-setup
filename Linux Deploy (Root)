@@ -34,7 +34,7 @@ deb http://deb.debian.org/debian/ unstable main contrib non-free
 deb-src http://deb.debian.org/debian/ unstable main contrib non-free
 
 # Tiger VNC
-sudo apt install tigervnc*
+apt install tigervnc-standalone-server
 
 # xz utils
 apt install xz-utils
