@@ -14,12 +14,6 @@ sudo apt install gpg -y
 
 sudo apt install libgl1:armhf libgl1 -y
 
-# sudo apt install build-essential git make cmake wget gcc-arm-linux-gnueabihf libc6:armhf 
-
-# sudo apt install mesa*:armhf zenity*:armhf libasound*:armhf libstdc++6:armhf #box86_dependencies
-
-# sudo apt install mesa* zenity* #box64_dependencies
-
 # - these packages are needed for running box86/wine-i386 on a 64-bit RPiOS via multiarch
 	
 sudo dpkg --add-architecture armhf && sudo apt-get update # enable multi-arch
