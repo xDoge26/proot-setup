@@ -15,6 +15,7 @@ cd /data/data/com.termux/files/usr/var/lib/proot-distro/dlcache &&
 rm * &&
 proot-distro login ubuntu --shared-tmp
 
+# xfce + box86_64
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Proot-Distro.sh &&
 chmod +x Proot-Distro.sh &&
 ./Proot-Distro.sh
