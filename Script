@@ -6,7 +6,7 @@ echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 
 pkg update && pkg upgrade -y && 
 termux-setup-storage && 
-pkg install proot-distro pulseaudio && 
+pkg install nano wget proot-distro pulseaudio && 
 proot-distro install ubuntu &&
 echo "pulseaudio --start --exit-idle-time=-1
 pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" >> ~/.bashrc &&
