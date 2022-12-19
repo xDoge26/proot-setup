@@ -4,12 +4,12 @@ dpkg --add-architecture armhf
 
 apt update && apt upgrade -y
 
-apt-get install sudo nano dbus-x11 tigervnc-standalone-server -y
+apt-get install sudo nano wget xfe dbus-x11 tigervnc-standalone-server -y
 
 apt-get install xfce4 xfce4-terminal --no-install-recommends -y
 
-apt install adwaita-icon-theme-full
-apt install tango-icon-theme
+apt install adwaita-icon-theme-full -y
+apt install tango-icon-theme -y
 update-icon-caches /usr/share/icons/*
 
 apt clean && apt autoremove -y
