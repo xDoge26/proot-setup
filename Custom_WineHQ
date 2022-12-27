@@ -21,13 +21,6 @@ rm -r wine* usr/ otp/
 export PATH=~/wine/bin/:$PATH
 export LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:~/wine/lib64/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu/
 
-# Proot-Distro
-
-export BOX86_PATH=~/wine/bin/
-export BOX86_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
-export BOX64_PATH=~/wine/bin/
-export BOX64_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:~/wine/lib/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
-
 # i386 
 
 libasound2:armhf libc6:armhf libglib2.0-0:armhf libgphoto2-6:armhf libgphoto2-port12:armhf libgstreamer-plugins-base1.0-0:armhf libgstreamer1.0-0:armhf libpcap0.8:armhf libpulse0:armhf libsane1:armhf libudev1:armhf libusb-1.0-0:armhf libx11-6:armhf libxext6:armhf ocl-icd-libopencl1:armhf libasound2-plugins:armhf libncurses6:armhf
