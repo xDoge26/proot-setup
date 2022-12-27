@@ -16,7 +16,7 @@ sudo apt install libgl1:armhf libgl1 -y
 
 # - these packages are needed for running box86/wine-i386 on a 64-bit RPiOS via multiarch
 	
-sudo dpkg --add-architecture armhf && sudo apt-get update # enable multi-arch
+sudo dpkg --add-architecture armhf && sudo apt-get update 
 
 sudo apt install libasound2:armhf libc6:armhf libglib2.0-0:armhf libgphoto2-6:armhf libgphoto2-port12:armhf libgstreamer-plugins-base1.0-0:armhf libgstreamer1.0-0:armhf libpcap0.8:armhf libpulse0:armhf libsane1:armhf libudev1:armhf libusb-1.0-0:armhf libx11-6:armhf libxext6:armhf ocl-icd-libopencl1:armhf libasound2-plugins:armhf libncurses6:armhf libcap2-bin:armhf libcups2:armhf libdbus-1-3:armhf libfontconfig1:armhf libfreetype6:armhf libglu1-mesa:armhf libgnutls30:armhf libgssapi-krb5-2:armhf libkrb5-3:armhf libodbc1:armhf libosmesa6:armhf libsdl2-2.0-0:armhf libv4l-0:armhf libxcomposite1:armhf libxcursor1:armhf libxfixes3:armhf libxi6:armhf libxinerama1:armhf libxrandr2:armhf libxrender1:armhf libxxf86vm1:armhf -y
 
@@ -63,12 +63,11 @@ rm -r wine*
 
 cd
 
-# Add these lines to your /etc/profile:
-
-echo "export BOX86_PATH=~/wine/bin/
-export BOX86_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:/lib/i386-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/
-export BOX64_PATH=~/wine/bin/
-export BOX64_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:~/wine/lib/wine/x86_64-unix/:/lib/i386-linux-gnu/:/lib/x86_64-linux-gnu/:/lib/arm-linux-gnueabihf/:/lib/aarch64-linux-gnu/" >> /etc/profile
-
-source /etc/profile
+# Install symlinks
+sudo ln -s ~/wine/bin/wine /usr/local/bin/wine
+sudo ln -s ~/wine/bin/wine64 /usr/local/bin/wine64
+sudo ln -s ~/wine/bin/wineboot /usr/local/bin/wineboot
+sudo ln -s ~/wine/bin/winecfg /usr/local/bin/winecfg
+sudo ln -s ~/wine/bin/wineserver /usr/local/bin/wineserver
+sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64 /usr/local/bin/wineboot /usr/local/bin/winecfg /usr/local/bin/wineserver
 
