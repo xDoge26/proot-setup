@@ -11,6 +11,7 @@ sudo tar xvpf ubuntu-base-22.04-base-arm64.tar.gz
 sudo mkdir sdcard
 
 # start.sh
+sudo nano start.sh
 
 #!/data/data/com.termux/files/usr/bin/sh
 
@@ -33,6 +34,7 @@ export TMPDIR=/tmp
 chroot ./chroot /bin/su - root
 
 # stop.sh
+sudo nano stop.sh
 
 #!/data/data/com.termux/files/usr/bin/sh
 
@@ -52,22 +54,11 @@ echo "127.0.0.1 localhost" > /etc/hosts
 
 # Fix 
 
-groupadd -g 3003 aid_inet
-
-groupadd -g 3004 aid_net_raw
-
-groupadd -g 1003 aid_graphics
-
-usermod -g 3003 -G 3003,3004 -a _apt
-
-usermod -G 3003 -a root
-
-
 groupadd -g 3001 aid_bt
 groupadd -g 3002 aid_bt_net
 groupadd -g 3003 aid_inet
 groupadd -g 3004 aid_net_raw
 groupadd -g 3005 aid_admin
 
-usermod -a -G aid_bt,aid_bt_net,aid_inet,aid_net_raw,aid_admin root
 usermod -g 3003 _apt
+usermod -a -G aid_bt,aid_bt_net,aid_inet,aid_net_raw,aid_admin root
