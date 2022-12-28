@@ -10,6 +10,7 @@ apt-get install xfce4 xfce4-terminal --no-install-recommends -y
 
 apt install adwaita-icon-theme-full -y
 apt install tango-icon-theme -y
+apt install gnome-themes-extra -y
 update-icon-caches /usr/share/icons/*
 
 apt clean && apt autoremove -y
