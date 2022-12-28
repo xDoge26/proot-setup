@@ -8,10 +8,6 @@ sudo apt update && sudo apt upgrade
 
 sudo apt install build-essential git wget make cmake gcc-arm-linux-gnueabihf libc6:armhf 
 
-# sudo apt install mesa*:armhf zenity*:armhf libasound*:armhf libstdc++6:armhf #box86_dependencies
-
-# sudo apt install mesa* zenity* #box64_dependencies
-
 # - these packages are needed for running box86/wine-i386 on a 64-bit RPiOS via multiarch
 	
 sudo dpkg --add-architecture armhf && sudo apt-get update # enable multi-arch
@@ -106,18 +102,6 @@ export BOX64_LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:~/wine/lib/wine/x86_64-u
 
 
 # Outdated 
-
-# If i want to execute 32-bit Box86 + Wine, the complete instructions are as follows:
-
-box86 wine *.exe
-
-# In case of 64-bit Box64 + Wine64:
-
-export WINEPREFIX=~/.wine64
-
-export WINEARCH=win64
-
-box64 wine64 *.exe
 
 # To run wine64 without always deleting the prefix, put these in your .bashrc
 
