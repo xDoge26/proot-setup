@@ -1,7 +1,5 @@
 #!/bin/bash
 
-dpkg --add-architecture armhf
-
 apt update && apt upgrade -y
 
 apt-get install sudo nano wget xfe dbus-x11 tigervnc-standalone-server -y
