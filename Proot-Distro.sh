@@ -33,7 +33,7 @@ export HOME=/root
 vncserver -kill :1
 rm -rf /root/.vnc/localhost:1.pid
 rm -rf /tmp/.X1-lock
-rm -rf /tmp/.X11-unix/X1' > /usr/local/bin/vncserver-stop
+rm -rf /tmp/.X11-unix/X1' > /usr/local/bin/vncserver-stop ~/.bash_logout
 
 chmod +x /usr/local/bin/vncserver-start
 chmod +x /usr/local/bin/vncserver-stop
@@ -46,8 +46,7 @@ source /etc/profile
 
 # echo "vncserver -name remote-desktop -geometry 960x540 :1" > /usr/local/bin/vncserver-start
 # echo "vncserver -name remote-desktop -geometry 960x540 -localhost no :1" > /usr/local/bin/vncserver-start
-
-echo -e "vncserver -kill :1\nrm -rf /root/.vnc/localhost:1.pid\nrm -rf /tmp/.X1-lock\nrm -rf /tmp/.X11-unix/X1" > ~/.bash_logout
+# echo -e "vncserver -kill :1\nrm -rf /root/.vnc/localhost:1.pid\nrm -rf /tmp/.X1-lock\nrm -rf /tmp/.X11-unix/X1" > ~/.bash_logout
 
 vncpasswd
 vncserver-start
