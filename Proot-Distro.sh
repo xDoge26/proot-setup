@@ -14,7 +14,13 @@ update-icon-caches /usr/share/icons/*
 apt clean && apt autoremove -y
 
 mkdir ~/.vnc
+
 # wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/xstartup -P ~/.vnc/
+
+echo '#!/bin/bash
+xrdb $HOME/.Xresources
+startxfce4' > ~/.vnc/xstartup
+
 
 echo "#!/bin/bash
 xrdb $HOME/.Xresources
