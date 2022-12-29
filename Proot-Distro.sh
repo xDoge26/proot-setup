@@ -18,7 +18,7 @@ mkdir ~/.vnc
 
 echo "#!/bin/bash
 xrdb $HOME/.Xresources
-startxfce4" > ~/.vnc/xstarup
+startxfce4" > ~/.vnc/xstartup
 
 
 # wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-start -P /usr/local/bin/
