@@ -21,19 +21,12 @@ echo '#!/bin/bash
 xrdb $HOME/.Xresources
 startxfce4' > ~/.vnc/xstartup
 
-
-echo "#!/bin/bash
-xrdb $HOME/.Xresources
-startxfce4" > ~/.vnc/xstartup
-
-
 # wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-start -P /usr/local/bin/
 
 echo "vncserver -name remote-desktop -geometry 960x540 -localhost no :1" > /usr/local/bin/vncserver-start
 
-
 # wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-stop -P /usr/local/bin/
-echo "#!/usr/bin/env bash
+echo '#!/usr/bin/env bash
 
 export USER=root
 export HOME=/root
@@ -41,7 +34,7 @@ export HOME=/root
 vncserver -kill :1
 rm -rf /root/.vnc/localhost:1.pid
 rm -rf /tmp/.X1-lock
-rm -rf /tmp/.X11-unix/X1" > /usr/local/bin/vncserver-stop
+rm -rf /tmp/.X11-unix/X1' > /usr/local/bin/vncserver-stop
 
 chmod +x /usr/local/bin/vncserver-start
 chmod +x /usr/local/bin/vncserver-stop
