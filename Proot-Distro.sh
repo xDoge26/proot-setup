@@ -27,8 +27,7 @@ echo "vncserver -name remote-desktop -geometry 960x540 -localhost no :1" > /usr/
 
 
 # wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-stop -P /usr/local/bin/
-echo "
-#!/usr/bin/env bash
+echo "#!/usr/bin/env bash
 
 export USER=root
 export HOME=/root
