@@ -19,7 +19,8 @@ apt update && apt upgrade -y
 nano /etc/apt/sources.list
 
 # Font
-mkdir ~/.fonts # then copy paste font you want
+mkdir ~/.fonts 
+cp /sdcard/Download/*.ttf ~/.fonts
 
 # Sound
 
