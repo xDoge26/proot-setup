@@ -3,10 +3,42 @@ curl --silent https://raw.githubusercontent.com/FEX-Emu/FEX/main/Scripts/Install
 python3 /tmp/InstallFEX.py && 
 rm /tmp/InstallFEX.py
 
+# Fix Fex-emu
+sudo apt install curl software-properties-common
+
+# Setup RootFS
+
+cd ~/Downloads
+wget https://raw.githubusercontent.com/FEX-Emu/RootFS/main/unbreak_chroot.sh
+wget https://raw.githubusercontent.com/FEX-Emu/RootFS/main/break_chroot.sh
+
+# Enter Chroot
+./unbreak_chroot.sh
+
 # Fix Chroot
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "127.0.0.1 localhost" > /etc/hosts
 
-# Fix Fex-emu
-sudo apt install curl software-properties-common
+ # Needed
+dpkg --add-architecture i386 
+apt update && apt upgrade -y
+apt install pulseaudio libgl1:i386 libgl1 libvulkan1:i386 libvulkan1 libgl1-mesa-glx:i386 libgl1-mesa-glx
+
+# Wine 
+apt install nano wget
+
+# Exit Chroot
+exit
+
+# Making the squashfs image
+mksquashfs . Ubuntu-22.04.sqsh -comp zstd
+
+# Rootfs location
+mkdir ~/.fex-emu/RootFS/
+
+# Extracting the squashfs
+unsquashfs -f -d Ubuntu/ Ubuntu-22.04.sqsh
+
+FEXConfig
+
 
