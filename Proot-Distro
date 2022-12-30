@@ -31,6 +31,11 @@ pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymou
 - In proot
 export PULSE_SERVER=127.0.0.1
 
+# Vnc config
+nano ~/.vnc/vnc.conf
+$geometry = "960x540"
+$localhost = "yes"
+
 # Add user (Optional)
 apt install sudo
 adduser android
