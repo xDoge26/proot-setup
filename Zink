@@ -45,12 +45,13 @@ With tmp set up that way, even prebuilt mesa packages work. If you want to compi
 
 Launch applications inside the proot with GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=3.3 yourapplication
 
+# Auto virpipe
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=3.3
-
-Changes to mesa are based on based on https://github.com/Grima04/mesa-turnip-kgsl/commit/7a82edc and https://github.com/Grima04/mesa-turnip-kgsl/commit/f5a92ad
-
-@ /u/avishek313 /u/Drishal
+ 
+# Fix bashrc
+cd /data/data/com.termux/files/home
+nano .bashrc
 
 Also, all of my content inside this page is under this license, basically do whatever you want. This license does not apply to content that's not mine (e.g. what the changes to Mesa applied with sed are based on).
 
