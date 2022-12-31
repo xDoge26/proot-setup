@@ -1,0 +1,2 @@
+pkg install android-tools
+adb pair localhost:Yourport Pairing_code
