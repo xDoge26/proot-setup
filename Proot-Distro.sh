@@ -39,11 +39,6 @@ chmod +x /usr/local/bin/vnc-start
 chmod +x /usr/local/bin/vnc-stop
 chmod +x ~/.vnc/xstartup
 
-echo 'vncserver -kill :1
-rm -rf /root/.vnc/localhost:1.pid
-rm -rf /tmp/.X1-lock
-rm -rf /tmp/.X11-unix/X1' > ~/.bash_logout
-
 echo "export DISPLAY=":1"" >> /etc/profile
 echo "export PULSE_SERVER=127.0.0.1" >> /etc/profile
 
