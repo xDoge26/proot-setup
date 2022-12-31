@@ -45,6 +45,8 @@ With tmp set up that way, even prebuilt mesa packages work. If you want to compi
 
 Launch applications inside the proot with GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=3.3 yourapplication
 
+export GALLIUM_DRIVER=virpipe
+export MESA_GL_VERSION_OVERRIDE=3.3
 
 Changes to mesa are based on based on https://github.com/Grima04/mesa-turnip-kgsl/commit/7a82edc and https://github.com/Grima04/mesa-turnip-kgsl/commit/f5a92ad
 
