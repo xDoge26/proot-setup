@@ -46,7 +46,9 @@ Launch applications inside the proot with GALLIUM_DRIVER=virpipe MESA_GL_VERSION
 # Auto virpipe
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=3.3
- 
+
+alias zink='GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=3.3'
+
 # Fix bashrc
 cd /data/data/com.termux/files/home
 nano .bashrc
