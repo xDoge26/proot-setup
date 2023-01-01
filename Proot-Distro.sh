@@ -15,17 +15,11 @@ apt clean && apt autoremove -y
 
 mkdir ~/.vnc
 
-# wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/xstartup -P ~/.vnc/
-
 echo '#!/bin/bash
 xrdb $HOME/.Xresources
 startxfce4' > ~/.vnc/xstartup
 
-# wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-start -P /usr/local/bin/
-
 echo 'vncserver -name remote-desktop -geometry 960x540 -localhost no :1' > /usr/local/bin/vnc-start
-
-# wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/vncserver-stop -P /usr/local/bin/
 
 echo '#!/usr/bin/env bash
 export USER=root
@@ -35,9 +29,9 @@ rm -rf /root/.vnc/localhost:1.pid
 rm -rf /tmp/.X1-lock
 rm -rf /tmp/.X11-unix/X1' > /usr/local/bin/vnc-stop
 
+chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vnc-start
 chmod +x /usr/local/bin/vnc-stop
-chmod +x ~/.vnc/xstartup
 
 echo "export DISPLAY=":1"" >> /etc/profile
 echo "export PULSE_SERVER=127.0.0.1" >> /etc/profile
