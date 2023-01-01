@@ -11,6 +11,7 @@ sudo apt install curl software-properties-common
 cd ~/Downloads
 wget https://raw.githubusercontent.com/FEX-Emu/RootFS/main/unbreak_chroot.sh
 wget https://raw.githubusercontent.com/FEX-Emu/RootFS/main/break_chroot.sh
+chmod +x *.sh
 
 # Enter Chroot
 ./unbreak_chroot.sh
