@@ -19,7 +19,7 @@ echo '#!/bin/bash
 xrdb $HOME/.Xresources
 startxfce4' > ~/.vnc/xstartup
 
-echo 'vncserver -name remote-desktop -geometry 960x540 -localhost no :1' > /usr/local/bin/vnc-start
+echo 'vncserver -name remote-desktop -geometry 854x480 -localhost no :1' > /usr/local/bin/vnc-start
 
 echo '#!/usr/bin/env bash
 export USER=root
