@@ -12,7 +12,8 @@ LD_PRELOAD='' git clone --shallow-since 2022-06-27 https://gitlab.freedesktop.or
 cd ~/tmp/libxshmfence;
 ./autogen.sh --prefix=$PREFIX --with-shared-memory-dir=$TMPDIR;
 sed -i s/values.h/limits.h/ ./src/xshmfence_futex.h;
-make -j8 install CPPFLAGS=-DMAXINT=INT_MAX;cd ~/tmp/mesa;
+make -j8 install CPPFLAGS=-DMAXINT=INT_MAX;
+cd ~/tmp/mesa;
 sed -i '40s+^$+#include "X11/Xlib.h"+' src/egl/main/egldisplay.h;sed -i 's/^import os$/import os, shutil\ndef link(src, dest):\n shutil.copyfile(src, dest)\ndef unlink(src):\n os.remove(src)\nos.link = link\nos.unlink = unlink/' bin/install_megadrivers.py;
 mkdir b;
 cd b;
