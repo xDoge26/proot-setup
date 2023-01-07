@@ -1,5 +1,4 @@
-# Update Termux pkg
-apt update && apt upgrade -y
+# Storage
 termux-setup-storage
 
 # Install Proot distro
@@ -15,8 +14,9 @@ proot-distro login ubuntu --shared-tmp
 # Update distro
 apt update && apt upgrade -y
 
-# Edit /etc/apt/sources.list
-nano /etc/apt/sources.list
+# Japan Locale
+alias JP='LANG="ja_JP.UTF-8"'
+source ~/.bashrc
 
 # Font
 mkdir ~/.fonts 
