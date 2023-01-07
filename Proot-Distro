@@ -18,9 +18,9 @@ apt update && apt upgrade -y
 en_US.UTF-8 UTF-8
 
 sudo apt install locales
-sudo echo 'ja_JP.UTF-8 UTF-8' >> /etc/locale.gen
+echo 'ja_JP.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen
 sudo locale-gen
-sudo echo 'alias jp='LANG=ja_JP.UTF-8'' >> ~/.bashrc
+echo 'alias jp='LANG=ja_JP.UTF-8'' >> ~/.bashrc
 source ~/.bashrc
 
 # Font
