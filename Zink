@@ -40,26 +40,19 @@ ninja install;
 
 
 # Outside the proot, start the virgl_test_server to use acceleration. Virpipes can communicate with it over /data/data/com.termux/files/usr/tmp
+# Launch applications inside the proot with GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=3.3 yourapplication
 
 MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless
-
-# Set up the proot so that if an application in the proot looks in /tmp it gets the content of /data/data/com.termux/files/usr/tmp instead. Specifically proot-distro login ??? --shared-tmp or add the arg -b /data/data/com.termux/files/usr/tmp:/tmp to the proot command.
-
-# With tmp set up that way, even prebuilt mesa packages work. If you want to compile your own mesa inside the proot, add virgl to gallium-drivers.
-
-# Launch applications inside the proot with GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=3.3 yourapplication
 
 # Auto virpipe
 export GALLIUM_DRIVER=virpipe
 export MESA_GL_VERSION_OVERRIDE=3.3
 
-alias zink='MESA_NO_ERROR=1 GALLIUM_DRIVER=virpipe'
+alias zink='MESA_GL_VERSION_OVERRIDE=3.3 MESA_NO_ERROR=1 GALLIUM_DRIVER=virpipe'
 
 # Fix bashrc
-cd /data/data/com.termux/files/home
-nano .bashrc
+nano /data/data/com.termux/files/home/.bashrc
 
-Also, all of my content inside this page is under this license, basically do whatever you want. This license does not apply to content that's not mine (e.g. what the changes to Mesa applied with sed are based on).
 
 edit: It is now -Dllvm=disabled because now that Termux updated to LLVM 15 this version of Mesa will probably not work with it. Change it to -Dllvm=enabled if sure it'll work. Unfortunately, -Dllvm=disabled significantly slows down and lowers compatibility of CPU-only 'acceleration', and might slow down GPU acceleration. Newer versions of Mesa have higher GPU/driver requirements. Installing another LLVM version (like how Mesa is installed here) takes hours of processing on a phone.
 
