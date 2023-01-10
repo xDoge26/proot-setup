@@ -42,4 +42,6 @@ unsquashfs -f -d ~/.fex-emu/RootFS/Ubuntu/ Ubuntu-22.04.sqsh
 
 FEXConfig
 
-
+# Fex shortcut
+alias fex="FEXInterpreter"
+alias fexcfg="FEXConfig"
