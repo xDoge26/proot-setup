@@ -45,3 +45,4 @@ FEXConfig
 # Fex shortcut
 alias fex="FEXInterpreter"
 alias fexcfg="FEXConfig"
+alias wine="/usr/bin/wine"
