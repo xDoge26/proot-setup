@@ -21,10 +21,7 @@ startxfce4' > ~/.vnc/xstartup
 
 echo 'vncserver -name remote-desktop -geometry 960x540 -localhost no :1' > /usr/local/bin/vnc-start
 
-echo '#!/usr/bin/env bash
-export USER=root
-export HOME=/root
-vncserver -kill :1
+echo 'vncserver -kill :1
 rm -rf /root/.vnc/localhost:1.pid
 rm -rf /tmp/.X1-lock
 rm -rf /tmp/.X11-unix/X1' > /usr/local/bin/vnc-stop
