@@ -76,14 +76,6 @@ debconf
 	mv wine-installer/opt/wine* ~/wine
 	
 	# Download wine dependencies
-	# then `dpkg-deb -I package.deb`. Read output, add `:arm64` to packages in dep list, then try installing them on Pi aarch64.	
+	# then `dpkg-deb -I package.deb`. Read output
 
 	
-
-	# Install symlinks
-	sudo ln -s ~/wine/bin/wine /usr/local/bin/wine
-	sudo ln -s ~/wine/bin/wine64 /usr/local/bin/wine64
-	sudo ln -s ~/wine/bin/wineboot /usr/local/bin/wineboot
-	sudo ln -s ~/wine/bin/winecfg /usr/local/bin/winecfg
-	sudo ln -s ~/wine/bin/wineserver /usr/local/bin/wineserver
-	sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64 /usr/local/bin/wineboot /usr/local/bin/winecfg /usr/local/bin/wineserver
