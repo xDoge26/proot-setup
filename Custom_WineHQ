@@ -1,5 +1,5 @@
 # Wine Explorer
-taskset -c 4-7 wine explorer /desktop=shell,960x540 explorer.exe
+wine explorer /desktop=shell,960x540 explorer.exe
 
 # https://dl.winehq.org/wine-builds/ubuntu/dists/
 
