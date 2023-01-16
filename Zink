@@ -40,10 +40,8 @@ ninja install;
 
 
 # Outside the proot, start the virgl_test_server to use acceleration. Virpipes can communicate with it over /data/data/com.termux/files/usr/tmp
-MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless
 
-# Launch applications inside the proot 
-GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=3.3 yourapplication
+MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=zink MESA_LOADER_DRIVER_OVERRIDE=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless
 
 # Auto virpipe
 export GALLIUM_DRIVER=virpipe
