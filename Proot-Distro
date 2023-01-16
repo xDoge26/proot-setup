@@ -63,3 +63,5 @@ sudo apt install gstreamer1.0-plugins-good
 sudo apt install gstreamer1.0-plugins-ugly
 
 
+cmd game downscale [0.5|0.6|0.7|0.8|0.9|disable] <PACKAGE_NAME>
+cmd game set --fps [30|45|60|90|120|disabled] <PACKAGE_NAME>
