@@ -1,3 +1,4 @@
 pkg install android-tools
 adb pair localhost:Port Pairing_code
 adb connect localhost:Port 
+
