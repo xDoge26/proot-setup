@@ -12,7 +12,7 @@ sudo apt install -y gpg
 
 # OpenGL
 
-sudo apt install -y libgl1:armhf libgl1 
+sudo apt install -y libgl1:armhf libgl1:arm64
 
 # - these packages are needed for running box86/wine-i386 on a 64-bit RPiOS via multiarch
 
