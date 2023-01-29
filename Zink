@@ -51,6 +51,8 @@ export MESA_GL_VERSION_OVERRIDE=3.3
 
 alias zink='MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe'
 
+WINEDEBUG=-all
+
 # Fix bashrc
 nano /data/data/com.termux/files/home/.bashrc
 
