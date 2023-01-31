@@ -14,11 +14,13 @@ pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymou
 echo "proot-distro login ubuntu --no-sysvipc --shared-tmp" >> ~/.bashrc &&
 proot-distro login ubuntu --no-sysvipc --shared-tmp 
 
-# Install xfce + box86_64
+# Install xfce 
 
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Proot-Distro.sh &&
 chmod +x Proot-Distro.sh &&
 ./Proot-Distro.sh
+
+# Install box86/box64
 
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh && 
 chmod +x Box86-64_Wine86-64.sh && 
