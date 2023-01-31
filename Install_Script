@@ -11,8 +11,8 @@ proot-distro install ubuntu &&
 rm /data/data/com.termux/files/usr/var/lib/proot-distro/dlcache/* &&
 echo "pulseaudio --start --exit-idle-time=-1
 pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" >> ~/.bashrc &&
-echo "proot-distro login ubuntu --shared-tmp" >> ~/.bashrc &&
-proot-distro login ubuntu --shared-tmp
+echo "proot-distro login ubuntu --shared-tmp --no-sysvipc " >> ~/.bashrc &&
+proot-distro login ubuntu --shared-tmp --no-sysvipc
 
 # Install xfce + box86_64
 
