@@ -4,9 +4,9 @@
 
 sudo dpkg --add-architecture armhf
 
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
 
-# Install related kits :
+# Install related kits 
 
 sudo apt install -y gpg
 
