@@ -3,16 +3,14 @@ pkg install tsu nano
 
 mkdir chroot
 cd chroot
-
-sudo wget https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-arm64.tar.gz
-
+sudo wget http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.1-base-arm64.tar.gz
 sudo tar xvpf ubuntu-base-22.04-base-arm64.tar.gz
 
 sudo mkdir sdcard
 
 # start.sh
 sudo nano start.sh
-
+------------------------------------------
 #!/data/data/com.termux/files/usr/bin/sh
 
 # fix /data mount options
@@ -32,10 +30,11 @@ export TERM=$TERM
 export TMPDIR=/tmp
 
 chroot ./chroot /bin/su - root
+------------------------------------------
 
 # stop.sh
 sudo nano stop.sh
-
+------------------------------------------
 #!/data/data/com.termux/files/usr/bin/sh
 
 umount ./chroot/dev/pts
@@ -43,6 +42,7 @@ umount ./chroot/dev
 umount ./chroot/sys
 umount ./chroot/proc
 umount ./chroot/sdcard
+------------------------------------------
 
 chmod +x *.sh
 
