@@ -35,7 +35,7 @@ mksquashfs . Ubuntu-22.04.sqsh -comp zstd
 
 # Extracting the squashfs
 mkdir ~/.fex-emu/RootFS/
-unsquashfs -f -d ~/.fex-emu/RootFS/Ubuntu/ Ubuntu-22.04.sqsh
+unsquashfs -f -d ~/.fex-emu/RootFS/Ubuntu/ /sdcard/Ubuntu-22.04.sqsh
 
 FEXConfig
 
