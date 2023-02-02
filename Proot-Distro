@@ -33,6 +33,8 @@ adduser android
 nano /etc/sudoers
 android ALL=(ALL:ALL) ALL
 
+# Line break
+Esc + $
 # Gstreamer
 sudo apt install gstreamer1.0-libav:armhf
 sudo apt install gstreamer1.0-plugins-bad:armhf
