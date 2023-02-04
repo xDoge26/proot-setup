@@ -13,7 +13,7 @@ sudo nano start.sh
 #!/data/data/com.termux/files/usr/bin/sh
 
 # fix /data mount options
-mount -o remount,dev,suid /data
+# mount -o remount,dev,suid /data
 
 mount --bind /dev ./chroot/dev
 mount --bind /sys ./chroot/sys
