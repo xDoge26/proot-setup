@@ -3,7 +3,7 @@ echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 
 
 pkg update
-pkg install tsu pulseaudio
+pkg install tsu nano wget pulseaudio
 
 mkdir chroot
 cd chroot
