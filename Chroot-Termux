@@ -1,5 +1,5 @@
 pkg update
-pkg install tsu nano
+pkg install tsu pulseaudio
 
 mkdir chroot
 cd chroot
