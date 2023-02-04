@@ -76,11 +76,14 @@ groupadd -g 3004 aid_net_raw
 
 groupadd -g 1003 aid_graphics
 
-usermod -g 3003 _apt
+usermod -a -G 3003 root
 
 usermod -a -G 3003,3004 _apt
 
-usermod -a -G 3003 root
+usermod -g 3003 _apt
+
+
+
 
 
 
