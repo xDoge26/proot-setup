@@ -7,7 +7,7 @@ pkg install tsu pulseaudio
 
 mkdir chroot
 cd chroot
-sudo wget http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.1-base-arm64.tar.gz
+wget http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.1-base-arm64.tar.gz
 sudo tar xvpf ubuntu-base-22.04.1-base-arm64.tar.gz
 sudo mkdir sdcard
 
