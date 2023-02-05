@@ -28,11 +28,6 @@ Target :
 
 /sdcard
 
-# Source list
-
-deb http://deb.debian.org/debian/ unstable main contrib non-free
-deb-src http://deb.debian.org/debian/ unstable main contrib non-free
-
 # Tiger VNC
 apt install tigervnc-standalone-server
 
@@ -40,7 +35,7 @@ apt install tigervnc-standalone-server
 apt install xz-utils
 
 # Text viewer
-sudo apt install mousepad
+apt install mousepad
 
 # Gallium Hud
 GALLIUM_HUD=help glxgears
