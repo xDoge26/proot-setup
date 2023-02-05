@@ -72,15 +72,11 @@ usermod -g 3003 _apt
 # Another
 
 groupadd -g 3003 aid_inet
-
 groupadd -g 3004 aid_net_raw
-
 groupadd -g 1003 aid_graphics
 
 usermod -a -G 3003 root
-
-usermod -a -G 3003,3004 _apt
-
+usermod -a -G 3003 _apt
 usermod -g 3003 _apt
 
 
