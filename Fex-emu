@@ -1,12 +1,7 @@
 # Install Fex
-curl --silent https://raw.githubusercontent.com/FEX-Emu/FEX/main/Scripts/InstallFEX.py --output /tmp/InstallFEX.py && 
-python3 /tmp/InstallFEX.py && 
-rm /tmp/InstallFEX.py
-
 
 # Setup RootFS
 
-cd ~/Downloads
 wget https://raw.githubusercontent.com/FEX-Emu/RootFS/main/unbreak_chroot.sh
 wget https://raw.githubusercontent.com/FEX-Emu/RootFS/main/break_chroot.sh
 chmod +x *.sh
