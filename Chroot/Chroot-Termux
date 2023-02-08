@@ -7,15 +7,17 @@ echo 'alias stop="sudo ./stop.sh"' >> ~/.bashrc
 pkg clean && yes | pkg update
 pkg install tsu nano wget pulseaudio
 
+wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Chroot/start.sh
+wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Chroot/stop.sh
+
+chmod +x *.sh
+
 sudo mkdir chroot && cd chroot
 sudo wget http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.1-base-arm64.tar.gz
 sudo tar xvpf ubuntu-base-22.04.1-base-arm64.tar.gz --numeric-owner
 sudo mkdir sdcard
 
-wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Chroot/start.sh
-wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Chroot/stop.sh
 
-chmod +x *.sh
 
 # 使用Google的DNS
 
