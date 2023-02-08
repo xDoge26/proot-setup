@@ -32,7 +32,7 @@ mksquashfs . Ubuntu-22.04.sqsh -comp zstd
 sudo apt install curl software-properties-common
 
 # Extracting the squashfs
-
+mkdir ~/.fex-emu/RootFS/
 unsquashfs -f -d ~/.fex-emu/RootFS/Ubuntu/ /sdcard/Ubuntu-22.04.sqsh
 
 FEXConfig
