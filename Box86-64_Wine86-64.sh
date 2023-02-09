@@ -28,23 +28,23 @@ sudo apt clean && sudo apt autoremove -y
 
 # Install Box86
 
-sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list
-wget -O- https://ryanfortner.github.io/box86-debs/KEY.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/box86-debs-archive-keyring.gpg
-sudo apt update && sudo apt install box86 -y
-
 # sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list
-# wget -O- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box86-debs-archive-keyring.gpg
+# wget -O- https://ryanfortner.github.io/box86-debs/KEY.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/box86-debs-archive-keyring.gpg
 # sudo apt update && sudo apt install box86 -y
+
+sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list
+wget -O- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box86-debs-archive-keyring.gpg
+sudo apt update && sudo apt install box86 -y
 
 # Install Box64
 
-sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list
-wget -O- https://ryanfortner.github.io/box64-debs/KEY.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/box64-debs-archive-keyring.gpg 
-sudo apt update && sudo apt install box64 -y
-
 # sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list
-# wget -O- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box64-debs-archive-keyring.gpg
+# wget -O- https://ryanfortner.github.io/box64-debs/KEY.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/box64-debs-archive-keyring.gpg 
 # sudo apt update && sudo apt install box64 -y
+
+sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list
+wget -O- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box64-debs-archive-keyring.gpg
+sudo apt update && sudo apt install box64 -y
 
 # Wine-amd64
 
