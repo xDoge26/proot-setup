@@ -48,9 +48,9 @@ sudo apt update && sudo apt install box64 -y
 
 # Wine-amd64
 
-cd 
-mkdir wine
-cd wine
+cd
+mkdir ~/wine
+cd ~/wine
 wget https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz
 tar -xvf *.tar.xz
 mv ~/wine/wine*/* ~/wine
