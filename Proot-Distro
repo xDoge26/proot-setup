@@ -21,6 +21,10 @@ pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth
 - In proot
 export PULSE_SERVER=127.0.0.1
 
+# Manage storage 
+
+apt install ncdu
+
 # Vnc config
 nano ~/.vnc/vnc.conf
 $geometry = "960x540"
