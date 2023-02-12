@@ -45,11 +45,9 @@ echo 'alias zink="ZINK_DESCRIPTORS=lazy MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE
 
 MESA_LOADER_DRIVER_OVERRIDE=zink ZINK_DESCRIPTORS=lazy
 
-# Auto virpipe
-export GALLIUM_DRIVER=virpipe
-export MESA_GL_VERSION_OVERRIDE=3.3
+# In proot
 
-echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe"' >> ~/.bashrc
+echo 'alias zink="WINEDEBUG=-all MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe"' >> ~/.bashrc
 
 WINEDEBUG=-all
 
