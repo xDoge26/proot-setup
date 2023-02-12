@@ -43,7 +43,6 @@ ninja install;
 
 echo 'alias zink="ZINK_DESCRIPTORS=lazy MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.0 GALLIUM_DRIVER=zink virgl_test_server --use-egl-surfaceless"' >> ~/.bashrc
 
-MESA_LOADER_DRIVER_OVERRIDE=zink ZINK_DESCRIPTORS=lazy
 
 # In proot
 
