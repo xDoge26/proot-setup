@@ -46,9 +46,8 @@ echo 'alias zink="ZINK_DESCRIPTORS=lazy MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE
 
 # In proot
 
-echo 'alias zink="WINEDEBUG=-all MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe"' >> ~/.bashrc
+echo 'alias zink="WINEDEBUG=-all MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.0 GALLIUM_DRIVER=virpipe"' >> ~/.bashrc
 
-WINEDEBUG=-all
 
 # Fix bashrc
 nano /data/data/com.termux/files/home/.bashrc
