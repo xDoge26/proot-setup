@@ -56,3 +56,13 @@ nano /data/data/com.termux/files/home/.bashrc
 edit: It is now -Dllvm=disabled because now that Termux updated to LLVM 15 this version of Mesa will probably not work with it. Change it to -Dllvm=enabled if sure it'll work. Unfortunately, -Dllvm=disabled significantly slows down and lowers compatibility of CPU-only 'acceleration', and might slow down GPU acceleration. Newer versions of Mesa have higher GPU/driver requirements. Installing another LLVM version (like how Mesa is installed here) takes hours of processing on a phone.
 
 Credit : eNB256
+
+
+
+https://github.com/termux-user-repository/tur/tree/master/tur/mesa-zink
+
+In short:
+
+pkg install tur-repo (or repo-tur?)
+pkg update (but ^ should also do this)
+pkg install mesa-zink
