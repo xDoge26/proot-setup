@@ -62,7 +62,7 @@ Credit : eNB256
 https://github.com/termux-user-repository/tur/tree/master/tur/mesa-zink
 
 In short:
-
-pkg install tur-repo (or repo-tur?)
-pkg update (but ^ should also do this)
+pkg install x11-repo
+pkg install tur-repo
+pkg update 
 pkg install mesa-zink
