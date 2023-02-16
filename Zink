@@ -62,7 +62,6 @@ Credit : eNB256
 https://github.com/termux-user-repository/tur/tree/master/tur/mesa-zink
 
 In short:
-pkg install x11-repo
-pkg install tur-repo
-pkg update 
-pkg install mesa-zink
+pkg install x11-repo tur-repo
+
+pkg install mesa-zink virglrenderer-zink
