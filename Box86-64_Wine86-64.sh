@@ -54,7 +54,7 @@ cd ~/wine
 wget https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz
 tar -xvf *.tar.xz
 mv ~/wine/wine*/* ~/wine
-rm -r wine*
+rm -rf wine*
 cd
 
 # Install symlinks
