@@ -35,7 +35,7 @@ usermod -a -G 3003 _apt
 usermod -g 3003 _apt
 
 # Core
-apt install sudo nano wget 
+apt install sudo nano wget xz-utils
 
 
 
