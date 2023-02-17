@@ -38,7 +38,7 @@ unsquashfs -f -d ~/.fex-emu/RootFS/Ubuntu/ /sdcard/Ubuntu-22.04.sqsh
 FEXConfig
 
 # Fex shortcut
-alias fex="FEXInterpreter"
+
 alias fexbash="FEXBash"
 alias fexcfg="FEXConfig"
-alias wine="/usr/bin/wine"
+
