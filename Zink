@@ -7,7 +7,7 @@ echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3 MESA_GLES_VERSION
 echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all mesa_glthread=true"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
 
 
-
+# Outdated
 
 Try setting it up (outside the proot) like so:
 
@@ -61,11 +61,6 @@ echo 'alias zink="ZINK_DESCRIPTORS=lazy MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE
 # In proot
 
 echo 'alias zink="WINEDEBUG=-all MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.0 GALLIUM_DRIVER=virpipe"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
-
-
-# Fix bashrc
-nano /data/data/com.termux/files/home/.bashrc
-
 
 edit: It is now -Dllvm=disabled because now that Termux updated to LLVM 15 this version of Mesa will probably not work with it. Change it to -Dllvm=enabled if sure it'll work. Unfortunately, -Dllvm=disabled significantly slows down and lowers compatibility of CPU-only 'acceleration', and might slow down GPU acceleration. Newer versions of Mesa have higher GPU/driver requirements. Installing another LLVM version (like how Mesa is installed here) takes hours of processing on a phone.
 
