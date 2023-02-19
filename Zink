@@ -46,7 +46,7 @@ echo 'alias zink="ZINK_DESCRIPTORS=lazy MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE
 
 # In proot
 
-echo 'alias zink="WINEDEBUG=-all MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.0 GALLIUM_DRIVER=virpipe"' >> ~/.bashrc
+echo 'alias zink="WINEDEBUG=-all MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.0 GALLIUM_DRIVER=virpipe"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
 
 
 # Fix bashrc
@@ -58,10 +58,13 @@ edit: It is now -Dllvm=disabled because now that Termux updated to LLVM 15 this 
 Credit : eNB256
 
 
-
 https://github.com/termux-user-repository/tur/tree/master/tur/mesa-zink
 
 In short:
 pkg install x11-repo tur-repo
 
 pkg install mesa-zink virglrenderer-mesa-zink
+
+
+
+
