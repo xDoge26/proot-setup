@@ -1,7 +1,7 @@
 Try setting it up (outside the proot) like so:
 
-pkg install -y x11-repo;
-pkg install -y clang lld binutils cmake autoconf automake libtool '*ndk*' make python git libandroid-shmem-static 'vulkan*' ninja llvm bison flex libx11 xorgproto libdrm libpixman libxfixes libjpeg-turbo xtrans libxxf86vm xorg-xrandr xorg-font-util xorg-util-macros libxfont2 libxkbfile libpciaccess xcb-util-renderutil xcb-util-image xcb-util-keysyms xcb-util-wm xorg-xkbcomp xkeyboard-config libxdamage libxinerama;
+pkg install -y x11-repo; 
+pkg install -y clang lld binutils cmake autoconf automake libtool ndk-sysroot ndk-multilib make python git libandroid-shmem-static 'vulkan*' ninja llvm bison flex libx11 xorgproto libdrm libpixman libxfixes libjpeg-turbo xtrans libxxf86vm xorg-xrandr xorg-font-util xorg-util-macros libxfont2 libxkbfile libpciaccess xcb-util-renderutil xcb-util-image xcb-util-keysyms xcb-util-wm xorg-xkbcomp xkeyboard-config libxdamage libxinerama;
 pip install meson mako;
 mkdir ~/tmp;
 cd ~/tmp;
@@ -21,6 +21,9 @@ cd b;
 LDFLAGS='-l:libandroid-shmem.a -llog' meson .. -Dprefix=$PREFIX -Dplatforms=x11 -Dgbm=enabled -Ddri-drivers='' -Dgallium-drivers=zink,swrast -Dllvm=disabled -Dvulkan-drivers='' -Dcpp_rtti=false -Dc_args=-Wno-error=incompatible-function-pointer-types -Dbuildtype=release;
 rm $PREFIX/lib/libglapi.so*;
 rm $PREFIX/lib/libGL.so*;
+rm $PREFIX/lib/libGLES*;
+rm $PREFIX/lib/libEGL*;
+rm $PREFIX/lib/libgbm*;
 ninja install;
 cd ~/tmp/libepoxy;
 mkdir b;
