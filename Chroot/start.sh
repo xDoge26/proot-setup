@@ -2,7 +2,7 @@
 
 # fix /data mount options
 # mount -o remount,dev,suid /data
-
+# mount --bind /data/data/com.termux/files/usr/tmp ./tmp
 mount --bind /dev ./chroot/dev
 mount --bind /sys ./chroot/sys
 mount --bind /proc ./chroot/proc
