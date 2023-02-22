@@ -34,7 +34,6 @@ usermod -a -G 3001,3002,3003,3004,3005 root
 usermod -a -G 3003 _apt
 usermod -g 3003 _apt
 
-# Core
 apt update && apt upgrade -y
 apt install -y sudo nano wget xz-utils 
 
@@ -49,15 +48,5 @@ echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3 MESA_GLES_VERSION
 
 echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all"' >> /data/data/com.termux/files/home/chroot/root/.bashrc
 
-
-# Another
-
-groupadd -g 3003 aid_inet
-groupadd -g 3004 aid_net_raw
-groupadd -g 1003 aid_graphics
-
-usermod -a -G 3003 root
-usermod -a -G 3003 _apt
-usermod -g 3003 _apt
 
 
