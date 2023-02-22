@@ -19,3 +19,4 @@ export TMPDIR=/tmp
 
 chroot ./chroot /bin/su - root
 
+./stop.sh
