@@ -45,8 +45,8 @@ usermod -a -G 3003 _apt
 usermod -g 3003 _apt
 
 # Core
-apt update &&
-apt install sudo nano wget xz-utils
+apt update && apt upgrade -y
+apt install -y sudo nano wget xz-utils 
 
 echo 'vncserver -kill :1' > ~/.bash_logout
 
