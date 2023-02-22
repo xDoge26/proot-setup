@@ -1,8 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/sh
 
-umount ./chroot/dev/pts
-umount ./chroot/dev
-umount ./chroot/proc
-umount ./chroot/sys
-umount ./chroot/sdcard
+umount umount -lvf ./chroot/dev/pts
+umount umount -lvf ./chroot/dev
+umount umount -lvf ./chroot/proc
+umount umount -lvf ./chroot/sys
+umount umount -lvf ./chroot/sdcard
 
