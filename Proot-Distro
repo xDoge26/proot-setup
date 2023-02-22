@@ -22,8 +22,11 @@ pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth
 export PULSE_SERVER=127.0.0.1
 
 # Manage storage 
-
 apt install ncdu
+
+# Check ip
+hostname -I
+ip a
 
 # Vnc config
 nano ~/.vnc/vnc.conf
