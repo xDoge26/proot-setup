@@ -34,6 +34,22 @@ usermod -a -G 3001,3002,3003,3004,3005 root
 usermod -a -G 3003 _apt
 usermod -g 3003 _apt
 
+# Core
+apt update && apt upgrade -y
+apt install -y sudo nano wget xz-utils 
+
+echo 'vncserver -kill :1' > ~/.bash_logout
+
+# Zink
+
+pkg install x11-repo tur-repo
+pkg install -y mesa-zink virglrenderer-mesa-zink
+
+echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3 MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles"' >> /data/data/com.termux/files/home/.bashrc
+
+echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all"' >> :/data/data/com.termux/files/home/chroot/root/.bashrc
+
+
 # Another
 
 groupadd -g 3003 aid_inet
@@ -43,25 +59,5 @@ groupadd -g 1003 aid_graphics
 usermod -a -G 3003 root
 usermod -a -G 3003 _apt
 usermod -g 3003 _apt
-
-# Core
-apt update && apt upgrade -y
-apt install -y sudo nano wget xz-utils 
-
-echo 'vncserver -kill :1' > ~/.bash_logout
-
-
-
-# Zink
-
-pkg install x11-repo tur-repo
-pkg install mesa-zink virglrenderer-mesa-zink
-
-echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3 MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles"' >> /data/data/com.termux/files/home/.bashrc
-
-echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all"' >> :/data/data/com.termux/files/home/chroot/root/.bashrc
-
-
-
 
 
