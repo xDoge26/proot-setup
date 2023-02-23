@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y
 
 # Install related kits 
 
-sudo apt install -y gpg
+sudo apt install -y xz-utils gpg
 
 # OpenGL
 
