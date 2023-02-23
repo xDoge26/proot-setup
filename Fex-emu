@@ -39,8 +39,6 @@ curl --silent https://raw.githubusercontent.com/FEX-Emu/FEX/main/Scripts/Install
 mkdir ~/.fex-emu/RootFS/
 unsquashfs -f -d ~/.fex-emu/RootFS/Ubuntu/ /sdcard/Ubuntu-22.04.sqsh
 
-FEXConfig
-
 # Fex shortcut
 
 alias fexbash="FEXBash"
