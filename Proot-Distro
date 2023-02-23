@@ -28,8 +28,12 @@ apt install ncdu
 hostname -I
 ip a
 
-#All in one 
+# xfce add-on
+apt install mousepad ristretto
+
+# Extract 
 apt install xfe
+apt install xarchiver
 
 # Vnc config
 nano ~/.vnc/vnc.conf
