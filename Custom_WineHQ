@@ -3,8 +3,6 @@ wine explorer /desktop=shell,960x540 explorer.exe
 
 # https://dl.winehq.org/wine-builds/ubuntu/dists/
 
-# Example :
-
 # Wine
 
 wine-stable-amd64_8.0.0.0_jammy-1_amd64.deb
