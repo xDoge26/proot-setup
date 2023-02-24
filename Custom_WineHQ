@@ -28,9 +28,9 @@ export LD_LIBRARY_PATH=~/wine/lib/wine/i386-unix/:~/wine/lib64/wine/x86_64-unix/
 
 dpkg-deb -I *.deb | grep -E "Depends|Recommends|Suggests|Pre\-Depends" | tr -d "|," | sed "s/([^)]*)/()/g" | tr -d "()" | tr " " "\n" | grep -Ev "Depends|Recommends|Suggests|Pre\-Depends|dpkg" | xargs
 
-dpkg-deb -I *.deb | grep -E "Depends|Recommends|Suggests|Pre\-Depends" | tr -d "|," | sed "s/([^)]*)/()/g" | tr -d "()" | tr " " "\n" | grep -Ev "Depends|Recommends|Suggests|Pre\-Depends|dpkg" | xargs | tr " " "\n" | sed 's/$/:armhf/' | xargs
+dpkg-deb -I wine-stable-i386*.deb | grep -E "Depends|Recommends|Suggests|Pre\-Depends" | tr -d "|," | sed "s/([^)]*)/()/g" | tr -d "()" | tr " " "\n" | grep -Ev "Depends|Recommends|Suggests|Pre\-Depends|dpkg" | xargs | tr " " "\n" | sed 's/$/:armhf/' | xargs
 
-dpkg-deb -I *.deb | grep -E "Depends|Recommends|Suggests|Pre\-Depends" | tr -d "|," | sed "s/([^)]*)/()/g" | tr -d "()" | tr " " "\n" | grep -Ev "Depends|Recommends|Suggests|Pre\-Depends|dpkg" | xargs | tr " " "\n" | sed 's/$/:arm64/' | xargs
+dpkg-deb -I wine-stable-amd64*.deb | grep -E "Depends|Recommends|Suggests|Pre\-Depends" | tr -d "|," | sed "s/([^)]*)/()/g" | tr -d "()" | tr " " "\n" | grep -Ev "Depends|Recommends|Suggests|Pre\-Depends|dpkg" | xargs | tr " " "\n" | sed 's/$/:arm64/' | xargs
 
 
 
