@@ -6,9 +6,10 @@ wine explorer /desktop=shell,960x540 explorer.exe
 # Example :
 
 # 64 Bit 
-wine-stable-i386_7.0.0.0~focal-1_i386.deb
-wine-stable-amd64_7.0.0.0~focal-1_amd64.deb
-wine-stable_7.0.0.0~focal-1_amd64.deb
+wine-stable-amd64_8.0.0.0_jammy-1_amd64.deb
+wine-stable-i386_8.0.0.0_jammy-1_i386.deb
+wine-stable_8.0.0.0_jammy-1_amd64.deb
+
 
 # Extract wine
 dpkg-deb -x *.deb .
