@@ -5,18 +5,19 @@ wine explorer /desktop=shell,960x540 explorer.exe
 
 # Example :
 
-# 64 Bit 
+# Wine
+
 wine-stable-amd64_8.0.0.0_jammy-1_amd64.deb
 wine-stable-i386_8.0.0.0_jammy-1_i386.deb
 wine-stable_8.0.0.0_jammy-1_amd64.deb
-
+wine-stable_8.0.0.0_jammy-1_i386.deb
 
 # Extract wine
 
 mkdir ~/wine64
-dpkg-deb -x wine-stable-amd64* ~/wine64
-dpkg-deb -x wine-stable-i386* ~/wine64
-dpkg-deb -x wine-stable_* ~/wine64
+dpkg-deb -x wine-*-amd64* ~/wine64
+dpkg-deb -x wine-*-i386* ~/wine64
+dpkg-deb -x wine-*_*_amd64.deb ~/wine64
 mv ~/wine64/opt/wine*/* ~/wine64
 cd wine64/ && rm -rf usr/ opt/
 
