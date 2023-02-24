@@ -12,10 +12,13 @@ wine-stable_8.0.0.0_jammy-1_amd64.deb
 
 
 # Extract wine
+
 mkdir ~/wine64
-dpkg-deb -x *.deb ~/wine64
+dpkg-deb -x wine-stable-amd64* ~/wine64
+dpkg-deb -x wine-stable-i386* ~/wine64
+dpkg-deb -x wine-stable_* ~/wine64
 mv ~/wine64/opt/wine*/* ~/wine64
-rm -r usr/ opt/
+cd wine64/ && rm -rf usr/ opt/
 
 # PC only
 export PATH=~/wine/bin/:$PATH
