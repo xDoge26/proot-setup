@@ -29,7 +29,7 @@ hostname -I
 ip a
 
 # xfce add-on
-apt install mousepad ristretto
+apt install mousepad ristretto thunar-archive-plugin
 
 # Extract 
 apt install xfe
