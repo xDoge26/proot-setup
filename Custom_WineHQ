@@ -12,12 +12,12 @@ wine-stable_8.0.0.0_jammy-1_i386.deb
 
 # Extract wine
 
-mkdir ~/wine64
-dpkg-deb -x wine-devel-amd64* ~/wine64
-dpkg-deb -x wine-devel-i386* ~/wine64
-dpkg-deb -x wine-devel_* ~/wine64
-mv ~/wine64/opt/wine*/* ~/wine64
-cd wine64/ && rm -rf usr/ opt/
+mkdir ~/winehq
+dpkg-deb -x wine-devel-amd64* ~/winehq
+dpkg-deb -x wine-devel-i386* ~/winehq
+dpkg-deb -x wine-devel_* ~/winehq
+mv ~/winehq/opt/wine*/* ~/winehq
+cd winehq/ && rm -rf usr/ opt/
 
 # PC only
 export PATH=~/wine/bin/:$PATH
