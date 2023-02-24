@@ -1,6 +1,8 @@
 # Wine Explorer
 wine explorer /desktop=shell,960x540 explorer.exe
 
+WINEDLLOVERRIDES="winegstreamer=" box86 wine
+
 # https://dl.winehq.org/wine-builds/ubuntu/dists/
 
 # Wine
