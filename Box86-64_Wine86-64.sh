@@ -3,7 +3,7 @@
 # Enable Multiarch
 
 sudo dpkg --add-architecture armhf
-sudo apt update 
+sudo apt update -y
 sudo apt upgrade -y
 
 # Install related kits 
