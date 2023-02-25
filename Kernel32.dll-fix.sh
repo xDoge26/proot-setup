@@ -1,6 +1,8 @@
 #!/bin/bash
 
+cd
 rm -rf ~/.wine
+rm -rf ~/64bit-wine.tar.xz
 wget https://github.com/ThieuMinh26/Proot-Setup/releases/download/1.0/64bit-wine.tar.xz
 tar -xf 64bit-wine.tar.xz
 echo 'alias gst="WINEDLLOVERRIDES=\"winegstreamer=\""' >> ~/.bashrc
