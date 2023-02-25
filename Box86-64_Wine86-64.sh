@@ -30,6 +30,7 @@ sudo apt insatll -y libasound2:arm64 libc6:arm64 libglib2.0-0:arm64 libgphoto2-6
 # Clean
 
 sudo apt clean && sudo apt autoremove -y
+sudo rm -rf ~/wine
 
 # Install Box86
 
