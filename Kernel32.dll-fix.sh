@@ -10,4 +10,3 @@ echo "If you have kernel32.dll problem , restart Termux"
 echo "And please use : gst box86 wine winecfg"
 echo "Or : rm -rf ~/.wine && WINEARCH=win32 box86 wine winecfg"
 
-
