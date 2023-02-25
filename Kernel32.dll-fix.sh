@@ -10,6 +10,6 @@ source ~/.bashrc
 clear
 
 echo "If you have kernel32.dll problem , restart Termux"
-echo "And use : gst box86 wine winecfg"
+echo "Try : gst box86 wine winecfg"
 echo "Or : rm -rf ~/.wine && WINEARCH=win32 box86 wine winecfg"
 
