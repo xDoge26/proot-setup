@@ -1,7 +1,7 @@
 
 # Install proot-distro
 
-echo "allow-external-apps = true" > ~/.termux/termux.properties
+echo "allow-external-apps = true" >> ~/.termux/termux.properties
 echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 
 pkg clean && yes | pkg update && termux-setup-storage && 
