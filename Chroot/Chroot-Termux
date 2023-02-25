@@ -5,7 +5,7 @@ echo 'alias start="sudo ./start.sh"' >> ~/.bashrc &&
 echo 'alias stop="sudo ./stop.sh"' >> ~/.bashrc
 
 pkg clean && yes | pkg update &&
-pkg install tsu nano wget pulseaudio -y && pkg clean
+pkg install tsu nano wget pulseaudio -y && pkg clean &&
 echo 'pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1' >> ~/.bashrc &&
 source ~/.bashrc
 
