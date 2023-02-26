@@ -34,6 +34,7 @@ usermod -a -G 3003 _apt
 usermod -g 3003 _apt
 echo "vncserver -kill :1" >> ~/.bash_logout
 echo "alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"" >> ~/.bashrc
+source ~/.bashrc
 
 apt update && apt upgrade -y
 apt install -y sudo nano wget xz-utils 
