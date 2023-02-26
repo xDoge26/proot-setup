@@ -44,6 +44,5 @@ apt install -y sudo nano wget xz-utils
 pkg install x11-repo tur-repo
 pkg install -y mesa-zink virglrenderer-mesa-zink
 
-sudo bash -c 'echo "alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"" >> /data/data/com.termux/files/home/chroot/root/.bashrc'
 
 
