@@ -25,5 +25,8 @@ chmod +x Box86-64_Wine86-64.sh &&
 ./Box86-64_Wine86-64.sh
 
 
+# Kernel32.dll fix
 
-
+wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Kernel32.dll-fix.sh &&
+chmod +x Kernel32.dll-fix.sh &&
+./Kernel32.dll-fix.sh
