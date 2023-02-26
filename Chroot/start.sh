@@ -10,7 +10,6 @@ mount --bind /dev/pts ./chroot/dev/pts
 mount --bind /sdcard ./chroot/sdcard
 # mount --bind /data/data/com.termux/files/usr/tmp ./chroot/tmp
 
-
 # disable termux-exec
 unset LD_PRELOAD
 
@@ -21,3 +20,4 @@ export TMPDIR=/tmp
 chroot ./chroot /bin/su - root
 
 ./stop.sh
+
