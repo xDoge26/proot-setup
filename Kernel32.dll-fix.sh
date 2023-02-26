@@ -2,9 +2,9 @@
 
 cd
 rm -rf ~/.wine
-rm -rf ~/64bit-wine.tar.xz
-wget https://github.com/ThieuMinh26/Proot-Setup/releases/download/1.0/64bit-wine.tar.xz
-tar -xf 64bit-wine.tar.xz
+rm -rf ~/wine-8.0.tar.xz
+wget https://github.com/ThieuMinh26/Proot-Setup/releases/download/1.0.0/wine-8.0.tar.xz
+tar -xf wine-8.0.tar.xz
 echo 'alias gst="WINEDLLOVERRIDES=\"winegstreamer=\""' >> ~/.bashrc
 source ~/.bashrc
 clear
