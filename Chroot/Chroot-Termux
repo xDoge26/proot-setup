@@ -1,4 +1,4 @@
-echo "allow-external-apps = true" >> ~/.termux/termux.properties &&
+echo "allow-external-apps = true" >> ~/.termux/termux.properties 
 echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 
 pkg clean && yes | pkg update &&
@@ -19,7 +19,7 @@ sudo tar -xvpf *.tar.gz && sudo rm *.tar.gz &&
 sudo mkdir sdcard && cd
 
 sudo bash -c 'echo "vncserver -kill :1" > data/data/com.termux/files/home/chroot/root/.bash_logout'
-sudo bash -c 'echo "alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"" >> /data/data/com.termux/files/home/chroot/root/.bashrc'
+sudo bash -c 'echo "alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"" >> /data/data/com.termux/files/home/chroot/root/.bashrc'
 
 
 
