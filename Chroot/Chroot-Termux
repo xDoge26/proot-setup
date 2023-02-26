@@ -46,6 +46,3 @@ apt install -y sudo nano wget xz-utils
 pkg install x11-repo tur-repo
 pkg install -y mesa-zink virglrenderer-mesa-zink
 
-sudo mount --bind /data/data/com.mittorn.virgloverlay/files/ /data/data/com.termux/files/usr/tmp/
-sudo umount -lv /data/data/com.termux/files/usr/tmp/
-
