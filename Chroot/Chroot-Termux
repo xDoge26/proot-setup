@@ -18,11 +18,6 @@ sudo wget http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-ba
 sudo tar -xvpf *.tar.gz && sudo rm *.tar.gz && clear &&
 sudo mkdir sdcard && cd
 
-sudo bash -c 'echo "vncserver -kill :1" > data/data/com.termux/files/home/chroot/root/.bash_logout'
-sudo bash -c 'echo "alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"" >> /data/data/com.termux/files/home/chroot/root/.bashrc'
-
-
-
 # 使用Google的DNS
 
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
@@ -37,6 +32,8 @@ groupadd -g 3005 aid_admin
 usermod -a -G 3001,3002,3003,3004,3005 root
 usermod -a -G 3003 _apt
 usermod -g 3003 _apt
+echo "vncserver -kill :1" >> ~/.bash_logout
+echo "alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"" >> ~/.bashrc
 
 apt update && apt upgrade -y
 apt install -y sudo nano wget xz-utils 
@@ -45,4 +42,7 @@ apt install -y sudo nano wget xz-utils
 
 pkg install x11-repo tur-repo
 pkg install -y mesa-zink virglrenderer-mesa-zink
+
+sudo bash -c 'echo "alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"" >> /data/data/com.termux/files/home/chroot/root/.bashrc'
+
 
