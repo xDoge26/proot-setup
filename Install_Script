@@ -3,7 +3,7 @@
 
 echo "allow-external-apps = true" >> ~/.termux/termux.properties
 echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
-termux-reload-settings
+
 
 pkg clean && yes | pkg update && termux-setup-storage && 
 pkg install nano wget proot-distro pulseaudio -y && pkg clean &&
