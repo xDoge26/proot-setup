@@ -39,7 +39,7 @@ echo "alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=v
 source ~/.bashrc
 
 apt update && apt upgrade -y
-apt install -y sudo nano wget xz-utils 
+apt install -y sudo nano ncdu wget
 
 # Zink
 
