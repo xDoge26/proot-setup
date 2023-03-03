@@ -1,8 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/sh
 
-# fix /data mount options
-# mount -o remount,dev,suid /data
-
 mount --bind /proc ./chroot/proc
 mount --bind /sys ./chroot/sys
 mount --bind /dev ./chroot/dev
