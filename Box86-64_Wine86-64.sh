@@ -49,7 +49,6 @@ cd
 mkdir ~/wine
 cd ~/wine
 wget https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz
-#    https://github.com/Kron4ek/Wine-Builds/releases/download/8.2/wine-8.2-amd64.tar.xz
 tar -xf *.tar.xz
 mv ~/wine/wine*/* ~/wine
 rm -rf wine*
