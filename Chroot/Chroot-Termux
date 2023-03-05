@@ -43,7 +43,7 @@ apt install -y sudo nano ncdu wget
 
 # Zink
 
-pkg install x11-repo tur-repo
+pkg install -y x11-repo tur-repo
 pkg install -y mesa-zink virglrenderer-mesa-zink
 
 
