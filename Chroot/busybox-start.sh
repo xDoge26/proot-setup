@@ -1,5 +1,4 @@
-#!/data/adb/magisk/busybox
-# /system/bin/sh
+#!/system/bin/sh
 
 mount --bind /proc ./chroot/proc
 mount --bind /sys ./chroot/sys
