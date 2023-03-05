@@ -34,9 +34,6 @@ apt install tigervnc-standalone-server
 # xz utils
 apt install xz-utils
 
-# Text viewer
-apt install mousepad
-
 # Gallium Hud
 GALLIUM_HUD=help glxgears
 GALLIUM_HUD=simple,fps glxgears
