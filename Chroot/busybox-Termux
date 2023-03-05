@@ -11,6 +11,7 @@ source ~/.bashrc
 
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Chroot/busybox-start.sh
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Chroot/busybox-stop.sh
+chmod +x *.sh
 
 sudo mkdir chroot && cd chroot &&
 sudo wget http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz &&
