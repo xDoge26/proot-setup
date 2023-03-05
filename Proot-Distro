@@ -6,7 +6,7 @@ termux-setup-storage
 sudo apt install locales
 echo 'ja_JP.UTF-8 UTF-8' | sudo tee -a /etc/locale.gen
 sudo locale-gen
-echo 'alias jp='LANG=ja_JP.UTF-8'' >> ~/.bashrc
+echo 'alias ja="LANG=ja_JP.UTF-8"' >> ~/.bashrc
 source ~/.bashrc
 
 sudo apt install locales
