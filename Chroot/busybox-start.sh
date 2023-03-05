@@ -8,7 +8,6 @@ mount --bind /sdcard ./chroot/sdcard
 # mount --bind /data/data/com.termux/files/usr/tmp ./chroot/tmp
 # mount --bind /data/data/com.mittorn.virgloverlay/files/ ./chroot/tmp
 
-
 chroot ./chroot /bin/su - root
 
 umount -lv ./chroot/dev/pts
