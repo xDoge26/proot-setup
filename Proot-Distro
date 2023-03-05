@@ -9,6 +9,9 @@ sudo locale-gen
 echo 'alias jp='LANG=ja_JP.UTF-8'' >> ~/.bashrc
 source ~/.bashrc
 
+sudo apt install locales
+sudo dpkg-reconfigure locales
+
 # Font
 mkdir ~/.fonts 
 cp /sdcard/Download/*.ttf ~/.fonts
