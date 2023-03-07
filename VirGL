@@ -1,4 +1,8 @@
-In short:
+Virgl gles :
+pkg install x11-repo 
+pkg install virglrenderer-android/x11
+
+Virgl zink :
 
 pkg install x11-repo tur-repo
 pkg install mesa-zink virglrenderer-mesa-zink
