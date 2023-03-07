@@ -1,14 +1,10 @@
 # Setup Box86-64_Wine86-64
 
-sudo dpkg --add-architecture armhf
-
-sudo apt update && sudo apt upgrade
-
 # Install related kits :
 
 sudo apt install git wget make cmake build-essential gcc-arm-linux-gnueabihf 
 
-# Compile Box86 with parameters for Raspberry Pi 4
+# Compile Box86
 
 cd
 git clone https://github.com/ptitSeb/box86
