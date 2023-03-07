@@ -45,7 +45,7 @@ apt install -y sudo nano ncdu wget
 pkg install x11-repo 
 pkg install virglrenderer-android/x11
 
-# Zink
+# Virgl zink
 pkg install -y x11-repo tur-repo
 pkg install -y mesa-zink virglrenderer-mesa-zink
 
