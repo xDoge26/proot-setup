@@ -6,7 +6,7 @@ sudo apt update && sudo apt upgrade
 
 # Install related kits :
 
-sudo apt install git wget make cmake build-essential gcc-arm-linux-gnueabihf libc6:armhf 
+sudo apt install git wget make cmake build-essential gcc-arm-linux-gnueabihf 
 
 # Compile Box86 with parameters for Raspberry Pi 4
 
@@ -31,9 +31,4 @@ cd
 rm -rf box64
 
 
-# Outdated 
-# To run wine64 without always deleting the prefix, put these in your .bashrc
-
-export PATH=~/wine/bin:~/wine64/bin:$PATH
-alias win64='export WINEPREFIX=~/.wine64 WINEARCH=win64'
 
