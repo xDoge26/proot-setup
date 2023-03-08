@@ -45,7 +45,7 @@ apt install -y sudo nano ncdu wget
 
 # Virgl gles :
 pkg install x11-repo 
-pkg install virglrenderer-android/x11
+pkg install virglrenderer-android
 
 # Virgl zink
 pkg install -y x11-repo tur-repo
