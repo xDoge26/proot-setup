@@ -21,7 +21,6 @@ xrdb $HOME/.Xresources
 startxfce4' > ~/.vnc/xstartup
 
 echo 'vncserver -name remote-desktop -geometry 960x540 -localhost no :1' > /usr/local/bin/vnc-start
-
 echo 'vncserver -kill :1' > /usr/local/bin/vnc-stop
 
 chmod +x ~/.vnc/xstartup
