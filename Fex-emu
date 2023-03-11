@@ -28,12 +28,9 @@ exit
 # Making the squashfs image
 mksquashfs . Ubuntu-22.04.sqsh -comp zstd
 
-# Fix Fex-emu
-
-sudo apt install curl software-properties-common
-
 # Install Fex-emu 
 
+apt install curl software-properties-common
 curl --silent https://raw.githubusercontent.com/FEX-Emu/FEX/main/Scripts/InstallFEX.py --output /tmp/InstallFEX.py && python3 /tmp/InstallFEX.py && rm /tmp/InstallFEX.py
 
 # Extracting the squashfs
