@@ -29,8 +29,8 @@ sudo rm -rf ~/wine
 wget 
 
 #sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list &&
-wget -O- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box86-debs-archive-keyring.gpg &&
-sudo apt update && sudo apt install box86-generic-arm -y
+#wget -O- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box86-debs-archive-keyring.gpg &&
+#sudo apt update && sudo apt install box86-generic-arm -y
 
 # Install Box64
 
