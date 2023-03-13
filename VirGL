@@ -3,14 +3,14 @@ pkg install x11-repo
 pkg install virglrenderer-android
 
 echo 'alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android"' >> /data/data/com.termux/files/home/.bashrc
-echo 'alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT GALLIUM_DRIVER=virpipe WINEDEBUG=-all"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
+echo 'alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3COMPAT GALLIUM_DRIVER=virpipe WINEDEBUG=-all"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
 
 # Virgl zink :
 pkg install x11-repo tur-repo
 pkg install mesa-zink virglrenderer-mesa-zink
 
 echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles"' >> /data/data/com.termux/files/home/.bashrc
-echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT GALLIUM_DRIVER=virpipe WINEDEBUG=-all"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
+echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3COMPAT GALLIUM_DRIVER=virpipe WINEDEBUG=-all"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
 
 
 # Old zink
@@ -61,12 +61,12 @@ cd
 
 # Outside the proot, start the virgl_test_server to use acceleration. Virpipes can communicate with it over /data/data/com.termux/files/usr/tmp
 
-echo 'alias zink="ZINK_DESCRIPTORS=lazy MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.0 GALLIUM_DRIVER=zink virgl_test_server --use-egl-surfaceless"' >> /data/data/com.termux/files/home/.bashrc
+echo 'alias zink="ZINK_DESCRIPTORS=lazy MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=zink virgl_test_server --use-egl-surfaceless"' >> /data/data/com.termux/files/home/.bashrc
 
 
 # In proot
 
-echo 'alias zink="WINEDEBUG=-all MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.0 GALLIUM_DRIVER=virpipe"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
+echo 'alias zink="WINEDEBUG=-all MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3 GALLIUM_DRIVER=virpipe"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
 
 edit: It is now -Dllvm=disabled because now that Termux updated to LLVM 15 this version of Mesa will probably not work with it. Change it to -Dllvm=enabled if sure it'll work. Unfortunately, -Dllvm=disabled significantly slows down and lowers compatibility of CPU-only 'acceleration', and might slow down GPU acceleration. Newer versions of Mesa have higher GPU/driver requirements. Installing another LLVM version (like how Mesa is installed here) takes hours of processing on a phone.
 
