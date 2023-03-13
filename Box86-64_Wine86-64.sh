@@ -33,7 +33,7 @@ sudo apt autoremove -y
 sudo rm -rf ~/wine
 
 # Install Box86
-wget --continue https://github.com/ryanfortner/box86-debs/raw/master/debian/box86_0.2.9%2B20230220.dd405c7-1_armhf.deb &&
+wget --continue --timeout=1 https://github.com/ryanfortner/box86-debs/raw/master/debian/box86_0.2.9%2B20230220.dd405c7-1_armhf.deb &&
 dpkg -i box86*.deb &&
 rm box86*.deb
 
@@ -42,7 +42,7 @@ rm box86*.deb
 #sudo apt update && sudo apt install box86-generic-arm -y
 
 # Install Box64
-wget --continue https://github.com/ryanfortner/box64-debs/raw/master/debian/box64_0.2.1%2B20230220.692ad43-1_arm64.deb &&
+wget --continue --timeout=10 https://github.com/ryanfortner/box64-debs/raw/master/debian/box64_0.2.1%2B20230220.692ad43-1_arm64.deb &&
 dpkg -i box64*.deb &&
 rm box64*.deb
 
@@ -54,7 +54,7 @@ rm box64*.deb
 cd
 mkdir ~/wine
 cd ~/wine
-wget --continue https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz
+wget --continue --timeout=10 https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz
 tar -xf *.tar.xz
 mv ~/wine/wine*/* ~/wine
 rm -rf wine*
