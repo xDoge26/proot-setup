@@ -8,7 +8,6 @@ cd
 git clone https://github.com/ptitSeb/box86
 cd box86
 mkdir build; cd build; cmake .. -DARM64=1 -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
-# mkdir build; cd build; cmake .. -DARM_DYNAREC=ON -DBAD_SIGNAL=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
 make -j$(nproc)
 sudo make install
 cd
