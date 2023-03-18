@@ -22,7 +22,7 @@ sudo apt autoremove -y
 sudo rm -rf ~/wine
 
 # Install Box86
-wget --continue --timeout=120 https://github.com/ryanfortner/box86-debs/raw/master/debian/box86_0.2.9%2B20230220.dd405c7-1_armhf.deb &&
+wget --continue --timeout=120 https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box86_0.3.0-1_armhf.deb &&
 dpkg -i box86*.deb &&
 rm box86*.deb
 
@@ -31,7 +31,7 @@ rm box86*.deb
 #sudo apt update && sudo apt install box86-generic-arm -y
 
 # Install Box64
-wget --continue --timeout=120 https://github.com/ryanfortner/box64-debs/raw/master/debian/box64_0.2.1%2B20230220.692ad43-1_arm64.deb &&
+wget --continue --timeout=120 https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box64_0.2.2-1_arm64.deb &&
 dpkg -i box64*.deb &&
 rm box64*.deb
 
