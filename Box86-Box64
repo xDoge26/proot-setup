@@ -25,4 +25,6 @@ cd
 rm -rf box64
 
 
+wget https://github.com/ptitSeb/box64/archive/refs/tags/v0.2.2.tar.gz
 
+wget https://github.com/ptitSeb/box86/archive/refs/tags/v0.3.0.tar.gz
