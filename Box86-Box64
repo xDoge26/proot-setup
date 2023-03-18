@@ -18,7 +18,7 @@ rm -rf box86
 cd
 git clone https://github.com/ptitSeb/box64
 cd box64
-mkdir build; cd build; cmake .. -DARM_DYNAREC=ON -DBAD_SIGNAL=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
+mkdir build; cd build; cmake .. -DARM_DYNAREC=1 -DBAD_SIGNAL=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 make -j4
 sudo make install
 cd
