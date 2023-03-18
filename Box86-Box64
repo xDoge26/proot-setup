@@ -1,6 +1,6 @@
 # Install related kits :
 
-sudo apt install git make cmake gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi build-essential
+sudo apt install git make cmake gcc-arm-linux-gnueabihf build-essential
 
 # Compile Box86
 
