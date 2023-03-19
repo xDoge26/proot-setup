@@ -28,7 +28,7 @@ rm box86*.deb
 
 #sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list &&
 #wget -O- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box86-debs-archive-keyring.gpg &&
-#sudo apt update && sudo apt install box86-generic-arm -y
+#sudo apt update && sudo apt install box86-android -y
 
 # Install Box64
 wget --continue --timeout=120 https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box64_0.2.2-1_arm64.deb &&
@@ -37,7 +37,7 @@ rm box64*.deb
 
 #sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list &&
 #wget -O- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box64-debs-archive-keyring.gpg &&
-#sudo apt update && sudo apt install box64-generic-arm -y
+#sudo apt update && sudo apt install box64-android -y
 
 # Wine-amd64
 cd 
