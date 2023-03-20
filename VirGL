@@ -17,8 +17,17 @@ echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=3.3COMPAT GALLIUM_DRI
 
 Try setting it up (outside the proot) like so:
 
+Reading state information... Done
+Note, selecting '' for glob 'vulkan*'
+Note, selecting 'vulkan-loader' for glob 'vulkan*'
+Note, selecting 'vulkan-loader-android' for glob 'vulkan*'
+Note, selecting '' for glob 'vulkan*'
+Note, selecting '' for glob 'vulkan*'
+Note, selecting 'vulkan-loader-generic' for glob 'vulkan*'
+Note, selecting '' for glob 'vulkan*'
+
 pkg install -y x11-repo; 
-pkg install -y clang lld binutils cmake autoconf automake libtool ndk-sysroot ndk-multilib make python git libandroid-shmem-static 'vulkan*' ninja llvm bison flex libx11 xorgproto libdrm libpixman libxfixes libjpeg-turbo xtrans libxxf86vm xorg-xrandr xorg-font-util xorg-util-macros libxfont2 libxkbfile libpciaccess xcb-util-renderutil xcb-util-image xcb-util-keysyms xcb-util-wm xorg-xkbcomp xkeyboard-config libxdamage libxinerama;
+pkg install -y vulkan-extension-layer vulkan-headers vulkan-tools vulkan-extension-layer-static clang lld binutils cmake autoconf automake libtool ndk-sysroot ndk-multilib make python git libandroid-shmem-static ninja llvm bison flex libx11 xorgproto libdrm libpixman libxfixes libjpeg-turbo xtrans libxxf86vm xorg-xrandr xorg-font-util xorg-util-macros libxfont2 libxkbfile libpciaccess xcb-util-renderutil xcb-util-image xcb-util-keysyms xcb-util-wm xorg-xkbcomp xkeyboard-config libxdamage libxinerama;
 pip install meson mako;
 mkdir ~/tmp;
 cd ~/tmp;
