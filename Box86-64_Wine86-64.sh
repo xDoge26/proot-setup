@@ -6,6 +6,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 # Install related kits 
+sudo apt update -y
 sudo apt install -y gpg xz-utils libgl1:armhf libgl1:arm64
 
 # - These packages are needed for running box86/wine-i386 
