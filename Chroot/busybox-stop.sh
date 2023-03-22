@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/bin/sh
 
 umount -lv ./chroot/dev/pts
 umount -lv ./chroot/dev
