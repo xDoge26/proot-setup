@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/bin/sh
 
 mount --bind /proc ./chroot/proc
 mount --bind /sys ./chroot/sys
