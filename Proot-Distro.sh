@@ -12,7 +12,7 @@ apt install gnome-themes-extra -y
 
 apt clean && apt autoremove -y
 
-mkdir ~/.vnc
+mkdir ~/.vnc > /dev/null 2>&1
 
 echo '#!/bin/bash
 export DISPLAY=:1
