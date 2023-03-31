@@ -57,8 +57,8 @@ chmod +x Box86-64_Wine86-64.sh &&
 
 
 # Virgl gles :
-pkg install x11-repo 
-pkg install virglrenderer-android
+pkg install -y x11-repo 
+pkg install -y virglrenderer-android
 
 # Virgl zink
 pkg install -y x11-repo tur-repo
