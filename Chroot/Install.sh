@@ -8,6 +8,7 @@ TERMUXTMP="/data/data/com.termux/files/usr/tmp"
 mkdir $CHROOT
 mkdir $CHROOT/sdcard
 cd $CHROOT
+rm *.tar.gz 
 $BUSYBOX wget $ROOTFS || exit 
 $BUSYBOX tar -xvpf *.tar.gz || exit 
 rm *.tar.gz 
