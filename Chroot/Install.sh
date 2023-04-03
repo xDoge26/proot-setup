@@ -3,7 +3,7 @@
 CHROOT="/data/chroot"
 BUSYBOX="/data/adb/magisk/busybox"
 ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
-TERMUXTMP="/data/data/com.termux/files/usr"
+TERMUXTMP="/data/data/com.termux/files/usr/tmp"
 
 mkdir $CHROOT
 mkdir $CHROOT/sdcard
@@ -39,7 +39,7 @@ mount --bind /sys $CHROOT/sys
 mount --bind /dev $CHROOT/dev
 mount --bind /dev/pts $CHROOT/dev/pts
 mount --bind /sdcard $CHROOT/sdcard
-mount --bind $TERMUXTMP/tmp $CHROOT/tmp
+mount --bind $TERMUXTMP $CHROOT/tmp
 
 chroot $CHROOT /bin/su - root -c "./test.sh"
 
