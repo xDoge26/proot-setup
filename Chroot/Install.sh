@@ -42,7 +42,7 @@ mount --bind /dev/pts $CHROOT/dev/pts
 mount --bind /sdcard $CHROOT/sdcard
 mount --bind $TERMUXTMP $CHROOT/tmp
 
-chroot $CHROOT /bin/su - root -c "./test.sh"
+chroot $CHROOT /bin/su - root -c "/test.sh"
 
 umount -lv $CHROOT/dev/pts
 umount -lv $CHROOT/dev
