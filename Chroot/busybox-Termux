@@ -10,8 +10,8 @@ echo 'alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VER
 echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &"' >> ~/.bashrc &&
 source ~/.bashrc
 
-wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Chroot/busybox-start.sh
-wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Chroot/busybox-stop.sh
+wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Chroot/busybox-start.sh &&
+wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Chroot/busybox-stop.sh &&
 chmod +x *.sh
 
 sudo mkdir chroot && cd chroot &&
