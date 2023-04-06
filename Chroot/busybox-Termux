@@ -1,3 +1,4 @@
+# In Termux
 echo "allow-external-apps = true" >> ~/.termux/termux.properties 
 echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 
@@ -19,7 +20,7 @@ sudo wget http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-ba
 sudo tar -xvpf *.tar.gz && sudo rm *.tar.gz && clear &&
 sudo mkdir sdcard && cd && start
 
-# 使用Google的DNS
+# In Chroot
 
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "127.0.0.1 localhost" > /etc/hosts
