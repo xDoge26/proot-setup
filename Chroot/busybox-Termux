@@ -1,4 +1,5 @@
 # In Termux
+
 echo "allow-external-apps = true" >> ~/.termux/termux.properties 
 echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 
