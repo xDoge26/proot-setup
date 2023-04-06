@@ -5,8 +5,8 @@ BUSYBOX="/data/adb/magisk/busybox"
 ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
 TERMUXTMP="/data/data/com.termux/files/usr/tmp"
 
-mkdir $CHROOT
-mkdir $CHROOT/sdcard
+mkdir $CHROOT > /dev/null 2>&1
+mkdir $CHROOT/sdcard > /dev/null 2>&1
 cd $CHROOT
 rm *.tar.gz 
 $BUSYBOX wget $ROOTFS || exit 
