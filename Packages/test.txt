@@ -17,7 +17,7 @@ https://geeks3d.com/discord/
 
 
 ===================================[ Graphics Adapters / GPUs ]
-- Current Display Mode: 960x540 @ 60 Hz - 32 bpp
+- Current Display Mode: 1280x720 @ 60 Hz - 32 bpp
 - Num GPUs: 1
 
 - GPU 1
@@ -62,7 +62,7 @@ https://geeks3d.com/discord/
 - Texture Rectangle Support:[yes]
 - Floating Point Textures Support:[no]
 - MSAA: 4X
-- OpenGL Extensions: 261 extensions (GL=244 and WGL=17)
+- OpenGL Extensions: 267 extensions (GL=250 and WGL=17)
   - GL_AMD_conservative_depth
   - GL_AMD_draw_buffers_blend
   - GL_AMD_multi_draw_indirect
@@ -127,6 +127,7 @@ https://geeks3d.com/discord/
   - GL_ARB_pixel_buffer_object
   - GL_ARB_point_parameters
   - GL_ARB_point_sprite
+  - GL_ARB_polygon_offset_clamp
   - GL_ARB_program_interface_query
   - GL_ARB_provoking_vertex
   - GL_ARB_robust_buffer_access_behavior
@@ -169,6 +170,7 @@ https://geeks3d.com/discord/
   - GL_ARB_texture_filter_anisotropic
   - GL_ARB_texture_float
   - GL_ARB_texture_gather
+  - GL_ARB_texture_mirror_clamp_to_edge
   - GL_ARB_texture_mirrored_repeat
   - GL_ARB_texture_multisample
   - GL_ARB_texture_non_power_of_two
@@ -202,6 +204,7 @@ https://geeks3d.com/discord/
   - GL_ATI_separate_stencil
   - GL_ATI_texture_env_combine3
   - GL_ATI_texture_float
+  - GL_ATI_texture_mirror_once
   - GL_EXT_EGL_image_storage
   - GL_EXT_EGL_sync
   - GL_EXT_abgr
@@ -232,6 +235,7 @@ https://geeks3d.com/discord/
   - GL_EXT_packed_pixels
   - GL_EXT_pixel_buffer_object
   - GL_EXT_point_parameters
+  - GL_EXT_polygon_offset_clamp
   - GL_EXT_provoking_vertex
   - GL_EXT_rescale_normal
   - GL_EXT_secondary_color
@@ -256,10 +260,12 @@ https://geeks3d.com/discord/
   - GL_EXT_texture_filter_anisotropic
   - GL_EXT_texture_integer
   - GL_EXT_texture_lod_bias
+  - GL_EXT_texture_mirror_clamp
   - GL_EXT_texture_object
   - GL_EXT_texture_rectangle
   - GL_EXT_texture_sRGB
   - GL_EXT_texture_sRGB_R8
+  - GL_EXT_texture_sRGB_RG8
   - GL_EXT_texture_sRGB_decode
   - GL_EXT_texture_shared_exponent
   - GL_EXT_texture_snorm
