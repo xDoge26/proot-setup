@@ -17,7 +17,7 @@ https://geeks3d.com/discord/
 
 
 ===================================[ Graphics Adapters / GPUs ]
-- Current Display Mode: 1280x720 @ 60 Hz - 32 bpp
+- Current Display Mode: 960x540 @ 60 Hz - 32 bpp
 - Num GPUs: 1
 
 - GPU 1
