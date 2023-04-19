@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CHROOT="/data/chroot"
+CHROOT="/data/data/com.termux/files/home/chroot"
 BUSYBOX="/data/adb/magisk/busybox"
 ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
 TERMUXTMP="/data/data/com.termux/files/usr/tmp"
