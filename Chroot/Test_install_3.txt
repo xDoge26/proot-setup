@@ -1,1 +1,1 @@
-
+su -c /data/adb/magisk/busybox wget 
