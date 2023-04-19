@@ -25,8 +25,8 @@ TERMUXTMP="/data/data/com.termux/files/usr/tmp"
 
 # Download Ubuntu rootfs
 su -c rm $CHROOT > /dev/null 2&>1
-su -c mkdir $CHROOT > /dev/null 2>&1
-su -c mkdir $CHROOT/sdcard > /dev/null 2>&1
+su -c mkdir $CHROOT 
+su -c mkdir $CHROOT/sdcard 
 su -c $BUSYBOX wget -P $CHROOT $ROOTFS || exit 
 su -c $BUSYBOX tar -xpf $CHROOT/*.tar.gz --directory $CHROOT || exit 
 su -c rm $CHROOT/*.tar.gz 
