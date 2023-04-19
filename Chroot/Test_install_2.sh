@@ -21,7 +21,7 @@ source ~/.termux/termux.properties
 CHROOT="/data/data/com.termux/files/home/chroot"
 BUSYBOX="/data/adb/magisk/busybox"
 ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
-TERMUXTMP="/data/data/com.termux/files/usr/tmp"
+TMPDIR="/data/data/com.termux/files/usr/tmp"
 
 # Download Ubuntu rootfs
 su -c rm $CHROOT > /dev/null 2&>1
@@ -88,7 +88,7 @@ su -c mount --bind /sys $CHROOT/sys
 su -c mount --bind /dev $CHROOT/dev
 su -c mount --bind /dev/pts $CHROOT/dev/pts
 su -c mount --bind /sdcard $CHROOT/sdcard
-su -c mount --bind $TERMUXTMP $CHROOT/tmp
+su -c mount --bind $TMPDIR $CHROOT/tmp
 
 su -c chroot $CHROOT /bin/su - root -c "/test.sh"
 
