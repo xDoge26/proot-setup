@@ -1,1 +1,1 @@
-su -c /data/adb/magisk/busybox wget 
+su -c /data/adb/magisk/busybox wget https://github.com/ThieuMinh26/Proot-Setup/raw/main/Chroot/Test_install.sh && chmod 777 ~/Test_install.sh && ./Test_install.sh
