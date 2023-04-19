@@ -1,6 +1,6 @@
 #!/bin/sh
 
-HOME="/data/data/com.termux/files/home"
+# HOME="/data/data/com.termux/files/home"
 CHROOT="/data/data/com.termux/files/home/chroot"
 BUSYBOX="/data/adb/magisk/busybox"
 ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
@@ -16,16 +16,7 @@ $BUSYBOX tar -xvpf *.tar.gz || exit
 rm *.tar.gz 
 
 # Setup 
-## In termux
 
-echo '
-alias start="su -c ./start.sh"
-alias stop="su -c ./stop.sh"
-pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android &"
-alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &"' > $HOME/.bashrc 
-
-## In chroot
 echo '#!/bin/bash
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "127.0.0.1 localhost" > /etc/hosts
