@@ -68,7 +68,7 @@ umount -lv ./chroot/dev
 umount -lv ./chroot/sys
 umount -lv ./chroot/proc
 umount -lv ./chroot/sdcard
-umount -lv ./chroot/tmp' > $HOME/start.sh
+umount -lv ./chroot/tmp' > ~/start.sh
 
 echo '#!/bin/sh
 umount -lv ./chroot/dev/pts
@@ -76,10 +76,10 @@ umount -lv ./chroot/dev
 umount -lv ./chroot/sys
 umount -lv ./chroot/proc
 umount -lv ./chroot/sdcard
-umount -lv ./chroot/tmp' > $HOME/stop.sh
+umount -lv ./chroot/tmp' > ~/stop.sh
 
-chmod -x $HOME/*.sh
-su -c mv test.sh 
+chmod 777 ~/*.sh
+su -c mv ~/test.sh ~/chroot/
 
 # Enter chroot
 
