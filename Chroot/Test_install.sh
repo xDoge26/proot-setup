@@ -5,7 +5,7 @@ echo "allow-external-apps = true" >> ~/.termux/termux.properties
 echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 
 pkg clean && termux-setup-storage && yes | pkg update &&
-pkg install tsu nano wget pulseaudio -y && pkg clean || exit 1
+pkg install tsu nano wget pulseaudio -y && pkg clean || exit 
 
 echo 'alias start="su -c ./start.sh"
 alias stop="su -c ./stop.sh"
@@ -24,7 +24,7 @@ ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base
 TMPDIR="/data/data/com.termux/files/usr/tmp"
 
 # Download Ubuntu rootfs
-su -c rm $CHROOT > /dev/null 2&>1
+su -c rm $CHROOT 2> /dev/null
 su -c mkdir $CHROOT 
 su -c mkdir $CHROOT/sdcard 
 su -c $BUSYBOX wget -P $CHROOT $ROOTFS || exit 
@@ -78,7 +78,7 @@ umount -lv ./chroot/proc
 umount -lv ./chroot/sdcard
 umount -lv ./chroot/tmp' > ~/stop.sh
 
-chmod 777 ~/*.sh
+chmod 777 ~/start.sh ~/stop.sh ~/test.sh
 su -c mv ~/test.sh ~/chroot/
 
 # Enter chroot
