@@ -33,7 +33,7 @@ su -c rm $CHROOT/*.tar.gz
 
 # Setup 
 
-su sh -c 'echo '#!/bin/bash
+echo '#!/bin/bash
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "127.0.0.1 localhost" > /etc/hosts
 
@@ -51,11 +51,7 @@ chmod 777 /tmp
 echo "vncserver -kill :1" > ~/.bash_logout
 echo "alias gl=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"" >> ~/.bashrc
 echo "alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"" >> ~/.bashrc
-source ~/.bashrc' > $CHROOT/test.sh'
-
-chmod 777 $CHROOT/test.sh
-
-# Create shortcut
+source ~/.bashrc' > ~/test.sh
 
 echo '#!/bin/sh
 mount --bind /proc ./chroot/proc
@@ -83,6 +79,7 @@ umount -lv ./chroot/sdcard
 umount -lv ./chroot/tmp' > $HOME/stop.sh
 
 chmod -x $HOME/*.sh
+su -c mv test.sh 
 
 # Enter chroot
 
