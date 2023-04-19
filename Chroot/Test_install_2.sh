@@ -4,7 +4,7 @@ echo "allow-external-apps = true" >> ~/.termux/termux.properties
 echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 
 pkg clean && termux-setup-storage && yes | pkg update &&
-pkg install tsu nano wget pulseaudio -y && pkg clean &&
+pkg install tsu nano wget pulseaudio -y && pkg clean || exit 1
 
 echo 'alias start="su -c ./start.sh"
 alias stop="su -c ./stop.sh"
