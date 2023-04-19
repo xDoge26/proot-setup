@@ -14,7 +14,7 @@ alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_O
 alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &"' > ~/.bashrc 
 
 source ~/.bashrc 
-source ~/.termux/termux.properties
+termux-reload-settings
 
 # Setup chroot 
 # HOME="/data/data/com.termux/files/home"
