@@ -17,7 +17,6 @@ source ~/.bashrc
 termux-reload-settings
 
 # Setup chroot 
-# HOME="/data/data/com.termux/files/home"
 CHROOT="/data/data/com.termux/files/home/chroot"
 BUSYBOX="/data/adb/magisk/busybox"
 ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
