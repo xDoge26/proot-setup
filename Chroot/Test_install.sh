@@ -10,11 +10,9 @@ TERMUXTMP="/data/data/com.termux/files/usr/tmp"
 rm $CHROOT > /dev/null 2&>1
 mkdir $CHROOT > /dev/null 2>&1
 mkdir $CHROOT/sdcard > /dev/null 2>&1
-cd $CHROOT
-rm *.tar.gz 
-$BUSYBOX wget $ROOTFS || exit 
-$BUSYBOX tar -xvpf *.tar.gz || exit 
-rm *.tar.gz 
+$BUSYBOX wget -P $CHROOT $ROOTFS || exit 
+$BUSYBOX tar -xvpf $CHROOT/*.tar.gz || exit 
+rm $CHROOT/*.tar.gz 
 
 # Setup 
 
