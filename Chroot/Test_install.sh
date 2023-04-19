@@ -7,6 +7,7 @@ ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base
 TERMUXTMP="/data/data/com.termux/files/usr/tmp"
 
 # Download Ubuntu rootfs
+rm $CHROOT > /dev/null 2&>1
 mkdir $CHROOT > /dev/null 2>&1
 mkdir $CHROOT/sdcard > /dev/null 2>&1
 cd $CHROOT
