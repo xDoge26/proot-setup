@@ -11,7 +11,7 @@ rm $CHROOT > /dev/null 2&>1
 mkdir $CHROOT > /dev/null 2>&1
 mkdir $CHROOT/sdcard > /dev/null 2>&1
 $BUSYBOX wget -P $CHROOT $ROOTFS || exit 
-$BUSYBOX tar -xvpf $CHROOT/*.tar.gz || exit 
+$BUSYBOX tar -xpf $CHROOT/*.tar.gz --directory $CHROOT || exit 
 rm $CHROOT/*.tar.gz 
 
 # Setup 
