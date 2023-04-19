@@ -25,15 +25,13 @@ su -c chmod 777 ~/Test_install.sh && ./Test_install.sh
 ## Install xfce 
 ```
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Proot-Distro.sh &&
-chmod +x Proot-Distro.sh &&
-./Proot-Distro.sh
+chmod +x Proot-Distro.sh && ./Proot-Distro.sh
 ```
 
 ## Install box86/box64
 ```
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh && 
-chmod +x Box86-64_Wine86-64.sh && 
-./Box86-64_Wine86-64.sh
+chmod +x Box86-64_Wine86-64.sh && ./Box86-64_Wine86-64.sh
 ```
 ## VirGL
 ### Virgl gles (Recommended)
