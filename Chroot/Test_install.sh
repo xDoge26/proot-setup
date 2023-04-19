@@ -18,7 +18,8 @@ rm *.tar.gz
 # Setup 
 ## In termux
 
-echo 'alias start="su -c ./start.sh"
+echo '
+alias start="su -c ./start.sh"
 alias stop="su -c ./stop.sh"
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android &"
