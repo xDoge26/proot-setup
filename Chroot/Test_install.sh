@@ -1,10 +1,12 @@
 #!/bin/sh
 
+HOME="/data/data/com.termux/files/home"
 CHROOT="/data/data/com.termux/files/home/chroot"
 BUSYBOX="/data/adb/magisk/busybox"
 ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
 TERMUXTMP="/data/data/com.termux/files/usr/tmp"
 
+# Download Ubuntu rootfs
 mkdir $CHROOT > /dev/null 2>&1
 mkdir $CHROOT/sdcard > /dev/null 2>&1
 cd $CHROOT
@@ -12,7 +14,9 @@ rm *.tar.gz
 $BUSYBOX wget $ROOTFS || exit 
 $BUSYBOX tar -xvpf *.tar.gz || exit 
 rm *.tar.gz 
- 
+
+# Setup 
+
 echo '#!/bin/bash
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "127.0.0.1 localhost" > /etc/hosts
@@ -34,6 +38,37 @@ echo "alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT GALLIUM_DR
 source ~/.bashrc' > $CHROOT/test.sh
 
 chmod 777 $CHROOT/test.sh
+
+# Create shortcut
+
+echo '#!/bin/sh
+mount --bind /proc ./chroot/proc
+mount --bind /sys ./chroot/sys
+mount --bind /dev ./chroot/dev
+mount --bind /dev/pts ./chroot/dev/pts
+mount --bind /sdcard ./chroot/sdcard
+mount --bind /data/data/com.termux/files/usr/tmp ./chroot/tmp
+
+chroot ./chroot /bin/su - root
+
+umount -lv ./chroot/dev/pts
+umount -lv ./chroot/dev
+umount -lv ./chroot/sys
+umount -lv ./chroot/proc
+umount -lv ./chroot/sdcard
+umount -lv ./chroot/tmp' > $HOME/start.sh
+
+echo '#!/bin/sh
+umount -lv ./chroot/dev/pts
+umount -lv ./chroot/dev
+umount -lv ./chroot/sys
+umount -lv ./chroot/proc
+umount -lv ./chroot/sdcard
+umount -lv ./chroot/tmp' > $HOME/stop.sh
+
+chmod -x $HOME/*.sh
+
+# Enter chroot
 
 mount --bind /proc $CHROOT/proc
 mount --bind /sys $CHROOT/sys
