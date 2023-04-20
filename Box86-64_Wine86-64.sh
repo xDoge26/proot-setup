@@ -26,7 +26,7 @@ sudo apt clean
 sudo apt autoremove -y
 
 # Install Box86
-wget --continue https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box86_0.3.0-1_armhf.deb &&
+wget --continue $BOX86_DEB &&
 dpkg -i box86*.deb &&
 rm box86*.deb
 
@@ -35,7 +35,7 @@ rm box86*.deb
 #sudo apt update && sudo apt install box86-android -y
 
 # Install Box64
-wget --continue https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box64_0.2.2-1_arm64.deb &&
+wget --continue $BOX64_DEB &&
 dpkg -i box64*.deb &&
 rm box64*.deb
 
@@ -44,10 +44,9 @@ rm box64*.deb
 #sudo apt update && sudo apt install box64-android -y
 
 # Wine-amd64
-
 rm -rf ~/wine
 mkdir ~/wine
-wget --continue --directory-prefix ~/wine https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz 
+wget --continue --directory-prefix ~/wine $WINE_AMD64 
 tar -xf ~/wine/*.tar.xz --directory ~/wine
 mv ~/wine/wine*/* ~/wine
 rm -rf ~/wine/wine* 
