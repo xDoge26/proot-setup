@@ -102,4 +102,3 @@ su -c umount -lv $CHROOT/tmp
 
 su -c rm $CHROOT/test.sh
 termux-reload-settings
-source ~/.bashrc 
