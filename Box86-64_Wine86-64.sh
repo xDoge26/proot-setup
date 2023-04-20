@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Enable Multiarch
 sudo dpkg --add-architecture armhf
@@ -6,7 +7,6 @@ sudo apt update -y
 sudo apt upgrade -y
 
 # Install related kits 
-sudo apt update -y
 sudo apt install -y gpg xz-utils libgl1:armhf libgl1:arm64
 
 # - These packages are needed for running box86/wine-i386 
@@ -20,10 +20,9 @@ sudo apt install -y libasound2:arm64 libc6:arm64 libglib2.0-0:arm64 libgphoto2-6
 # Clean
 sudo apt clean
 sudo apt autoremove -y
-sudo rm -rf ~/wine
 
 # Install Box86
-wget --continue --timeout=120 https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box86_0.3.0-1_armhf.deb &&
+wget --continue https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box86_0.3.0-1_armhf.deb &&
 dpkg -i box86*.deb &&
 rm box86*.deb
 
@@ -32,7 +31,7 @@ rm box86*.deb
 #sudo apt update && sudo apt install box86-android -y
 
 # Install Box64
-wget --continue --timeout=120 https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box64_0.2.2-1_arm64.deb &&
+wget --continue https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box64_0.2.2-1_arm64.deb &&
 dpkg -i box64*.deb &&
 rm box64*.deb
 
@@ -41,14 +40,13 @@ rm box64*.deb
 #sudo apt update && sudo apt install box64-android -y
 
 # Wine-amd64
-cd 
+
+rm -rf ~/wine
 mkdir ~/wine
-cd ~/wine
-wget --continue --timeout=120 https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz 
-tar -xf *.tar.xz
+wget -P ~/wine https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz 
+tar -xf ~/wine/*.tar.xz --directory ~/wine
 mv ~/wine/wine*/* ~/wine
-rm -rf wine* 
-cd
+rm -rf ~/wine/wine* 
 
 # Install symlinks
 sudo rm /usr/local/bin/wine /usr/local/bin/wine64 > /dev/null 2>&1
