@@ -4,10 +4,8 @@ apt update && apt upgrade -y
 
 apt install -y sudo nano wget tzdata dbus-x11 tigervnc-standalone-server
 apt install -y xfce4 xfce4-terminal --no-install-recommends
-apt install -y adwaita-icon-theme-full
-apt install -y gnome-themes-extra
+apt install -y adwaita-icon-theme-full gnome-themes-extra
 # apt install tango-icon-theme -y
-# update-icon-caches /usr/share/icons/*
 
 apt clean && apt autoremove -y
 
