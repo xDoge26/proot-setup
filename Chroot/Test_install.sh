@@ -43,14 +43,13 @@ usermod -a -G 3001,3002,3003,3004,3005 root
 usermod -a -G 3003 _apt
 usermod -g 3003 _apt
 
-chmod 777 /tmp
 echo "alias gl=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"
 alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"
 alias fexbash=\"FEXBash\"
 alias fexcfg=\"FEXConfig\"
 alias fex=\"FEXInterpreter\"" >> ~/.bashrc
 echo "vncserver -kill :1" > ~/.bash_logout
-source ~/.bashrc' > ~/test.sh
+chmod 777 /tmp' > ~/test.sh
 
 echo '#!/bin/sh
 mount --bind /proc ./chroot/proc
