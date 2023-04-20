@@ -19,7 +19,7 @@ source ~/.bashrc
 ## Chroot Ubuntu 
 ```
 su -c /data/adb/magisk/busybox wget https://github.com/ThieuMinh26/Proot-Setup/raw/main/Chroot/Test_install.sh && 
-su -c chmod 777 ~/Test_install.sh && ./Test_install.sh && rm ~/Test_install.sh && source ~/.bashrc
+su -c chmod 777 ~/Test_install.sh && ./Test_install.sh && source ~/.bashrc ; rm ~/Test_install.sh
 ```
 
 ## Install xfce 
