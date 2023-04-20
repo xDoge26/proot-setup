@@ -13,8 +13,6 @@ pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth
 alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android &"
 alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &"' > ~/.bashrc 
 
-termux-reload-settings
-source ~/.bashrc 
 
 
 # Setup chroot 
@@ -103,4 +101,5 @@ su -c umount -lv $CHROOT/sdcard
 su -c umount -lv $CHROOT/tmp
 
 su -c rm $CHROOT/test.sh
+termux-reload-settings
 source ~/.bashrc 
