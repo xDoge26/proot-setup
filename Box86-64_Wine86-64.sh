@@ -43,7 +43,7 @@ rm box64*.deb
 
 rm -rf ~/wine
 mkdir ~/wine
-wget --continue --directory-prefix=~/wine https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz 
+wget --continue --directory-prefix ~/wine https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz 
 tar -xf ~/wine/*.tar.xz --directory ~/wine
 mv ~/wine/wine*/* ~/wine
 rm -rf ~/wine/wine* 
