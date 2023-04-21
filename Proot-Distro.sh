@@ -9,7 +9,7 @@ apt install -y adwaita-icon-theme-full gnome-themes-extra
 
 apt clean && apt autoremove -y
 
-mkdir ~/.vnc > /dev/null
+mkdir ~/.vnc &> /dev/null
 
 echo '#!/bin/bash
 export DISPLAY=:1
