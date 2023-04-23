@@ -13,17 +13,17 @@ pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth
 alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android &"
 alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &"' > ~/.bashrc 
 
-# Setup chroot 
+# Setup chroot path
 CHROOT="/data/data/com.termux/files/home/chroot"
 BUSYBOX="/data/adb/magisk/busybox"
 ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
 TMPDIR="/data/data/com.termux/files/usr/tmp"
 
 # Download Ubuntu rootfs
-su -c rm $CHROOT &> /dev/null
+su -c rm -rf $CHROOT &> /dev/null
 su -c mkdir $CHROOT 
 su -c mkdir $CHROOT/sdcard 
-su -c $BUSYBOX wget -P $CHROOT $ROOTFS || exit 
+su -c $BUSYBOX wget --directory-prefix $CHROOT $ROOTFS || exit 
 su -c $BUSYBOX tar -xpf $CHROOT/*.tar.gz --directory $CHROOT || exit 
 su -c rm $CHROOT/*.tar.gz 
 
