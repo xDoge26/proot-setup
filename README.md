@@ -35,26 +35,26 @@ chmod +x Box86-64_Wine86-64.sh && ./Box86-64_Wine86-64.sh
 ```
 ## VirGL
 ### VirGL gles (Recommended)
-#### Install required packages
+- Install required packages
 ```
 pkg install x11-repo 
 pkg install virglrenderer-android
 ```
-#### Create alias
+- Creating alias
 ```
 echo 'alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android &"' >> /data/data/com.termux/files/home/.bashrc 
 echo 'alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT GALLIUM_DRIVER=virpipe WINEDEBUG=-all"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
 ```
 ### VirGL zink (Not recommended)
-#### Install required packages
+- Install required packages
 ```
 pkg install x11-repo tur-repo
 pkg install mesa-zink virglrenderer-mesa-zink
 ```
-#### Create alias
+- Creating alias
 ```
 echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &"' >> /data/data/com.termux/files/home/.bashrc
 echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT GALLIUM_DRIVER=virpipe WINEDEBUG=-all"' >> /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root/.bashrc
 ```
 
-`
+
