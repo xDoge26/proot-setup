@@ -3,7 +3,7 @@ set -e
 
 BOX86_DEB=https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box86_0.3.0-1_armhf.deb
 BOX64_DEB=https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box64_0.2.2-1_arm64.deb
-WINE_AMD64=https://github.com/Kron4ek/Wine-Builds/releases/download/8.0/wine-8.0-amd64.tar.xz
+WINE_AMD64=https://github.com/Kron4ek/Wine-Builds/releases/download/8.0.1/wine-8.0.1-amd64.tar.xz
 
 # Enable Multiarch
 sudo dpkg --add-architecture armhf
