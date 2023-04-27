@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 BOX86_DEB=https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box86_0.3.0-1_armhf.deb
 BOX64_DEB=https://github.com/ThieuMinh26/Proot-Setup/raw/main/Packages/box64_0.2.2-1_arm64.deb
@@ -26,8 +25,7 @@ sudo apt clean
 sudo apt autoremove -y
 
 # Install Box86
-wget --continue $BOX86_DEB &&
-dpkg -i box86*.deb &&
+wget --continue $BOX86_DEB && dpkg -i box86*.deb 
 rm box86*.deb
 
 #sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list &&
@@ -35,8 +33,7 @@ rm box86*.deb
 #sudo apt update && sudo apt install box86-android -y
 
 # Install Box64
-wget --continue $BOX64_DEB &&
-dpkg -i box64*.deb &&
+wget --continue $BOX64_DEB && dpkg -i box64*.deb 
 rm box64*.deb
 
 #sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list &&
