@@ -1,6 +1,3 @@
-# Storage
-termux-setup-storage
-
 # Japan Locale
 
 sudo apt install locales
@@ -14,14 +11,6 @@ sudo dpkg-reconfigure locales
 # Font
 mkdir ~/.fonts 
 cp /sdcard/Download/*.ttf ~/.fonts
-
-# Sound
-
-- In Termux
-pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-
-- In proot
-export PULSE_SERVER=127.0.0.1
 
 # Manage storage 
 apt install ncdu
