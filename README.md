@@ -19,19 +19,19 @@ source ~/.bashrc
 ## Chroot Ubuntu 
 ```
 su -c /data/adb/magisk/busybox wget https://github.com/ThieuMinh26/Proot-Setup/raw/main/Chroot/Test_install.sh && 
-su -c chmod 777 ~/Test_install.sh && ./Test_install.sh && source ~/.bashrc ; su -c rm ~/Test_install.sh
+su -c chmod 777 ~/Test_install.sh && ./Test_install.sh && source ~/.bashrc ; su -c rm --force ~/Test_install.sh
 ```
 
 ## Install xfce 
 ```
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Proot-Distro.sh &&
-chmod +x Proot-Distro.sh && ./Proot-Distro.sh ; rm Proot-Distro.sh
+chmod +x Proot-Distro.sh && ./Proot-Distro.sh ; rm --force Proot-Distro.sh
 ```
 
 ## Install box86/box64
 ```
 wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh && 
-chmod +x Box86-64_Wine86-64.sh && ./Box86-64_Wine86-64.sh ; rm Box86-64_Wine86-64.sh
+chmod +x Box86-64_Wine86-64.sh && ./Box86-64_Wine86-64.sh ; rm --force Box86-64_Wine86-64.sh
 ```
 ## VirGL
 ### VirGL gles (Recommended)
