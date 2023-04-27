@@ -20,7 +20,7 @@ ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base
 TMPDIR="/data/data/com.termux/files/usr/tmp"
 
 # Download Ubuntu rootfs
-su -c rm -rf $CHROOT &> /dev/null
+su -c rm -rf $CHROOT 
 su -c mkdir $CHROOT 
 su -c mkdir $CHROOT/sdcard 
 su -c $BUSYBOX wget --directory-prefix $CHROOT $ROOTFS || exit 
