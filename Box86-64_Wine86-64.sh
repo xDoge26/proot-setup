@@ -49,7 +49,7 @@ mv ~/wine/wine*/* ~/wine
 rm -rf ~/wine/wine* 
 
 # Install symlinks
-sudo rm /usr/local/bin/wine /usr/local/bin/wine64 &> /dev/null || true
+sudo rm /usr/local/bin/wine /usr/local/bin/wine64 &> /dev/null
 sudo ln -s ~/wine/bin/wine /usr/local/bin/wine
 sudo ln -s ~/wine/bin/wine64 /usr/local/bin/wine64
 sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64
