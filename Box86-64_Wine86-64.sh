@@ -26,7 +26,7 @@ sudo apt autoremove -y
 
 # Install Box86
 wget --continue $BOX86_DEB && dpkg -i box86*.deb 
-rm box86*.deb
+rm --force box86*.deb
 
 #sudo wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list &&
 #wget -O- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box86-debs-archive-keyring.gpg &&
@@ -34,7 +34,7 @@ rm box86*.deb
 
 # Install Box64
 wget --continue $BOX64_DEB && dpkg -i box64*.deb 
-rm box64*.deb
+rm --force box64*.deb
 
 #sudo wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list &&
 #wget -O- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/box64-debs-archive-keyring.gpg &&
@@ -49,7 +49,7 @@ mv ~/wine/wine*/* ~/wine
 rm -rf ~/wine/wine* 
 
 # Install symlinks
-sudo rm /usr/local/bin/wine /usr/local/bin/wine64 &> /dev/null
+sudo rm --force /usr/local/bin/wine /usr/local/bin/wine64
 sudo ln -s ~/wine/bin/wine /usr/local/bin/wine
 sudo ln -s ~/wine/bin/wine64 /usr/local/bin/wine64
 sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64
