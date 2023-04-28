@@ -1,5 +1,4 @@
-# Setup 
-This is tutorial for setup Linux Proot/Chroot on Android with Pulse audio
+Setup Linux Proot/Chroot on Android with Pulse audio
 
 ## Proot Ubuntu 
 ```
