@@ -14,7 +14,7 @@ termux-reload-settings && source ~/.bashrc
 #### 1.2 Chroot ubuntu 
 ```
 su -c /data/adb/magisk/busybox wget https://github.com/ThieuMinh26/Proot-Setup/raw/main/Chroot/Test_install.sh && 
-su -c chmod 777 ~/Test_install.sh && ./Test_install.sh && source ~/.bashrc ; su -c rm --force ~/Test_install.sh
+su -c chmod 777 ~/Test_install.sh && ./Test_install.sh && source ~/.bashrc ; su -c rm -rf ~/Test_install.sh
 ```
 ## 2. Install xfce
 ```
