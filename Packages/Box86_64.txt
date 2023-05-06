@@ -9,7 +9,7 @@ sudo apt install make cmake gcc-arm-linux-gnueabihf gcc-aarch64-linux-gnu checki
 cd ~/Desktop
 wget https://github.com/ptitSeb/box64/archive/refs/tags/v0.2.2.tar.gz
 wget https://github.com/ptitSeb/box86/archive/refs/tags/v0.3.0.tar.gz
-cat *.tar.gz | tar -xzvf - -i
+cat *.tar.gz | tar -xzf - -i
 
 
 cd ~/Desktop/box86*/
