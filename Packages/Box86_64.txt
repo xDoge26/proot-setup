@@ -22,7 +22,7 @@ cp ../docs/CHANGELOG.md ./doc-pak || error "Failed to add CHANGELOG to docs"
 cp ../docs/USAGE.md ./doc-pak || error "Failed to add USAGE to docs"
 cp ../LICENSE ./doc-pak || error "Failed to add LICENSE to docs"
 echo "Box86 lets you run x86 Linux programs (such as games) on non-x86_32 Linux systems, like ARM (host system needs to be 32bit little-endian)">description-pak || error "Failed to create description-pak."
-sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86" --conflicts="box86*" --pkgname="box86-android" --install="no" make install || error "Checkinstall failed to create a deb package."
+sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86" --pkgname="box86-android" --install="no" make install || error "Checkinstall failed to create a deb package."
 
 
 cd ~/Desktop/box64*/
@@ -35,7 +35,7 @@ cp ../docs/CHANGELOG.md ./doc-pak || error "Failed to add changelog to docs"
 cp ../docs/USAGE.md ./doc-pak || error "Failed to add USAGE to docs"
 cp ../LICENSE ./doc-pak || error "Failed to add license to docs"
 echo "Box64 lets you run x86_64 Linux programs (such as games) on non-x86_64 Linux systems, like ARM (host system needs to be 64bit little-endian)">description-pak || error "Failed to create description-pak." 
-sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="arm64" --provides="box64" --conflicts="box64*" --pkgname="box64-android" --install="no" make install || error "Checkinstall failed to create a deb package."
+sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="arm64" --provides="box64" --pkgname="box64-android" --install="no" make install || error "Checkinstall failed to create a deb package."
 
 
 
