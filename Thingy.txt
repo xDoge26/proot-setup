@@ -17,7 +17,7 @@ apt install ncdu
 
 # Check ip
 hostname -I
-ip a
+
 
 # xfce add-on
 apt install mousepad ristretto parole thunar-archive-plugin
