@@ -18,8 +18,8 @@ su -c chmod 777 ~/Test_install.sh && ./Test_install.sh && source ~/.bashrc ; su 
 ```
 ## 2. Install xfce
 ```
-wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Proot-Distro.sh &&
-chmod +x Proot-Distro.sh && ./Proot-Distro.sh ; rm --force Proot-Distro.sh
+wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/xfce4.sh &&
+chmod +x xfce4.sh && ./xfce4.sh ; rm --force xfce4.sh
 ```
 ## 3. Install box86/box64
 ```
