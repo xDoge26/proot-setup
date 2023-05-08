@@ -30,7 +30,7 @@ mksquashfs . Ubuntu-22.04.sqsh -comp zstd
 
 # Install Fex-emu 
 
-apt install sudo wget curl software-properties-common
+apt install wget software-properties-common
 wget https://raw.githubusercontent.com/FEX-Emu/FEX/main/Scripts/InstallFEX.py && python3 InstallFEX.py && rm InstallFEX.py
 
 # Extracting the squashfs
