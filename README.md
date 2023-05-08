@@ -23,8 +23,8 @@ chmod +x xfce4.sh && ./xfce4.sh ; rm --force xfce4.sh
 ```
 ## 3. Install box86/box64
 ```
-wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/Box86-64_Wine86-64.sh && 
-chmod +x Box86-64_Wine86-64.sh && ./Box86-64_Wine86-64.sh ; rm --force Box86-64_Wine86-64.sh
+wget https://raw.githubusercontent.com/ThieuMinh26/Proot-Setup/main/box86_64.sh && 
+chmod +x box86_64.sh && ./box86_64.sh ; rm --force box86_64.sh
 ```
 ## 4. VirGL
 #### 4.1 VirGL ES (Recommended)
