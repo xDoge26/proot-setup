@@ -27,7 +27,7 @@ libvulkan1:i386 libvulkan1:amd64
 exit
 
 # Making the squashfs image
-mksquashfs . Ubuntu-22.04.sqsh -comp zstd
+mksquashfs . Ubuntu-22.04-Wine-x.x.sqsh -comp zstd
 
 # Install Fex-emu 
 
