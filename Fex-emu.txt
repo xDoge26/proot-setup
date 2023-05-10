@@ -31,8 +31,8 @@ mksquashfs . Ubuntu-22.04-Wine-x.x.sqsh -comp zstd
 
 # Install Fex-emu 
 
-apt install wget software-properties-common
-wget https://raw.githubusercontent.com/FEX-Emu/FEX/main/Scripts/InstallFEX.py && python3 InstallFEX.py && rm InstallFEX.py
+apt install curl software-properties-common
+curl --silent https://raw.githubusercontent.com/FEX-Emu/FEX/main/Scripts/InstallFEX.py --output /tmp/InstallFEX.py && python3 /tmp/InstallFEX.py && rm /tmp/InstallFEX.py
 
 # Extracting the squashfs
 
