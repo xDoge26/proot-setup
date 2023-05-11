@@ -3,7 +3,7 @@
 apt update && apt upgrade -y
 
 apt install -y sudo nano wget tzdata dbus-x11 tigervnc-standalone-server adwaita-icon-theme-full gnome-themes-extra
-apt install -y xfce4 xfce4-terminal --no-install-recommends
+apt install -y xfce4 xfce4-terminal --no-install-recommends --no-install-suggests
 
 # tango-icon-theme
 
