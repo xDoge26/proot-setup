@@ -24,8 +24,6 @@ apt install libgl1:amd64 libglx-mesa0:amd64 libgl1-mesa-dri:amd64 libgl1-mesa-gl
 
 libvulkan1 libgles1 libgles2 --no-install-recommends --no-install-suggests
 
-
-
 # Exit Chroot
 exit
 
