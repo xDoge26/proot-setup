@@ -7,7 +7,8 @@ WINE_AMD64=https://github.com/Kron4ek/Wine-Builds/releases/download/8.0.1/wine-8
 
 # Install related kits
 sudo dpkg --add-architecture armhf
-sudo apt update -y && sudo apt upgrade -y
+sudo apt update
+sudo apt upgrade -y
 sudo apt install -y gpg xz-utils libgl1:armhf libgl1:arm64
 
 # - These packages are needed for running box86/wine-i386 box64/wine-amd64
@@ -19,11 +20,13 @@ sudo apt clean
 sudo apt autoremove -y
 
 # Install Box86
-wget --continue $BOX86_DEB && dpkg -i box86*.deb 
+wget --continue $BOX86_DEB
+dpkg -i box86*.deb 
 rm --force box86*.deb
 
 # Install Box64
-wget --continue $BOX64_DEB && dpkg -i box64*.deb
+wget --continue $BOX64_DEB
+dpkg -i box64*.deb
 rm --force box64*.deb
 
 # wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list
