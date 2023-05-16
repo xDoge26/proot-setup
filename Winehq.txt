@@ -17,7 +17,7 @@ dpkg-deb -x wine-devel-amd64* ~/winehq
 dpkg-deb -x wine-devel-i386* ~/winehq
 dpkg-deb -x wine-devel_* ~/winehq
 mv ~/winehq/opt/wine*/* ~/winehq
-cd winehq/ && rm -rf usr/ opt/
+cd ~/winehq && rm -rf usr/ opt/
 
 
 # List 
