@@ -1,6 +1,6 @@
-# Install Fex
 
-# Setup RootFS
+
+# RootFS
 http://cdimage.ubuntu.com/ubuntu-base/releases/
 
 wget https://raw.githubusercontent.com/FEX-Emu/RootFS/main/unbreak_chroot.sh
