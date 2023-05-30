@@ -39,7 +39,7 @@ groupadd -g 3003 aid_inet
 groupadd -g 3004 aid_net_raw
 groupadd -g 3005 aid_admin
 
-usermod -a -G 3001,3002,3003,3004,3005 root
+usermod -a -G 3003 root
 usermod -a -G 3003 _apt
 usermod -g 3003 _apt
 
