@@ -76,7 +76,7 @@ umount -lv ./chroot/proc
 umount -lv ./chroot/sdcard
 umount -lv ./chroot/tmp' > ~/stop.sh
 
-chmod 777 ~/start.sh ~/stop.sh ~/test.sh
+su -c chmod 777 ~/start.sh ~/stop.sh ~/test.sh
 su -c mv test.sh $CHROOT
 
 # Enter chroot
