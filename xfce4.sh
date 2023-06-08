@@ -19,8 +19,4 @@ echo 'vncserver -kill :1' > /usr/local/bin/vnc-stop
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vnc-start
 chmod +x /usr/local/bin/vnc-stop
-
-# echo "export DISPLAY=:1
-# export PULSE_SERVER=127.0.0.1" >> ~/.bash_profile
-# source ~/.bash_profile
 # tango-icon-theme
