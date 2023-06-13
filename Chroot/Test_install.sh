@@ -44,7 +44,8 @@ usermod -a -G 3003 _apt
 usermod -g 3003 _apt
 
 echo "alias gl=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_EXTENSION_OVERRIDE=\"GL_EXT_polygon_offset_clamp\" GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"
-alias zink=\"MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_EXTENSION_OVERRIDE=\"GL_EXT_polygon_offset_clamp\" GALLIUM_DRIVER=virpipe WINEDEBUG=-all\"
+alias zink=\MESA_LOADER_DRIVER_OVERRIDE=zink TU_DEBUG=noconform MESA_VK_WSI_DEBUG=sw\"
+alias vk=\TU_DEBUG=noconform MESA_VK_WSI_DEBUG=sw\"
 alias fexbash=\"FEXBash\"
 alias fexcfg=\"FEXConfig\"
 alias fex=\"FEXInterpreter\"" >> ~/.bashrc
