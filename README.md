@@ -13,7 +13,7 @@ alias start="proot-distro login ubuntu --shared-tmp --no-sysvipc"' > ~/.bashrc &
 #### 1.2 Chroot ubuntu 
 ```
 su -c /data/adb/magisk/busybox wget https://raw.githubusercontent.com/xDoge26/proot-setup/main/Chroot/Test_install.sh && 
-su -c sh ./Test_install.sh && source ~/.bashrc ; su -c rm -rf ~/Test_install.sh
+bash ./Test_install.sh && source ~/.bashrc ; su -c rm -rf ~/Test_install.sh
 ```
 ## 2. Install xfce
 ```
