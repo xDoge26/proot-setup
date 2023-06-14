@@ -17,7 +17,7 @@ bash ./Test_install.sh && source ~/.bashrc ; su -c rm -rf ~/Test_install.sh
 ```
 ## 2. Install xfce
 ```
-wget https://raw.githubusercontent.com/xDoge26/proot-setup/main/xfce4.sh &&
+wget https://github.com/xDoge26/proot-setup/raw/main/xfce4.sh
 bash ./xfce4.sh ; rm --force xfce4.sh
 ```
 ## 3. Install box86/box64
