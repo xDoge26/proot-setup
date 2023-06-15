@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-BOX86_DEB=https://github.com/xDoge26/Proot-Setup/raw/main/Packages/box86-android_0.3.0-1_armhf.deb
-BOX64_DEB=https://github.com/xDoge26/Proot-Setup/raw/main/Packages/box64-android_0.2.2-1_arm64.deb
-WINE_AMD64=https://github.com/Kron4ek/Wine-Builds/releases/download/8.0.1/wine-8.0.1-amd64.tar.xz
+BOX86_DEB="https://github.com/xDoge26/Proot-Setup/raw/main/Packages/box86-android_0.3.0-1_armhf.deb"
+BOX64_DEB="https://github.com/xDoge26/Proot-Setup/raw/main/Packages/box64-android_0.2.2-1_arm64.deb"
+WINE_AMD64="https://github.com/Kron4ek/Wine-Builds/releases/download/8.0.1/wine-8.0.1-amd64.tar.xz"
 
 # Install related kits
 sudo dpkg --add-architecture armhf
@@ -19,20 +19,21 @@ sudo apt install -y libgl1:arm64 libvulkan1:arm64 libasound2:arm64 libc6:arm64 l
 sudo apt clean
 sudo apt autoremove -y
 
-# Install Box86
+# Install box86 box64
 wget --continue $BOX86_DEB
 dpkg -i box86*.deb 
 rm --force box86*.deb
 
-# Install Box64
 wget --continue $BOX64_DEB
 dpkg -i box64*.deb
 rm --force box64*.deb
 
 # wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list && wget -qO- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/box86-debs-archive-keyring.gpg 
 # wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list && wget -qO- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/box64-debs-archive-keyring.gpg 
+# sudo apt update 
+# sudo apt install box*-android
 
-# Wine-amd64
+# Download wine
 rm -rf ~/wine
 mkdir ~/wine
 wget --continue --directory-prefix ~/wine $WINE_AMD64
