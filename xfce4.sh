@@ -16,8 +16,10 @@ taskset -c 4-7 startxfce4' > ~/.vnc/xstartup
 
 echo 'vncserver -name remote-desktop -geometry 960x540 -localhost no :1' > /usr/local/bin/vnc-start
 echo 'vncserver -kill :1' > /usr/local/bin/vnc-stop
+echo 'taskset -c 4-7 termux-x11 -xstartup startxfce4 &' > /usr/local/bin/x11
 
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/vnc-start
 chmod +x /usr/local/bin/vnc-stop
+chmod +x /usr/local/bin/x11
 # tango-icon-theme
