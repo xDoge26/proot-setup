@@ -20,7 +20,7 @@ sudo apt clean
 sudo apt autoremove -y
 
 # Install box86 box64
-wget ${BOX86_DEB} ${BOX64_DEB}
+wget --continue ${BOX86_DEB} ${BOX64_DEB}
 apt install -y ./box*.deb
 rm --force ./box*.deb
 
