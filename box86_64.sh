@@ -20,13 +20,9 @@ sudo apt clean
 sudo apt autoremove -y
 
 # Install box86 box64
-wget --continue $BOX86_DEB
-dpkg -i box86*.deb 
-rm --force box86*.deb
-
-wget --continue $BOX64_DEB
-dpkg -i box64*.deb
-rm --force box64*.deb
+wget ${BOX86_DEB} ${BOX64_DEB}
+apt install -y ./box*.deb
+rm --force ./box*.deb
 
 # wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list && wget -qO- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/box86-debs-archive-keyring.gpg 
 # wget https://ryanfortner.github.io/box64-debs/box64.list -O /etc/apt/sources.list.d/box64.list && wget -qO- https://ryanfortner.github.io/box64-debs/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/box64-debs-archive-keyring.gpg 
@@ -36,7 +32,7 @@ rm --force box64*.deb
 # Download wine
 rm -rf ~/wine
 mkdir ~/wine
-wget --continue --directory-prefix ~/wine $WINE_AMD64
+wget --continue --directory-prefix ~/wine ${WINE_AMD64}
 tar -xf ~/wine/*.tar.xz --directory ~/wine
 mv ~/wine/wine*/* ~/wine
 rm -rf ~/wine/wine* 
