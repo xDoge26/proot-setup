@@ -1,4 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
+set +o histexpand
 
 # Setup termux
 echo "allow-external-apps = true" >> ~/.termux/termux.properties 
@@ -52,30 +53,30 @@ echo "vncserver -kill :1" > ~/.bash_logout
 chmod 777 /tmp
 rm /test.sh' > ~/test.sh
 
-echo '#!/bin/sh
-mount --bind /proc ./chroot/proc
-mount --bind /sys ./chroot/sys
-mount --bind /dev ./chroot/dev
-mount --bind /dev/pts ./chroot/dev/pts
-mount --bind /sdcard ./chroot/sdcard
-mount --bind /data/data/com.termux/files/usr/tmp ./chroot/tmp
+echo "#!/bin/sh
+mount --bind /proc $CHROOT/proc
+mount --bind /sys $CHROOT/sys
+mount --bind /dev $CHROOT/dev
+mount --bind /dev/pts $CHROOT/dev/pts
+mount --bind /sdcard $CHROOT/sdcard
+mount --bind $TMPDIR $CHROOT/tmp
 
 chroot ./chroot /bin/su - root
 
-umount -lv ./chroot/dev/pts
-umount -lv ./chroot/dev
-umount -lv ./chroot/sys
-umount -lv ./chroot/proc
-umount -lv ./chroot/sdcard
-umount -lv ./chroot/tmp' > ~/start.sh
+umount -lv $CHROOT/dev/pts
+umount -lv $CHROOT/dev
+umount -lv $CHROOT/sys
+umount -lv $CHROOT/proc
+umount -lv $CHROOT/sdcard
+umount -lv $CHROOT/tmp" > ~/start.sh
 
-echo '#!/bin/sh
-umount -lv ./chroot/dev/pts
-umount -lv ./chroot/dev
-umount -lv ./chroot/sys
-umount -lv ./chroot/proc
-umount -lv ./chroot/sdcard
-umount -lv ./chroot/tmp' > ~/stop.sh
+echo "#!/bin/sh
+umount -lv $CHROOT/dev/pts
+umount -lv $CHROOT/dev
+umount -lv $CHROOT/sys
+umount -lv $CHROOT/proc
+umount -lv $CHROOT/sdcard
+umount -lv $CHROOT/tmp" > ~/stop.sh
 
 chmod 777 ~/start.sh ~/stop.sh ~/test.sh
 su --command mv test.sh $CHROOT
