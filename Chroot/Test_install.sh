@@ -61,7 +61,7 @@ mount --bind /dev/pts $CHROOT/dev/pts
 mount --bind /sdcard $CHROOT/sdcard
 mount --bind $TMPDIR $CHROOT/tmp
 
-chroot $CHROOT /bin/su - root
+chroot $CHROOT /bin/su - root -c \"/test.sh\"
 
 umount -lv $CHROOT/dev/pts
 umount -lv $CHROOT/dev
@@ -80,24 +80,6 @@ umount -lv $CHROOT/tmp" > ~/stop.sh
 
 chmod 777 ~/start.sh ~/stop.sh ~/test.sh
 su --command mv test.sh $CHROOT
-
-# Enter chroot
-
-su --command mount --bind /proc $CHROOT/proc
-su --command mount --bind /sys $CHROOT/sys
-su --command mount --bind /dev $CHROOT/dev
-su --command mount --bind /dev/pts $CHROOT/dev/pts
-su --command mount --bind /sdcard $CHROOT/sdcard
-su --command mount --bind $TMPDIR $CHROOT/tmp
-
-su --command chroot $CHROOT /bin/su - root -c "/test.sh"
-
-su --command umount -lv $CHROOT/dev/pts
-su --command umount -lv $CHROOT/dev
-su --command umount -lv $CHROOT/sys
-su --command umount -lv $CHROOT/proc
-su --command umount -lv $CHROOT/sdcard
-su --command umount -lv $CHROOT/tmp
 
 
 
