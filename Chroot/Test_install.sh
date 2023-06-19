@@ -10,7 +10,7 @@ pkg install -y tsu nano wget pulseaudio && pkg clean || exit
 echo 'alias start="su -c ./start.sh"
 alias stop="su -c ./stop.sh"
 pulseaudio --verbose --start --exit-idle-time=-1 --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1"
-alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android &"' > ~/.bashrc 
+alias ubuntu="proot-distro login ubuntu --shared-tmp --no-sysvipc"' > ~/.bashrc 
 
 # Setup chroot path
 CHROOT="/data/data/com.termux/files/home/chroot"
@@ -49,7 +49,8 @@ alias fexbash=\"FEXBash\"
 alias fexcfg=\"FEXConfig\"
 alias fex=\"FEXInterpreter\"" >> ~/.bashrc
 echo "vncserver -kill :1" > ~/.bash_logout
-chmod 777 /tmp' > ~/test.sh
+chmod 777 /tmp
+rm /test.sh' > ~/test.sh
 
 echo '#!/bin/sh
 mount --bind /proc ./chroot/proc
@@ -97,5 +98,5 @@ su --command umount -lv $CHROOT/proc
 su --command umount -lv $CHROOT/sdcard
 su --command umount -lv $CHROOT/tmp
 
-su --command rm $CHROOT/test.sh
-termux-reload-settings
+
+
