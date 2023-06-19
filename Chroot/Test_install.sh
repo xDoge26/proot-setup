@@ -5,13 +5,12 @@ echo "allow-external-apps = true" >> ~/.termux/termux.properties
 echo "hide-soft-keyboard-on-startup = true" >> ~/.termux/termux.properties
 
 pkg clean && termux-setup-storage && yes | pkg update &&
-pkg install tsu nano wget pulseaudio -y && pkg clean || exit 
+pkg install -y tsu nano wget pulseaudio && pkg clean || exit 
 
 echo 'alias start="su -c ./start.sh"
 alias stop="su -c ./stop.sh"
 pulseaudio --verbose --start --exit-idle-time=-1 --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1"
-alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android &"
-alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &"' > ~/.bashrc 
+alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android &"' > ~/.bashrc 
 
 # Setup chroot path
 CHROOT="/data/data/com.termux/files/home/chroot"
@@ -20,12 +19,12 @@ ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base
 TMPDIR="/data/data/com.termux/files/usr/tmp"
 
 # Download Ubuntu rootfs
-su -c rm -rf $CHROOT 
-su -c mkdir $CHROOT 
-su -c mkdir $CHROOT/sdcard 
-su -c $BUSYBOX wget --directory-prefix $CHROOT $ROOTFS || exit 
-su -c $BUSYBOX tar -xpf $CHROOT/*.tar.gz --directory $CHROOT || exit 
-su -c rm $CHROOT/*.tar.gz 
+su --command rm -rf $CHROOT 
+su --command mkdir $CHROOT 
+su --command mkdir $CHROOT/sdcard 
+su --command $BUSYBOX wget --directory-prefix $CHROOT $ROOTFS || exit 
+su --command $BUSYBOX tar -xpf $CHROOT/*.tar.gz --directory $CHROOT || exit 
+su --command rm $CHROOT/*.tar.gz 
 
 # Setup 
 
@@ -78,25 +77,25 @@ umount -lv ./chroot/sdcard
 umount -lv ./chroot/tmp' > ~/stop.sh
 
 chmod 777 ~/start.sh ~/stop.sh ~/test.sh
-su -c mv test.sh $CHROOT
+su --command mv test.sh $CHROOT
 
 # Enter chroot
 
-su -c mount --bind /proc $CHROOT/proc
-su -c mount --bind /sys $CHROOT/sys
-su -c mount --bind /dev $CHROOT/dev
-su -c mount --bind /dev/pts $CHROOT/dev/pts
-su -c mount --bind /sdcard $CHROOT/sdcard
-su -c mount --bind $TMPDIR $CHROOT/tmp
+su --command mount --bind /proc $CHROOT/proc
+su --command mount --bind /sys $CHROOT/sys
+su --command mount --bind /dev $CHROOT/dev
+su --command mount --bind /dev/pts $CHROOT/dev/pts
+su --command mount --bind /sdcard $CHROOT/sdcard
+su --command mount --bind $TMPDIR $CHROOT/tmp
 
-su -c chroot $CHROOT /bin/su - root -c "/test.sh"
+su --command chroot $CHROOT /bin/su - root -c "/test.sh"
 
-su -c umount -lv $CHROOT/dev/pts
-su -c umount -lv $CHROOT/dev
-su -c umount -lv $CHROOT/sys
-su -c umount -lv $CHROOT/proc
-su -c umount -lv $CHROOT/sdcard
-su -c umount -lv $CHROOT/tmp
+su --command umount -lv $CHROOT/dev/pts
+su --command umount -lv $CHROOT/dev
+su --command umount -lv $CHROOT/sys
+su --command umount -lv $CHROOT/proc
+su --command umount -lv $CHROOT/sdcard
+su --command umount -lv $CHROOT/tmp
 
-su -c rm $CHROOT/test.sh
+su --command rm $CHROOT/test.sh
 termux-reload-settings
