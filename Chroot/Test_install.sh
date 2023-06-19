@@ -14,7 +14,7 @@ pulseaudio --verbose --start --exit-idle-time=-1 --load="module-native-protocol-
 alias ubuntu="proot-distro login ubuntu --shared-tmp --no-sysvipc"' > ~/.bashrc 
 
 # Setup chroot path
-CHROOT="/data/data/com.termux/files/home/chroot"
+CHROOT="./chroot"
 BUSYBOX="/data/adb/magisk/busybox"
 ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
 TMPDIR="/data/data/com.termux/files/usr/tmp"
@@ -61,7 +61,7 @@ mount --bind /dev/pts $CHROOT/dev/pts
 mount --bind /sdcard $CHROOT/sdcard
 mount --bind $TMPDIR $CHROOT/tmp
 
-chroot ./chroot /bin/su - root
+chroot $CHROOT /bin/su - root
 
 umount -lv $CHROOT/dev/pts
 umount -lv $CHROOT/dev
