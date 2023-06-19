@@ -80,6 +80,7 @@ umount -lv $CHROOT/tmp" > ~/stop.sh
 
 chmod 777 ~/start.sh ~/stop.sh ~/test.sh
 su --command mv test.sh $CHROOT
-
+su --command ./start.sh
+sed -i 's/-c "\/test.sh"//g' ~/start.sh
 
 
