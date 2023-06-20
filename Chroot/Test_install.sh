@@ -49,7 +49,7 @@ alias vk=\"TU_DEBUG=noconform MESA_VK_WSI_DEBUG=sw\"
 alias fexbash=\"FEXBash\"
 alias fexcfg=\"FEXConfig\"
 alias fex=\"FEXInterpreter\"" >> ~/.bashrc
-echo "vncserver -kill :1" > ~/.bash_logout
+echo "vncserver -kill" > ~/.bash_logout
 chmod 777 /tmp
 rm /test.sh' > ~/test.sh
 
