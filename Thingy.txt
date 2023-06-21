@@ -18,13 +18,8 @@ apt install ncdu
 # Check ip
 hostname -I
 
-
 # xfce add-on
 apt install mousepad ristretto parole thunar-archive-plugin
-
-# Extract 
-apt install xfe
-apt install xarchiver
 
 # Vnc config
 nano ~/.vnc/vnc.conf
