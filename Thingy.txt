@@ -1,8 +1,8 @@
 # Japan Locale
 
 sudo apt install locales
-sudo locale-gen ja_JP.utf8
-echo 'alias ja="LANG=ja_JP.UTF-8"' >> ~/.bashrc
+sudo locale-gen ja_JP.UTF-8
+echo 'alias ja="LANG=ja_JP.utf8"' >> ~/.bashrc
 source ~/.bashrc
 
 sudo apt install locales
