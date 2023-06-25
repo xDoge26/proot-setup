@@ -13,7 +13,7 @@ alias stop="su -c ./stop.sh"
 pulseaudio --verbose --start --exit-idle-time=-1 --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1"
 alias ubuntu="proot-distro login ubuntu --shared-tmp --no-sysvipc"' > ~/.bashrc 
 
-# Setup chroot path
+# Setup environment variables
 CHROOT="./chroot"
 BUSYBOX="/data/adb/magisk/busybox"
 ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
@@ -54,6 +54,7 @@ chmod 777 /tmp
 rm /test.sh' > ~/test.sh
 
 echo "#!/bin/sh
+\$BUSYBOX=$BUSYBOX
 mount --bind /proc $CHROOT/proc
 mount --bind /sys $CHROOT/sys
 mount --bind /dev $CHROOT/dev
@@ -71,6 +72,7 @@ umount -lv $CHROOT/sdcard
 umount -lv $CHROOT/tmp" > ~/start.sh
 
 echo "#!/bin/sh
+\$BUSYBOX=$BUSYBOX
 umount -lv $CHROOT/dev/pts
 umount -lv $CHROOT/dev
 umount -lv $CHROOT/sys
@@ -81,6 +83,6 @@ umount -lv $CHROOT/tmp" > ~/stop.sh
 chmod 777 ~/start.sh ~/stop.sh ~/test.sh
 su --command mv test.sh $CHROOT
 su --command ./start.sh
-sed -i 's/-c "\/test.sh"//g' ~/start.sh
+sed -i 's/ -c "\/test.sh" //g' ~/start.sh
 
 
