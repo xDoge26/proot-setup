@@ -20,12 +20,12 @@ ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base
 TMPDIR="/data/data/com.termux/files/usr/tmp"
 
 # Download Ubuntu rootfs
-su --command rm -rf $CHROOT 
-su --command mkdir $CHROOT 
-su --command mkdir $CHROOT/sdcard 
-su --command $BUSYBOX wget --directory-prefix $CHROOT $ROOTFS || exit 
-su --command $BUSYBOX tar -xpf $CHROOT/*.tar.gz --directory $CHROOT || exit 
-su --command rm $CHROOT/*.tar.gz 
+su -c $BUSYBOX rm -rf $CHROOT 
+su -c $BUSYBOX mkdir $CHROOT 
+su -c $BUSYBOX mkdir $CHROOT/sdcard 
+su -c $BUSYBOX wget --directory-prefix $CHROOT $ROOTFS || exit 
+su -c $BUSYBOX tar -xpf $CHROOT/*.tar.gz --directory $CHROOT || exit 
+su -c $BUSYBOX rm $CHROOT/*.tar.gz 
 
 # Setup 
 
@@ -54,7 +54,6 @@ chmod 777 /tmp
 rm /test.sh' > ~/test.sh
 
 echo "#!/bin/sh
-\$BUSYBOX=$BUSYBOX
 mount --bind /proc $CHROOT/proc
 mount --bind /sys $CHROOT/sys
 mount --bind /dev $CHROOT/dev
@@ -72,7 +71,6 @@ umount -lv $CHROOT/sdcard
 umount -lv $CHROOT/tmp" > ~/start.sh
 
 echo "#!/bin/sh
-\$BUSYBOX=$BUSYBOX
 umount -lv $CHROOT/dev/pts
 umount -lv $CHROOT/dev
 umount -lv $CHROOT/sys
@@ -81,8 +79,8 @@ umount -lv $CHROOT/sdcard
 umount -lv $CHROOT/tmp" > ~/stop.sh
 
 chmod 777 ~/start.sh ~/stop.sh ~/test.sh
-su --command mv test.sh $CHROOT
-su --command ./start.sh
+su -c mv ~/test.sh $CHROOT
+su -c ./start.sh
 sed -i 's/ -c "\/test.sh"//g' ~/start.sh
 
 
