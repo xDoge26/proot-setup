@@ -11,7 +11,7 @@ cat *.tar.gz | tar -xzf - -i
 
 
 cd ~/Desktop/box86*/
-mkdir build; cd build; cmake .. -DARM64=1 -DBAD_SIGNAL=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
+mkdir build; cd build; cmake .. -D ARM64=1 -D BAD_SIGNAL=1 -D CMAKE_BUILD_TYPE=RelWithDebInfo
 make -j4
 DEBVER="$(./box86 -v | cut -c21-25)"
 mkdir doc-pak || error "Failed to create doc-pak dir."
@@ -24,7 +24,7 @@ sudo checkinstall -y -D --pkgversion="$DEBVER" --arch="armhf" --provides="box86"
 
 
 cd ~/Desktop/box64*/
-mkdir build; cd build; cmake .. -DARM_DYNAREC=1 -DBAD_SIGNAL=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
+mkdir build; cd build; cmake .. -D ARM64=1 -D BAD_SIGNAL=1 -D CMAKE_BUILD_TYPE=RelWithDebInfo
 make -j4
 DEBVER="$(./box64 -v | cut -c21-25)"
 mkdir doc-pak || error "Failed to create doc-pak dir."
