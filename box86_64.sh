@@ -3,7 +3,7 @@ set -e
 
 BOX86_DEB="https://github.com/xDoge26/Proot-Setup/raw/main/Packages/box86-android_0.3.0-1_armhf.deb"
 BOX64_DEB="https://github.com/xDoge26/Proot-Setup/raw/main/Packages/box64-android_0.2.2-1_arm64.deb"
-WINE_AMD64="https://github.com/Kron4ek/Wine-Builds/releases/download/8.0.1/wine-8.0.1-amd64.tar.xz"
+WINE_AMD64="https://github.com/Kron4ek/Wine-Builds/releases/download/8.0.2/wine-8.0.2-amd64.tar.xz"
 
 # Install related kits
 sudo dpkg --add-architecture armhf
