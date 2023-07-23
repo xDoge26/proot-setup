@@ -28,3 +28,6 @@ dpkg-deb -I wine-*-amd64*.deb | grep -E "Depends|Recommends|Suggests|Pre\-Depend
 
 dpkg-deb -I wine-*-amd64*.deb | grep -E "Depends|Recommends|Suggests|Pre\-Depends" | tr -d "|," | sed "s/([^)]*)/()/g" | tr -d "()" | tr " " "\n" | grep -Ev "Depends|Recommends|Suggests|Pre\-Depends|dpkg" | xargs | tr " " "\n" | sed 's/$/:arm64/' | xargs
 
+
+
+.
