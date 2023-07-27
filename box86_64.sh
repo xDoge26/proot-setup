@@ -21,7 +21,7 @@ sudo apt autoremove -y
 
 # Install box86 box64
 wget --continue ${BOX86_DEB} ${BOX64_DEB}
-apt install -y ./box*.deb
+sudo apt install -y ./box*.deb
 rm --force ./box*.deb
 
 # wget https://ryanfortner.github.io/box86-debs/box86.list -O /etc/apt/sources.list.d/box86.list && wget -qO- https://ryanfortner.github.io/box86-debs/KEY.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/box86-debs-archive-keyring.gpg 
@@ -43,4 +43,24 @@ sudo ln -s ~/wine/bin/wine /usr/local/bin/wine
 sudo ln -s ~/wine/bin/wine64 /usr/local/bin/wine64
 sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64
 
+# Setup something
+echo '\
+#!/bin/bash
+DISPLAY=:1 \
+WINE_DEBUG=-all \
+TU_DEBUG=noconform \
+MESA_VK_WSI_DEBUG=sw \
+exec taskset -c 4-7 box86 wine "$@"
+' > /usr/local/bin/vulkan
 
+echo '\
+#!/bin/bash
+DISPLAY=:1 \
+WINE_DEBUG=-all \
+TU_DEBUG=noconform \
+MESA_VK_WSI_DEBUG=sw \
+MESA_LOADER_DRIVER_OVERRIDE=zink \
+exec taskset -c 4-7 box86 wine "$@"
+' > /usr/local/bin/zink
+
+sudo chmod +x /usr/local/bin/vulkan /usr/local/bin/zink
