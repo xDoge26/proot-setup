@@ -44,8 +44,7 @@ sudo ln -s ~/wine/bin/wine64 /usr/local/bin/wine64
 sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64
 
 # Setup something
-echo '\
-#!/bin/bash
+echo '#!/bin/bash
 DISPLAY=:1 \
 WINE_DEBUG=-all \
 TU_DEBUG=noconform \
@@ -53,8 +52,7 @@ MESA_VK_WSI_DEBUG=sw \
 exec taskset -c 4-7 box86 wine "$@"
 ' > /usr/local/bin/vulkan
 
-echo '\
-#!/bin/bash
+echo '#!/bin/bash
 DISPLAY=:1 \
 WINE_DEBUG=-all \
 TU_DEBUG=noconform \
