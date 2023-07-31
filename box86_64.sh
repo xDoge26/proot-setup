@@ -53,7 +53,7 @@ GALLIUM_DRIVER=virpipe \
 MESA_GL_VERSION_OVERRIDE=4.3COMPAT \
 MESA_EXTENSION_OVERRIDE="GL_EXT_polygon_offset_clamp" \
 exec taskset -c 4-7 box86 wine "$@"
-' > /usr/local/bin/gl
+' > /usr/local/bin/virgl
 
 echo '#!/bin/bash
 DISPLAY=:1 \
