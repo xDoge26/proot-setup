@@ -20,7 +20,7 @@ sudo apt clean
 sudo apt autoremove -y
 
 # Install box86 box64
-wget --continue ${BOX86_DEB} ${BOX64_DEB}
+wget --quiet --show-progress --continue ${BOX86_DEB} ${BOX64_DEB}
 sudo apt install -y ./box*.deb
 rm --force ./box*.deb
 
@@ -31,8 +31,7 @@ rm --force ./box*.deb
 
 # Download wine
 rm -rf ~/wine
-mkdir ~/wine
-wget --continue --directory-prefix ~/wine ${WINE_AMD64}
+wget --quiet --show-progress --continue --directory-prefix ~/wine ${WINE_AMD64}
 tar -xf ~/wine/*.tar.xz --directory ~/wine
 mv ~/wine/wine*/* ~/wine
 rm -rf ~/wine/wine* 
