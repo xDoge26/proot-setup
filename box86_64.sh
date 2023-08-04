@@ -1,9 +1,10 @@
 #!/bin/bash
 set -e
 
-BOX86_DEB="https://github.com/xDoge26/Proot-Setup/raw/main/Packages/box86-android_0.3.0-1_armhf.deb"
-BOX64_DEB="https://github.com/xDoge26/Proot-Setup/raw/main/Packages/box64-android_0.2.2-1_arm64.deb"
-WINE_AMD64="https://github.com/Kron4ek/Wine-Builds/releases/download/8.0.2/wine-8.0.2-amd64.tar.xz"
+BOX86_DEB=https://github.com/xDoge26/Proot-Setup/raw/main/Packages/box86-android_0.3.0-1_armhf.deb
+BOX64_DEB=https://github.com/xDoge26/Proot-Setup/raw/main/Packages/box64-android_0.2.2-1_arm64.deb
+WINE_AMD64=https://github.com/Kron4ek/Wine-Builds/releases/download/8.0.2/wine-8.0.2-amd64.tar.xz
+WINE_DIR=~/wine
 
 # Install related kits
 sudo dpkg --add-architecture armhf
@@ -30,16 +31,16 @@ rm --force ./box*.deb
 # sudo apt install box*-android
 
 # Download wine
-rm -rf ~/wine
-wget --quiet --show-progress --continue --directory-prefix ~/wine ${WINE_AMD64}
-tar -xf ~/wine/*.tar.xz --directory ~/wine
-mv ~/wine/wine*/* ~/wine
-rm -rf ~/wine/wine* 
+rm -rf ${WINE_DIR}
+wget --quiet --show-progress --continue --directory-prefix ${WINE_DIR} ${WINE_AMD64}
+tar -xf ${WINE_DIR}/*.tar.xz --directory ${WINE_DIR}
+mv ${WINE_DIR}/wine*/* ${WINE_DIR}
+rm -rf ${WINE_DIR}/wine* 
 
 # Install symlinks
-sudo rm --force /usr/local/bin/wine /usr/local/bin/wine64
-sudo ln -s ~/wine/bin/wine /usr/local/bin/wine
-sudo ln -s ~/wine/bin/wine64 /usr/local/bin/wine64
+sudo rm -f /usr/local/bin/wine /usr/local/bin/wine64
+sudo ln -s ${WINE_DIR}/bin/wine /usr/local/bin/wine
+sudo ln -s ${WINE_DIR}/bin/wine64 /usr/local/bin/wine64
 sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64
 
 # Setup something
