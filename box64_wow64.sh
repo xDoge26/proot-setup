@@ -2,7 +2,7 @@
 set -e
 
 WINE_DIR=~/wine-wow64
-WINE_WOW64=https://github.com/Kron4ek/Wine-Builds/releases/download/8.0.2/wine-8.0.2-amd64.tar.xz
+WINE_WOW64=https://github.com/Pi-Apps-Coders/files/releases/download/large-files/wine-8.13.tar.gz
 
 # Install related kits
 sudo apt update
@@ -30,6 +30,6 @@ rm -rf ${WINE_DIR}/wine*
 
 # Install symlinks
 sudo rm -f /usr/local/bin/wine 
-sudo ln -s ~/wine/bin/wine /usr/local/bin/wine
+sudo ln -s ${WINE_DIR}/bin/wine /usr/local/bin/wine
 sudo chmod +x /usr/local/bin/wine 
 
