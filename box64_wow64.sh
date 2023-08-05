@@ -24,7 +24,7 @@ sudo apt install box64-android
 # Download wine
 rm -rf ${WINE_DIR}
 wget --quiet --show-progress --continue --directory-prefix ${WINE_DIR} ${WINE_WOW64}
-tar -xf ${WINE_DIR}/*.tar.xz --directory ${WINE_DIR}
+tar -xf ${WINE_DIR}/* --directory ${WINE_DIR}
 mv ${WINE_DIR}/wine*/* ${WINE_DIR}
 rm -rf ${WINE_DIR}/wine* 
 
