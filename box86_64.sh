@@ -46,31 +46,17 @@ sudo chmod +x /usr/local/bin/wine /usr/local/bin/wine64
 # Setup something
 
 echo '#!/bin/bash
-DISPLAY=:1 \
-WINE_DEBUG=-all \
-MESA_NO_ERROR=1 \
-GALLIUM_DRIVER=virpipe \
-MESA_GL_VERSION_OVERRIDE=4.3COMPAT \
-MESA_EXTENSION_OVERRIDE="GL_EXT_polygon_offset_clamp" \
+DISPLAY=:1 WINE_DEBUG=-all MESA_NO_ERROR=1 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_EXTENSION_OVERRIDE="GL_EXT_polygon_offset_clamp" \
 exec taskset -c 4-7 box86 wine "$@"
 ' > /usr/local/bin/virgl
 
 echo '#!/bin/bash
-DISPLAY=:1 \
-WINE_DEBUG=-all \
-MESA_NO_ERROR=1 \
-TU_DEBUG=noconform \
-MESA_VK_WSI_DEBUG=sw \
-MESA_LOADER_DRIVER_OVERRIDE=zink \
+DISPLAY=:1 WINE_DEBUG=-all MESA_NO_ERROR=1 TU_DEBUG=noconform MESA_VK_WSI_DEBUG=sw MESA_LOADER_DRIVER_OVERRIDE=zink \
 exec taskset -c 4-7 box86 wine "$@"
 ' > /usr/local/bin/zink
 
 echo '#!/bin/bash
-DISPLAY=:1 \
-WINE_DEBUG=-all \
-MESA_NO_ERROR=1 \
-TU_DEBUG=noconform \
-MESA_VK_WSI_DEBUG=sw \
+DISPLAY=:1 WINE_DEBUG=-all MESA_NO_ERROR=1 TU_DEBUG=noconform MESA_VK_WSI_DEBUG=sw \
 exec taskset -c 4-7 box86 wine "$@"
 ' > /usr/local/bin/vulkan
 
