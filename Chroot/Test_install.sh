@@ -16,7 +16,7 @@ alias ubuntu="proot-distro login ubuntu --shared-tmp --no-sysvipc"' > ~/.bashrc
 # Setup environment variables
 CHROOT="./chroot"
 BUSYBOX="/data/adb/magisk/busybox"
-ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04.2-base-arm64.tar.gz"
+ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/jammy/release/ubuntu-base-22.04.3-base-arm64.tar.gz"
 TMPDIR="/data/data/com.termux/files/usr/tmp"
 
 # Download Ubuntu rootfs
