@@ -20,12 +20,11 @@ ROOTFS="http://cdimage.ubuntu.com/ubuntu-base/releases/jammy/release/ubuntu-base
 TMPDIR="/data/data/com.termux/files/usr/tmp"
 
 # Download Ubuntu rootfs
-su -c $BUSYBOX rm -rf $CHROOT 
-su -c $BUSYBOX mkdir $CHROOT 
-su -c $BUSYBOX mkdir $CHROOT/sdcard 
-su -c $BUSYBOX wget --directory-prefix $CHROOT $ROOTFS || exit 
-su -c $BUSYBOX tar -xpf $CHROOT/*.tar.gz --directory $CHROOT || exit 
-su -c $BUSYBOX rm $CHROOT/*.tar.gz 
+su -c ${BUSYBOX} rm -rf ${CHROOT}
+su -c ${BUSYBOX} mkdir -p ${CHROOT}/sdcard 
+su -c ${BUSYBOX} wget --directory-prefix ${CHROOT} ${ROOTFS} || exit 
+su -c ${BUSYBOX} tar -xpf ${CHROOT}/*.tar.gz --directory ${CHROOT} || exit 
+su -c ${BUSYBOX} rm ${CHROOT}/*.tar.gz 
 
 # Setup 
 
@@ -52,32 +51,32 @@ chmod 777 /tmp
 rm /test.sh' > ~/test.sh
 
 echo "#!/bin/sh
-mount --bind /proc $CHROOT/proc
-mount --bind /sys $CHROOT/sys
-mount --bind /dev $CHROOT/dev
-mount --bind /dev/pts $CHROOT/dev/pts
-mount --bind /sdcard $CHROOT/sdcard
-mount --bind $TMPDIR $CHROOT/tmp
+mount --bind /proc ${CHROOT}/proc
+mount --bind /sys ${CHROOT}/sys
+mount --bind /dev ${CHROOT}/dev
+mount --bind /dev/pts ${CHROOT}/dev/pts
+mount --bind /sdcard ${CHROOT}/sdcard
+mount --bind ${TMPDIR} ${CHROOT}/tmp
 
-chroot $CHROOT /bin/su - root -c \"/test.sh\"
+chroot ${CHROOT} /bin/su - root -c \"/test.sh\"
 
-umount -lv $CHROOT/dev/pts
-umount -lv $CHROOT/dev
-umount -lv $CHROOT/sys
-umount -lv $CHROOT/proc
-umount -lv $CHROOT/sdcard
-umount -lv $CHROOT/tmp" > ~/start.sh
+umount -lv ${CHROOT}/dev/pts
+umount -lv ${CHROOT}/dev
+umount -lv ${CHROOT}/sys
+umount -lv ${CHROOT}/proc
+umount -lv ${CHROOT}/sdcard
+umount -lv ${CHROOT}/tmp" > ~/start.sh
 
 echo "#!/bin/sh
-umount -lv $CHROOT/dev/pts
-umount -lv $CHROOT/dev
-umount -lv $CHROOT/sys
-umount -lv $CHROOT/proc
-umount -lv $CHROOT/sdcard
-umount -lv $CHROOT/tmp" > ~/stop.sh
+umount -lv ${CHROOT}/dev/pts
+umount -lv ${CHROOT}/dev
+umount -lv ${CHROOT}/sys
+umount -lv ${CHROOT}/proc
+umount -lv ${CHROOT}/sdcard
+umount -lv ${CHROOT}/tmp" > ~/stop.sh
 
 chmod 777 ~/start.sh ~/stop.sh ~/test.sh
-su -c mv ~/test.sh $CHROOT
+su -c mv ~/test.sh ${CHROOT}
 su -c ./start.sh
 sed -i 's/ -c "\/test.sh"//g' ~/start.sh
 
