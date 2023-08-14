@@ -31,5 +31,6 @@ rm -rf ${WINE_DIR}/wine*
 # Install symlinks
 sudo rm -f /usr/local/bin/wine 
 sudo ln -s ${WINE_DIR}/bin/wine /usr/local/bin/wine
+sudo ln -s /usr/local/bin/box64 /usr/local/bin/box86
 sudo chmod +x /usr/local/bin/wine 
 
