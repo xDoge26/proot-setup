@@ -51,29 +51,29 @@ chmod 777 /tmp
 rm /test.sh' > ~/test.sh
 
 echo "#!/bin/sh
-mount --bind /proc ${CHROOT}/proc
-mount --bind /sys ${CHROOT}/sys
-mount --bind /dev ${CHROOT}/dev
-mount --bind /dev/pts ${CHROOT}/dev/pts
-mount --bind /sdcard ${CHROOT}/sdcard
-mount --bind ${TMPDIR} ${CHROOT}/tmp
+${BUSYBOX} mount --bind /proc ${CHROOT}/proc
+${BUSYBOX} mount --bind /sys ${CHROOT}/sys
+${BUSYBOX} mount --bind /dev ${CHROOT}/dev
+${BUSYBOX} mount --bind /dev/pts ${CHROOT}/dev/pts
+${BUSYBOX} mount --bind /sdcard ${CHROOT}/sdcard
+${BUSYBOX} mount --bind ${TMPDIR} ${CHROOT}/tmp
 
-chroot ${CHROOT} /bin/su - root -c \"/test.sh\"
+${BUSYBOX} chroot ${CHROOT} /bin/su - root -c \"/test.sh\"
 
-umount -lv ${CHROOT}/dev/pts
-umount -lv ${CHROOT}/dev
-umount -lv ${CHROOT}/sys
-umount -lv ${CHROOT}/proc
-umount -lv ${CHROOT}/sdcard
-umount -lv ${CHROOT}/tmp" > ~/start.sh
+${BUSYBOX} umount -l ${CHROOT}/dev/pts
+${BUSYBOX} umount -l ${CHROOT}/dev
+${BUSYBOX} umount -l ${CHROOT}/sys
+${BUSYBOX} umount -l ${CHROOT}/proc
+${BUSYBOX} umount -l ${CHROOT}/sdcard
+${BUSYBOX} umount -l ${CHROOT}/tmp" > ~/start.sh
 
 echo "#!/bin/sh
-umount -lv ${CHROOT}/dev/pts
-umount -lv ${CHROOT}/dev
-umount -lv ${CHROOT}/sys
-umount -lv ${CHROOT}/proc
-umount -lv ${CHROOT}/sdcard
-umount -lv ${CHROOT}/tmp" > ~/stop.sh
+${BUSYBOX} umount -l ${CHROOT}/dev/pts
+${BUSYBOX} umount -l ${CHROOT}/dev
+${BUSYBOX} umount -l ${CHROOT}/sys
+${BUSYBOX} umount -l ${CHROOT}/proc
+${BUSYBOX} umount -l ${CHROOT}/sdcard
+${BUSYBOX} umount -l ${CHROOT}/tmp" > ~/stop.sh
 
 chmod 777 ~/start.sh ~/stop.sh ~/test.sh
 su -c mv ~/test.sh ${CHROOT}
