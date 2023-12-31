@@ -16,28 +16,8 @@ su -c /data/adb/magisk/busybox wget https://github.com/xDoge26/proot-setup/raw/m
 ```
 wget https://github.com/xDoge26/proot-setup/raw/main/xfce4.sh ; bash xfce4.sh ; rm xfce4.sh
 ```
-## 3. Install box86/box64
-```
-wget https://github.com/xDoge26/proot-setup/raw/main/box86_64.sh ; bash box86_64.sh ; rm box86_64.sh
-```
+
 ## 4. VirGL
-#### 4.1 VirGL ES (Recommended)
-- Install required packages
-```
-pkg install x11-repo 
-pkg install virglrenderer-android
-```
-- Creating alias
-```
-echo 'alias gl="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 virgl_test_server_android &"' >> ~/.bashrc
-source ~/.bashrc
-```
-#### 4.2 VirGL zink (Not recommended)
-- Install required packages
-```
-pkg install x11-repo tur-repo
-pkg install mesa-zink virglrenderer-mesa-zink
-```
 - Creating alias
 ```
 echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &"' >> ~/.bashrc
