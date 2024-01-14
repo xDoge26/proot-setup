@@ -17,11 +17,4 @@ su -c /data/adb/magisk/busybox wget https://github.com/xDoge26/proot-setup/raw/m
 wget https://github.com/xDoge26/proot-setup/raw/main/xfce4.sh ; bash xfce4.sh ; rm xfce4.sh
 ```
 
-## 4. VirGL
-- Creating alias
-```
-echo 'alias zink="MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &"' >> ~/.bashrc
-source ~/.bashrc
-```
-
 
